@@ -1,0 +1,24 @@
+{
+  "hero": { "title": "About ISOLOGIC", "subtitle": "Independent auditor and advisor focused on practical outcomes." },
+  "mission": {
+    "title": "Our mission",
+    "text": "Enable organizations to identify risks early, implement effective controls and meet regulations without slowing the business."
+  },
+  "values": {
+    "title": "Values",
+    "items": [
+      { "title": "Independence", "text": "Objective conclusions without compromise." },
+      { "title": "Accuracy", "text": "Evidence-based assessments and clear recommendations." },
+      { "title": "Pragmatism", "text": "Actionable solutions that work in reality." }
+    ]
+  },
+  "expertise": {
+    "title": "Expertise",
+    "items": [
+      { "title": "Financial audit", "text": "Preparation and support throughout the external audit cycle." },
+      { "title": "Internal controls", "text": "Implementation and evaluation aligned with COSO principles." },
+      { "title": "Regulatory compliance", "text": "Interpretation and implementation plans for sector regulations." }
+    ]
+  }
+}
+

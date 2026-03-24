@@ -1,0 +1,24 @@
+{
+  "hero": { "title": "Licencēšana", "subtitle": "Praktisks atbalsts licencēm un regulatīvajām atļaujām." },
+  "overview": {
+    "title": "Apgabals",
+    "text": "Trūkumu analīze, dokumentācija un kontroles, lai izpildītu licencēšanas prasības ar skaidriem pierādījumiem regulatoriem."
+  },
+  "benefits": {
+    "title": "Ieguvumi",
+    "items": [
+      { "title": "Skaidrība", "text": "Precīzi zināt, kas un līdz kuram termiņam nepieciešams." },
+      { "title": "Noturība", "text": "Saskaņotas politikas, procedūras un kontrolju darbība." },
+      { "title": "Pārliecība", "text": "Aizstāvami iesniegumi un gatavība papildjautājumiem." }
+    ]
+  },
+  "steps": {
+    "title": "Pieeja",
+    "items": [
+      { "title": "Gatavības pārskats", "text": "Novērtējam trūkumus pret licencēšanas kritērijiem." },
+      { "title": "Novēršana", "text": "Aizveram trūkumus ar dokumentiem un kontrolēm." },
+      { "title": "Iesniegumu atbalsts", "text": "Sagatavojam pierādījumus un atbildes." }
+    ]
+  }
+}
+

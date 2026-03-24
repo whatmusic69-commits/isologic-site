@@ -1,0 +1,23 @@
+{
+  "hero": { "title": "Par ISOLOGIC", "subtitle": "Neatkarīgs auditors un konsultants ar fokusēšanos uz praktisku rezultātu." },
+  "mission": {
+    "title": "Mūsu misija",
+    "text": "Palīdzēt uzņēmumiem savlaicīgi identificēt riskus, ieviest efektīvus kontroles mehānismus un droši atbilst regulām, saglabājot biznesa tempu."
+  },
+  "values": {
+    "title": "Vērtības",
+    "items": [
+      { "title": "Neatkarība", "text": "Objektīvi secinājumi bez kompromisiem." },
+      { "title": "Precizitāte", "text": "Dati, pierādījumi un skaidri ieteikumi." },
+      { "title": "Pragmatika", "text": "Praktiski risinājumi, kas darbojas reālajā dzīvē." }
+    ]
+  },
+  "expertise": {
+    "title": "Ekspertīze",
+    "items": [
+      { "title": "Finanšu audits", "text": "Sagatavošanās un atbalsts ārējā audita ciklā." },
+      { "title": "Iekšējie kontroles", "text": "COSO pamatprincipu ieviešana un novērtēšana." },
+      { "title": "Regulatīvā atbilstība", "text": "Nozaru prasību interpretācija un ieviešanas plāni." }
+    ]
+  }
+}

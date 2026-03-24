@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: your-user/your-repo
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "home"
+    label: "Home"
+    files:
+      - label: "Home LV"
+        name: "home_lv"
+        file: "content/pages/home/lv.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: "CTA Text", name: "ctaText", widget: "string" }
+
+      - label: "Home EN"
+        name: "home_en"
+        file: "content/pages/home/en.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: "CTA Text", name: "ctaText", widget: "string" }
+
+      - label: "Home RU"
+        name: "home_ru"
+        file: "content/pages/home/ru.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: "CTA Text", name: "ctaText", widget: "string" }

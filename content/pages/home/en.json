@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Independent audit and compliance advisory",
+    "subtitle": "Precision, integrity and proactive guidance for regulated businesses.",
+    "primaryCtaLabel": "Talk to an advisor",
+    "primaryCtaHref": "/en/contact",
+    "secondaryCtaLabel": "Our services",
+    "secondaryCtaHref": "/en/services"
+  },
+  "intro": {
+    "title": "Trusted partner for assurance and compliance",
+    "text": "ISOLOGIC helps companies strengthen internal controls, meet regulatory obligations and prepare for audits without surprises."
+  },
+  "servicesPreview": {
+    "title": "Core capabilities",
+    "cards": [
+      { "title": "External audit support", "description": "Preparation, documentation reviews and liaison with auditors to streamline the process." },
+      { "title": "Internal controls & risk", "description": "Design and assessment of control frameworks aligned with leading standards." },
+      { "title": "Compliance readiness", "description": "Policy alignment, gap analysis and practical remediation plans for regulatory requirements." }
+    ]
+  },
+  "benefits": {
+    "title": "Why choose ISOLOGIC",
+    "items": [
+      { "title": "Independent perspective", "text": "Objective insights that help leadership make confident decisions." },
+      { "title": "Efficient delivery", "text": "Clear scope, pragmatic actions and sensible timelines." },
+      { "title": "Regulatory fluency", "text": "Experience across financial, technology and professional services." }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "10+", "label": "years experience" },
+      { "value": "50+", "label": "engagements" },
+      { "value": "3", "label": "languages" },
+      { "value": "100%", "label": "independent" }
+    ]
+  },
+  "ctaBand": {
+    "title": "Ready to strengthen your compliance?",
+    "subtitle": "Let’s review your current state and priorities.",
+    "ctaLabel": "Schedule a call",
+    "ctaHref": "/en/contact"
+  }
+}

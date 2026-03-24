@@ -1,0 +1,24 @@
+{
+  "hero": { "title": "Pieņemšana", "subtitle": "Neatkarīga gatavības un nodošanas kvalitātes pārliecība." },
+  "overview": {
+    "title": "Kas ietverts",
+    "text": "Strukturētas pieņemšanas pārbaudes pēc kritērijiem, dokumentācijas pilnīgums un kontroles darbība, lai mazinātu go‑live un audita riskus."
+  },
+  "benefits": {
+    "title": "Ieguvumi",
+    "items": [
+      { "title": "Skaidri kritēriji", "text": "Standarti saskaņoti ar riskiem un regulējumu." },
+      { "title": "Pierādījumu bāze", "text": "Aizstāvama dokumentācija revidentiem un iesaistītajām pusēm." },
+      { "title": "Mazāk pārrāvumu", "text": "Mazāk vēlu izmaiņu un tīrāka nodošana." }
+    ]
+  },
+  "steps": {
+    "title": "Kā tas notiek",
+    "items": [
+      { "title": "Apgabals un kritēriji", "text": "Definējam ‘gatavs’ un pierādījumu prasības." },
+      { "title": "Pārskats un testēšana", "text": "Pārbaudām pilnīgumu un galveno kontrolju darbību." },
+      { "title": "Apstiprinājums", "text": "Kopsavilkums un pieņemšana vai rīcības punkti." }
+    ]
+  }
+}
+

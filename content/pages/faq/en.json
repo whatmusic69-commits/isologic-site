@@ -1,0 +1,10 @@
+{
+  "hero": { "title": "Frequently asked questions", "subtitle": "Clear answers to common topics." },
+  "items": [
+    { "question": "What industries do you work with?", "answer": "We support financial services, technology and professional services, with experience applicable to other sectors." },
+    { "question": "Do you provide ongoing compliance support?", "answer": "Yes. We offer periodic reviews and on-call advisory for internal controls and regulatory changes." },
+    { "question": "Can you coordinate with our external auditors?", "answer": "Absolutely. We prepare documentation and liaise to streamline requests and walkthroughs." },
+    { "question": "How do engagements typically start?", "answer": "We begin with a focused discovery to understand objectives, timelines and current state, then propose a clear scope." }
+  ]
+}
+

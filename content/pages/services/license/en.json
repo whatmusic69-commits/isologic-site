@@ -1,0 +1,24 @@
+{
+  "hero": { "title": "License", "subtitle": "Practical support for licensing and regulatory permissions." },
+  "overview": {
+    "title": "Scope",
+    "text": "Gap analysis, documentation and control design to meet licensing expectations with clear evidence for regulators."
+  },
+  "benefits": {
+    "title": "Key benefits",
+    "items": [
+      { "title": "Clarity", "text": "Understand exactly what is required and by when." },
+      { "title": "Consistency", "text": "Aligned policies, procedures and control operation." },
+      { "title": "Confidence", "text": "Defensible submissions and readiness for follow‑ups." }
+    ]
+  },
+  "steps": {
+    "title": "Approach",
+    "items": [
+      { "title": "Readiness review", "text": "Assess gaps against licensing criteria." },
+      { "title": "Remediation", "text": "Close gaps with documentation and controls." },
+      { "title": "Submission support", "text": "Prepare evidence and responses." }
+    ]
+  }
+}
+

@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+ :root {
+  --background: #F7F5F0; /* warm off-white */
+  --foreground: #1E1E1B; /* dark graphite */
+  --surface: #FFFFFF; /* cards */
+  --surface-muted: #EFEAE0; /* subtle panels */
+  --surface-dark: #232320; /* premium dark panels */
+  --text-on-dark: #F7F4EE; /* soft white */
+  --border: #DDD6C8; /* soft border */
+  --accent: #B08A3C; /* muted bronze gold */
+  --accent-hover: #9A7631; /* darker bronze */
+ }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-dark: var(--surface-dark);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Fixed light theme */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Subtle reveal utility when element enters viewport */
+.reveal-hidden { opacity: 0; transform: translateY(16px); }
+.reveal-in { opacity: 1; transform: translateY(0); }
+.transition-soft { transition: opacity 500ms ease, transform 500ms ease; }
+
+/* Card base */
+.card { @apply rounded-2xl bg-white shadow-sm; border: 1px solid var(--border); }
+.card-hover { @apply transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-md; }
+
+/* Button base */
+.btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium transition-colors duration-300; }
+.btn { @apply transition-transform ease-out; }
+.btn:hover { transform: scale(1.02); box-shadow: 0 8px 22px rgba(176,138,60,0.18); }
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--accent); color: var(--foreground); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: var(--surface-muted); color: var(--foreground); border: 1px solid var(--border); }
+.btn-secondary:hover { background: #E7E1D6; border-color: var(--accent); color: var(--accent); }
+
+/* Navbar */
+.nav-link { color: color-mix(in oklab, var(--foreground) 85%, white); transition: color 150ms ease; }
+.nav-link:hover { color: var(--accent); }
+.nav-link-active { color: var(--accent); }
+
+/* Premium underline hover for nav links */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 220ms ease;
+}
+.nav-link:hover::after, .nav-link-active::after { width: 100%; }
+
+/* Section spacing */
+.section { @apply mx-auto max-w-6xl px-6 py-16 md:py-24; }
+.section-narrow { @apply mx-auto max-w-3xl px-6 py-16 md:py-20; }
+.section-alt { background: var(--surface-muted); }
+
+/* Dark premium panel for selected sections (hero/CTA) */
+.panel-dark { border: 1px solid #2c2c29; background: var(--surface-dark); color: var(--text-on-dark); border-radius: 1.5rem; }

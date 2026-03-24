@@ -1,0 +1,23 @@
+{
+  "hero": { "title": "Services", "subtitle": "Clear scope, efficient delivery, results you can trust." },
+  "services": {
+    "title": "What we do",
+    "items": [
+      { "title": "External audit readiness", "description": "End-to-end preparation including documentation, walkthroughs and liaison with auditors." },
+      { "title": "Internal control design & review", "description": "Control frameworks aligned with COSO, tailored to your risk profile." },
+      { "title": "Regulatory compliance advisory", "description": "Gap analysis, remediation plans and ongoing compliance support." },
+      { "title": "Policies & procedures", "description": "Practical policies and SOPs that are clear, complete and usable." },
+      { "title": "Risk assessment", "description": "Structured approach to identify, assess and prioritize enterprise risks." },
+      { "title": "Training & awareness", "description": "Targeted sessions to embed controls and compliance across teams." }
+    ]
+  },
+  "process": {
+    "title": "How we work",
+    "steps": [
+      { "title": "Discovery", "text": "Understand objectives, constraints and current state." },
+      { "title": "Assessment", "text": "Evidence-based analysis to identify gaps and priorities." },
+      { "title": "Implementation", "text": "Pragmatic actions, clear ownership and timelines." }
+    ]
+  }
+}
+

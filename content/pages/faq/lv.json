@@ -1,0 +1,10 @@
+{
+  "hero": { "title": "Biežāk uzdotie jautājumi", "subtitle": "Skaidras atbildes uz populāriem jautājumiem." },
+  "items": [
+    { "question": "Ar kādām nozarēm mēs strādājam?", "answer": "Finanšu pakalpojumi, tehnoloģijas un profesionālie pakalpojumi; pieredze pielietojama arī citur." },
+    { "question": "Vai nodrošināt nepārtrauktu atbilstības atbalstu?", "answer": "Jā. Piedāvājam periodiskus pārskatus un konsultācijas par iekšējām kontrolēm un regulējuma izmaiņām." },
+    { "question": "Vai sadarbojaties ar mūsu ārējiem auditoriem?", "answer": "Jā. Sagatavojam dokumentus un koordinējam pieprasījumus un walkthrough procesu." },
+    { "question": "Kā parasti sākas projekts?", "answer": "Sākam ar īsu izpēti par mērķiem, termiņiem un situāciju, tad piedāvājam skaidru apjomu." }
+  ]
+}
+

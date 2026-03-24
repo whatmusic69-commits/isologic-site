@@ -1,0 +1,9 @@
+{
+  "hero": { "title": "Sazinieties ar mums", "subtitle": "Pārrunāsim jūsu audita un atbilstības prioritātes." },
+  "details": {
+    "email": "info@isologic.example",
+    "phone": "+371 0000 0000",
+    "address": "Rīga, Brīvības iela 1",
+    "ctaLabel": "Rakstīt ziņu"
+  }
+}

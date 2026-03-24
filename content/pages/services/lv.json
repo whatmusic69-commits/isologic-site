@@ -1,0 +1,23 @@
+{
+  "hero": { "title": "Pakalpojumi", "subtitle": "Skaidrs apjoms, efektīva piegāde un uzticams rezultāts." },
+  "services": {
+    "title": "Ko mēs darām",
+    "items": [
+      { "title": "Gatavība ārējam auditam", "description": "Pilns sagatavošanās cikls: dokumenti, walkthrough un sadarbība ar auditoriem." },
+      { "title": "Kontroļu izstrāde un pārskats", "description": "Kontroles sistēmas atbilstoši COSO, pielāgotas jūsu riskiem." },
+      { "title": "Atbilstības konsultācijas", "description": "Trūkumu analīze, rīcības plāni un nepārtraukts atbalsts." },
+      { "title": "Politikas un procedūras", "description": "Praktiskas politikas un SOP, kas ir skaidras un lietojamas." },
+      { "title": "Riska novērtēšana", "description": "Strukturēta pieeja risku identificēšanai un prioritizēšanai." },
+      { "title": "Apmācības un izpratne", "description": "Mērķētas sesijas, lai ieviestu kontroles un atbilstību komandās." }
+    ]
+  },
+  "process": {
+    "title": "Kā mēs strādājam",
+    "steps": [
+      { "title": "Iepazīšanās", "text": "Mērķi, ierobežojumi un pašreizējais stāvoklis." },
+      { "title": "Novērtējums", "text": "Datu balstīta analīze, lai noteiktu trūkumus un prioritātes." },
+      { "title": "Ieviešana", "text": "Praktiskas darbības, skaidra atbildība un termiņi." }
+    ]
+  }
+}
+

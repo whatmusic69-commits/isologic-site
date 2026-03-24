@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Neatkarīgs audits un atbilstības konsultācijas",
+    "subtitle": "Precizitāte, godīgums un proaktīvs atbalsts regulētām nozarēm.",
+    "primaryCtaLabel": "Sazināties ar konsultantu",
+    "primaryCtaHref": "/lv/contact",
+    "secondaryCtaLabel": "Mūsu pakalpojumi",
+    "secondaryCtaHref": "/lv/services"
+  },
+  "intro": {
+    "title": "Uzticams partneris pārliecībai un atbilstībai",
+    "text": "ISOLOGIC palīdz stiprināt iekšējās kontroles, izpildīt regulatīvās prasības un sagatavoties auditam bez pārsteigumiem."
+  },
+  "servicesPreview": {
+    "title": "Galvenās kompetences",
+    "cards": [
+      { "title": "Atbalsts ārējam auditam", "description": "Sagatavošanās, dokumentu pārskati un sadarbība ar auditoriem, lai process būtu raits." },
+      { "title": "Iekšējās kontroles un riski", "description": "Kontroles sistēmu izstrāde un novērtēšana atbilstoši vadošajiem standartiem." },
+      { "title": "Atbilstības gatavība", "description": "Politiku saskaņošana, trūkumu analīze un praktiski rīcības plāni prasību izpildei." }
+    ]
+  },
+  "benefits": {
+    "title": "Kāpēc ISOLOGIC",
+    "items": [
+      { "title": "Neatkarīgs skats", "text": "Objektīvi secinājumi, kas palīdz pieņemt drošus lēmumus." },
+      { "title": "Efektīva piegāde", "text": "Skaidrs apjoms, pragmatiskas darbības un saprātīgi termiņi." },
+      { "title": "Regulāciju izpratne", "text": "Pieredze finanšu, tehnoloģiju un profesionālo pakalpojumu nozarēs." }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "10+", "label": "gadu pieredze" },
+      { "value": "50+", "label": "projekti" },
+      { "value": "3", "label": "valodas" },
+      { "value": "100%", "label": "neatkarīgi" }
+    ]
+  },
+  "ctaBand": {
+    "title": "Vēlaties stiprināt atbilstību?",
+    "subtitle": "Pārrunāsim jūsu situāciju un prioritātes.",
+    "ctaLabel": "Pieteikt zvanu",
+    "ctaHref": "/lv/contact"
+  }
+}

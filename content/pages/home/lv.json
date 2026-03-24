@@ -1,4 +1,200 @@
 {
+  "ctaBand": {
+    "title": "Vēlaties stiprināt atbilstību?",
+    "subtitle": "Pārrunāsim jūsu situāciju un prioritātes.",
+    "ctaLabel": "Pieteikt zvanu",
+    "ctaHref": "/lv/contact"
+  },
+  "industriesSection": {
+    "title": "Ar ko strādājam",
+    "subtitle": "Atbalstām organizācijas, kurām vajadzīgas skaidras kontroles, uzticami procesi un ilgtspējīga atbilstība.",
+    "items": [
+      {
+        "title": "Finanšu pakalpojumi",
+        "icon": "briefcase"
+      },
+      {
+        "title": "Tehnoloģijas",
+        "icon": "cpu"
+      },
+      {
+        "title": "Veselības aprūpe",
+        "icon": "heart-pulse"
+      },
+      {
+        "title": "Izglītība",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Juridiskie pakalpojumi",
+        "icon": "scale"
+      },
+      {
+        "title": "Profesionālie pakalpojumi",
+        "icon": "messages-square"
+      },
+      {
+        "title": "Valsts sektors",
+        "icon": "landmark"
+      },
+      {
+        "title": "Viesmīlība",
+        "icon": "building"
+      }
+    ]
+  },
+  "servicesPreview": {
+    "title": "Galvenās kompetences",
+    "cards": [
+      {
+        "title": "Atbalsts ārējam auditam",
+        "description": "Sagatavošanās, dokumentu pārskati un sadarbība ar auditoriem, lai process būtu raits."
+      },
+      {
+        "title": "Iekšējās kontroles un riski",
+        "description": "Kontroles sistēmu izstrāde un novērtēšana atbilstoši vadošajiem standartiem."
+      },
+      {
+        "title": "Atbilstības gatavība",
+        "description": "Politiku saskaņošana, trūkumu analīze un praktiski rīcības plāni prasību izpildei."
+      }
+    ]
+  },
+  "intro": {
+    "title": "Uzticams partneris pārliecībai un atbilstībai",
+    "text": "ISOLOGIC palīdz stiprināt iekšējās kontroles, izpildīt regulatīvās prasības un sagatavoties auditam bez pārsteigumiem."
+  },
+  "standardsSection": {
+    "title": "Galvenās kompetences",
+    "subtitle": "Standarti un ietvari, kurus ieviešam un novērtējam.",
+    "ctaText": "Saņemt konsultāciju",
+    "ctaHref": "/lv/contact",
+    "items": [
+      {
+        "title": "ISO 27001 — Informācijas drošība",
+        "icon": "flag"
+      },
+      {
+        "title": "ISO 22301 — Darbības nepārtrauktība",
+        "icon": "eye"
+      },
+      {
+        "title": "ISO 20000 — Pakalpojumu pārvaldība",
+        "icon": "user-settings"
+      },
+      {
+        "title": "ISO 27017 — Mākoņpakalpojumi",
+        "icon": "cloud"
+      },
+      {
+        "title": "ISO 9001 — Kvalitātes vadība",
+        "icon": "send"
+      },
+      {
+        "title": "ISO 45001 — Darba drošība un veselība",
+        "icon": "rocket"
+      },
+      {
+        "title": "ISO 14001 — Vides pārvaldība",
+        "icon": "tree"
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Atsauksmes",
+    "subtitle": "Klienti par sadarbības vērtību ar ISOLOGIC.",
+    "rotationIntervalMs": 6000,
+    "items": [
+      {
+        "quote": "ISOLOGIC precizēja apjomu un noņēma lieko. No neskaidrības līdz konkrētam plānam pāris dienās.",
+        "authorName": "Emma Klāra",
+        "authorRole": "COO",
+        "company": "Finlytics",
+        "rating": 5
+      },
+      {
+        "quote": "Audita sagatavošanas materiāli bija ļoti precīzi. Pieprasījumi no auditoriem kļuva strukturēti un ātri izpildāmi.",
+        "authorName": "Daniels Vongs",
+        "authorRole": "Finanšu vadītājs",
+        "company": "Nimbus Tech",
+        "rating": 5
+      },
+      {
+        "quote": "Pragmatisks kontroļu dizains, ko komandas patiešām ievēro. Darbojas praksē, ne tikai dokumentos.",
+        "authorName": "Sofija Martinsa",
+        "authorRole": "Riska vadītāja",
+        "company": "Corevista",
+        "rating": 5
+      },
+      {
+        "quote": "Ieguvām pārliecību pirms svarīgas klienta pārbaudes. Pierādījumi bija gatavi un aizstāvami.",
+        "authorName": "Liams Patels",
+        "authorRole": "Operāciju vadītājs",
+        "company": "Axis Cloud",
+        "rating": 5
+      },
+      {
+        "quote": "Skaidras darbības, atbildīgie un termiņi. Vadības sapulces kļuva īsākas un fokusētākas.",
+        "authorName": "Grace Lī",
+        "authorRole": "Atbilstības vadītāja",
+        "company": "North & Co",
+        "rating": 5
+      },
+      {
+        "quote": "Neatkarīgs skats, kas bija nepieciešams. Secinājumi – lakoniski un uz risinājumu vērsti.",
+        "authorName": "Olivers Brauns",
+        "authorRole": "Finanšu direktors",
+        "company": "Metronome",
+        "rating": 5
+      },
+      {
+        "quote": "Gada garumā uzturēja gatavību auditam. Vairs nav pēdējā brīža steigas pirms sertifikācijas.",
+        "authorName": "Hanna Šmita",
+        "authorRole": "Kvalitātes vadītāja",
+        "company": "Helios Labs",
+        "rating": 5
+      },
+      {
+        "quote": "Dokumentācijas kvalitāte uzlabojās visā organizācijā. Procesi vieglāk apmācāmi un uzturami.",
+        "authorName": "Džeks Millers",
+        "authorRole": "Apmācību vadītājs",
+        "company": "Arclight Services",
+        "rating": 5
+      }
+    ]
+  },
+  "ownershipSection": {
+    "title": "Uzņemamies atbildību.",
+    "subtitle": "No pirmās sarunas līdz ilgtspējīgam rezultātam — mēs atbildam par sertifikāciju un atbilstību.",
+    "buttonText": "Ārpakalpojums: atbilstības vadība",
+    "buttonHref": "/lv/contact",
+    "items": [
+      {
+        "title": "IEVIET",
+        "eyebrow": "Strukturēti jau no pirmās dienas.",
+        "description": "Sistēma tiek veidota korekti, domājot par sertifikāciju jau sākumā.",
+        "icon": "wrench"
+      },
+      {
+        "title": "AUDITS",
+        "eyebrow": "Vienmēr gatavi pārbaudei.",
+        "description": "Iekšējie pārskati uztur kontroli un atbilstību visa gada garumā.",
+        "icon": "badge-a"
+      },
+      {
+        "title": "SERTIFICĒ",
+        "eyebrow": "Sertifikācija nodrošināta.",
+        "description": "Pārvaldām procesu, lai apstiprinājums būtu raits un paredzams.",
+        "icon": "award"
+      },
+      {
+        "title": "PĀRVALDI",
+        "eyebrow": "Atbilstība — nodrošināta.",
+        "description": "Nepārtraukta uzraudzība nodrošina stipru un ilgtspējīgu sertifikāciju.",
+        "icon": "shield"
+      }
+    ]
+  },
   "hero": {
     "title": "Neatkarīgs audits un atbilstības konsultācijas",
     "subtitle": "Precizitāte, godīgums un proaktīvs atbalsts regulētām nozarēm.",
@@ -7,38 +203,67 @@
     "secondaryCtaLabel": "Mūsu pakalpojumi",
     "secondaryCtaHref": "/lv/services"
   },
-  "intro": {
-    "title": "Uzticams partneris pārliecībai un atbilstībai",
-    "text": "ISOLOGIC palīdz stiprināt iekšējās kontroles, izpildīt regulatīvās prasības un sagatavoties auditam bez pārsteigumiem."
-  },
-  "servicesPreview": {
-    "title": "Galvenās kompetences",
-    "cards": [
-      { "title": "Atbalsts ārējam auditam", "description": "Sagatavošanās, dokumentu pārskati un sadarbība ar auditoriem, lai process būtu raits." },
-      { "title": "Iekšējās kontroles un riski", "description": "Kontroles sistēmu izstrāde un novērtēšana atbilstoši vadošajiem standartiem." },
-      { "title": "Atbilstības gatavība", "description": "Politiku saskaņošana, trūkumu analīze un praktiski rīcības plāni prasību izpildei." }
-    ]
-  },
   "benefits": {
     "title": "Kāpēc ISOLOGIC",
     "items": [
-      { "title": "Neatkarīgs skats", "text": "Objektīvi secinājumi, kas palīdz pieņemt drošus lēmumus." },
-      { "title": "Efektīva piegāde", "text": "Skaidrs apjoms, pragmatiskas darbības un saprātīgi termiņi." },
-      { "title": "Regulāciju izpratne", "text": "Pieredze finanšu, tehnoloģiju un profesionālo pakalpojumu nozarēs." }
+      {
+        "title": "Neatkarīgs skats",
+        "text": "Objektīvi secinājumi, kas palīdz pieņemt drošus lēmumus."
+      },
+      {
+        "title": "Efektīva piegāde",
+        "text": "Skaidrs apjoms, pragmatiskas darbības un saprātīgi termiņi."
+      },
+      {
+        "title": "Regulāciju izpratne",
+        "text": "Pieredze finanšu, tehnoloģiju un profesionālo pakalpojumu nozarēs."
+      }
     ]
   },
   "stats": {
     "items": [
-      { "value": "10+", "label": "gadu pieredze" },
-      { "value": "50+", "label": "projekti" },
-      { "value": "3", "label": "valodas" },
-      { "value": "100%", "label": "neatkarīgi" }
+      {
+        "value": "10+",
+        "label": "gadu pieredze"
+      },
+      {
+        "value": "50+",
+        "label": "projekti"
+      },
+      {
+        "value": "3",
+        "label": "valodas"
+      },
+      {
+        "value": "100%",
+        "label": "neatkarīgi"
+      }
     ]
   },
-  "ctaBand": {
-    "title": "Vēlaties stiprināt atbilstību?",
-    "subtitle": "Pārrunāsim jūsu situāciju un prioritātes.",
-    "ctaLabel": "Pieteikt zvanu",
-    "ctaHref": "/lv/contact"
+  "whyChoose": {
+    "title": "Kāpēc ISOLOGIC",
+    "subtitle": "Neatkarīga pārliecība ar praktisku, aizstāvamu rezultātu.",
+    "items": [
+      {
+        "title": "Paredzama piegāde",
+        "description": "Skaidrs plāns, termiņi un komunikācija — bez pārsteigumiem.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Praktiskas sistēmas",
+        "description": "Kontroles un procedūras, kas atbilst jūsu darba ritmam.",
+        "icon": "cube"
+      },
+      {
+        "title": "Neatkarīga uzraudzība",
+        "description": "Objektīvs skats, pilna atbildība un caurspīdīgi pierādījumi.",
+        "icon": "layers"
+      },
+      {
+        "title": "Uzticams rezultāts",
+        "description": "Ilgtspējīga atbilstība un dokumentācija audita gatavībā.",
+        "icon": "chart"
+      }
+    ]
   }
 }

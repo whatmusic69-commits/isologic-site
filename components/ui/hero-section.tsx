@@ -15,18 +15,35 @@ export default function HeroSection({
 }) {
   return (
     <section className="section pb-10 md:pb-12">
-      <div className="group relative overflow-hidden panel-dark transition-transform duration-500 will-change-transform hover:scale-[1.01]">
-        <div className="absolute inset-0 opacity-[0.08] pointer-events-none"
-             aria-hidden>
-          <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-accent/60 blur-3xl transition-transform duration-700 group-hover:scale-110" />
-          <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-accent/60 blur-3xl transition-transform duration-700 group-hover:scale-110" />
+      <div
+        className="group relative overflow-hidden rounded-2xl border transition-transform duration-500 will-change-transform hover:scale-[1.01] shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
+        style={{
+          borderColor: "color-mix(in oklab, var(--border) 80%, white)",
+          background:
+            "radial-gradient(80% 80% at 85% 40%, rgba(0,109,182,0.12) 0%, rgba(0,109,182,0.06) 22%, rgba(0,109,182,0.0) 55%), linear-gradient(135deg, #F4F7FB 0%, #F2F5F8 100%)",
+        }}
+      >
+        {/* Subtle top accent line */}
+        <div className="absolute inset-x-0 top-0 h-[2px] bg-[color:var(--accent)] opacity-20" aria-hidden />
+
+        {/* Decorative layer to reduce empty right side */}
+        <div className="pointer-events-none absolute right-[-6%] top-[-10%] hidden md:block" aria-hidden>
+          <div
+            className="h-64 w-64 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(0,109,182,0.10) 0%, rgba(0,109,182,0.04) 45%, rgba(0,109,182,0.0) 70%)",
+              filter: "blur(2px)",
+            }}
+          />
         </div>
+
         <div className="relative px-8 md:px-12 py-16 md:py-24">
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl" style={{color: "var(--text-on-dark)"}}>
+          <h1 className="text-[26px] sm:text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl heading-balance heading-wrap" style={{ color: "#1A1A1A" }}>
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-5 max-w-2xl text-lg md:text-xl" style={{color: "color-mix(in oklab, var(--text-on-dark) 85%, black)"}}>
+            <p className="mt-5 max-w-2xl text-lg md:text-xl" style={{ color: "#555" }}>
               {subtitle}
             </p>
           )}

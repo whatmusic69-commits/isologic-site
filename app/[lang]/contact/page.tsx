@@ -3,12 +3,21 @@ import { getPageContent } from "@/lib/content";
 import { isValidLang } from "@/lib/i18n";
 import SectionHeading from "@/components/ui/section-heading";
 import Reveal from "@/components/ui/reveal";
-import Button from "@/components/ui/button";
-import VisualPanel from "@/components/ui/visual-panel";
+import type { Metadata } from "next";
+import { buildAlternates, truncate } from "@/lib/seo";
+import ContactForm, { ContactFormSchema } from "@/components/ui/contact-form";
 
-type ContactContent = {
-  hero: { title: string; subtitle?: string };
-  details: { email: string; phone: string; address: string; ctaLabel?: string };
+type ContactPageContent = {
+  contactPage: {
+    title: string;
+    subtitle?: string;
+    ctaText?: string;
+    asideTitle?: string;
+    asideSubtitle?: string;
+    successTitle?: string;
+    successBody?: string;
+    form: ContactFormSchema;
+  };
 };
 
 export default async function ContactPage({
@@ -18,47 +27,61 @@ export default async function ContactPage({
 }) {
   const { lang } = await params;
   if (!isValidLang(lang)) notFound();
-  const content = await getPageContent<ContactContent>("contact", lang);
+  const content = await getPageContent<ContactPageContent>("contact", lang);
+
+  const page = content.contactPage;
 
   return (
     <main>
+      {/* 1. INTRO / HERO BLOCK */}
       <section className="section">
-        <SectionHeading alignment="left" title={content.hero.title} subtitle={content.hero.subtitle} />
+        <Reveal>
+          <SectionHeading alignment="left" title={page.title} subtitle={page.subtitle} />
+        </Reveal>
+        {page.ctaText && (
+          <div className="mt-4 max-w-3xl text-neutral-700">{page.ctaText}</div>
+        )}
       </section>
 
+      {/* 2. MAIN CONTACT SECTION */}
       <section className="section">
-        <VisualPanel src="/visuals/office.svg" />
-      </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* LEFT: text content */}
+          <Reveal>
+            <div className="card card-hover p-6 md:p-8 h-full">
+              {page.asideTitle && (
+                <h3 className="text-xl font-semibold text-neutral-900">{page.asideTitle}</h3>
+              )}
+              {page.asideSubtitle && (
+                <p className="mt-3 text-neutral-700">{page.asideSubtitle}</p>
+              )}
+            </div>
+          </Reveal>
 
-      <section className="section grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Reveal>
-          <div className="card card-hover p-6">
-            <p className="text-sm text-neutral-600">Email</p>
-            <p className="mt-1 font-medium">{content.details.email}</p>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="card card-hover p-6">
-            <p className="text-sm text-neutral-600">Phone</p>
-            <p className="mt-1 font-medium">{content.details.phone}</p>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div className="card card-hover p-6">
-            <p className="text-sm text-neutral-600">Address</p>
-            <p className="mt-1 font-medium">{content.details.address}</p>
-          </div>
-        </Reveal>
+          {/* RIGHT: form */}
+          <Reveal>
+            <div className="card card-hover p-6 md:p-8">
+              <ContactForm form={page.form} successTitle={page.successTitle} successBody={page.successBody} />
+            </div>
+          </Reveal>
+        </div>
       </section>
-
-      {content.details.ctaLabel && (
-        <section className="section-narrow">
-          <div className="card card-hover p-8 text-center">
-            <h3 className="text-xl font-semibold">{content.details.ctaLabel}</h3>
-            <div className="mt-4"><a href={`mailto:${content.details.email}`} className="btn btn-primary">{content.details.ctaLabel}</a></div>
-          </div>
-        </section>
-      )}
     </main>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLang(lang)) return {};
+  const content = await getPageContent<ContactPageContent>("contact", lang);
+  const title = content?.contactPage?.title || "Contact";
+  const description = truncate(content?.contactPage?.subtitle || "");
+  const { base, langs } = buildAlternates("/contact");
+  return {
+    title,
+    description: description || undefined,
+    alternates: { canonical: `${base}/${lang}/contact`, languages: langs },
+    openGraph: { title, description: description || undefined, url: `${base}/${lang}/contact` },
+    twitter: { title, description: description || undefined },
+  };
 }

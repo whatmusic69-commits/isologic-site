@@ -11,6 +11,20 @@
     "title": "Trusted partner for assurance and compliance",
     "text": "ISOLOGIC helps companies strengthen internal controls, meet regulatory obligations and prepare for audits without surprises."
   },
+  "industriesSection": {
+    "title": "Who we work with",
+    "subtitle": "We support organizations that need clear controls, reliable processes and sustainable compliance.",
+    "items": [
+      { "title": "Financial Services", "icon": "briefcase" },
+      { "title": "Technology", "icon": "cpu" },
+      { "title": "Healthcare", "icon": "heart-pulse" },
+      { "title": "Education", "icon": "graduation-cap" },
+      { "title": "Legal Services", "icon": "scale" },
+      { "title": "Professional Services", "icon": "messages-square" },
+      { "title": "Public Sector", "icon": "landmark" },
+      { "title": "Hospitality", "icon": "building" }
+    ]
+  },
   "servicesPreview": {
     "title": "Core capabilities",
     "cards": [
@@ -19,12 +33,53 @@
       { "title": "Compliance readiness", "description": "Policy alignment, gap analysis and practical remediation plans for regulatory requirements." }
     ]
   },
+  "standardsSection": {
+    "title": "Key competencies",
+    "subtitle": "Frameworks and standards we implement and assess.",
+    "ctaText": "Get advisory support",
+    "ctaHref": "/en/contact",
+    "items": [
+      { "title": "ISO 27001 — Information Security", "icon": "flag" },
+      { "title": "ISO 22301 — Business Continuity", "icon": "eye" },
+      { "title": "ISO 20000 — Service Management", "icon": "user-settings" },
+      { "title": "ISO 27017 — Cloud Services", "icon": "cloud" },
+      { "title": "ISO 9001 — Quality Management", "icon": "send" },
+      { "title": "ISO 45001 — Health & Safety", "icon": "rocket" },
+      { "title": "ISO 14001 — Environmental Management", "icon": "tree" }
+    ]
+  },
   "benefits": {
     "title": "Why choose ISOLOGIC",
     "items": [
       { "title": "Independent perspective", "text": "Objective insights that help leadership make confident decisions." },
       { "title": "Efficient delivery", "text": "Clear scope, pragmatic actions and sensible timelines." },
       { "title": "Regulatory fluency", "text": "Experience across financial, technology and professional services." }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why choose ISOLOGIC",
+    "subtitle": "Independent assurance with practical, defensible outcomes.",
+    "items": [
+      {
+        "title": "Straightforward delivery",
+        "description": "Clear plan, milestones and communication — no surprises.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Practical systems",
+        "description": "Controls and procedures that fit how your teams work.",
+        "icon": "cube"
+      },
+      {
+        "title": "Independent oversight",
+        "description": "Objective view, full accountability and transparent evidence.",
+        "icon": "layers"
+      },
+      {
+        "title": "Reliable outcomes",
+        "description": "Sustainable compliance and audit‑ready documentation.",
+        "icon": "chart"
+      }
     ]
   },
   "stats": {
@@ -40,5 +95,54 @@
     "subtitle": "Let’s review your current state and priorities.",
     "ctaLabel": "Schedule a call",
     "ctaHref": "/en/contact"
+  }
+  ,
+  "ownershipSection": {
+    "title": "We take ownership.",
+    "subtitle": "From first discussion to ongoing success, we take responsibility for your certification and compliance.",
+    "buttonText": "Outsourced Compliance Management",
+    "buttonHref": "/en/contact",
+    "items": [
+      {
+        "title": "IMPLEMENT",
+        "eyebrow": "Structured from day one.",
+        "description": "Your system is built correctly with certification in mind from the start.",
+        "icon": "wrench"
+      },
+      {
+        "title": "AUDIT",
+        "eyebrow": "Always audit‑ready.",
+        "description": "Internal reviews keep everything controlled and compliant year‑round.",
+        "icon": "badge-a"
+      },
+      {
+        "title": "CERTIFY",
+        "eyebrow": "Certification, secured.",
+        "description": "We manage the process so approval is smooth and straightforward.",
+        "icon": "award"
+      },
+      {
+        "title": "MANAGE",
+        "eyebrow": "Compliance, covered.",
+        "description": "Ongoing oversight ensures your certification remains strong and sustainable.",
+        "icon": "shield"
+      }
+    ]
+  }
+  ,
+  "testimonialsSection": {
+    "title": "Client feedback",
+    "subtitle": "How clients describe the value of working with ISOLOGIC.",
+    "rotationIntervalMs": 6000,
+    "items": [
+      { "quote": "ISOLOGIC clarified our scope and cut the noise. We moved from uncertainty to a concrete plan in days, not weeks.", "authorName": "Emma Clark", "authorRole": "COO", "company": "Finlytics", "rating": 5 },
+      { "quote": "Their audit preparation pack was spot‑on. Requests from external auditors became structured and fast to resolve.", "authorName": "Daniel Wong", "authorRole": "Head of Finance", "company": "Nimbus Tech", "rating": 5 },
+      { "quote": "Pragmatic control design that our teams actually follow. It works in practice, not just on paper.", "authorName": "Sofia Martins", "authorRole": "Risk Lead", "company": "Corevista", "rating": 5 },
+      { "quote": "We gained confidence ahead of a critical client assessment. Evidence was ready and defensible.", "authorName": "Liam Patel", "authorRole": "VP Operations", "company": "Axis Cloud", "rating": 5 },
+      { "quote": "Clear actions, owners and timelines. Steering meetings became shorter and more focused.", "authorName": "Grace Lee", "authorRole": "Compliance Manager", "company": "North & Co", "rating": 5 },
+      { "quote": "Independent perspective we needed. Findings were concise and solution‑oriented.", "authorName": "Oliver Brown", "authorRole": "CFO", "company": "Metronome", "rating": 5 },
+      { "quote": "They kept us audit‑ready all year. No last‑minute scramble before certification.", "authorName": "Hannah Schmidt", "authorRole": "QA Director", "company": "Helios Labs", "rating": 5 },
+      { "quote": "Documentation quality improved across the board. Processes are easier to train and sustain.", "authorName": "Jack Miller", "authorRole": "HR & Training", "company": "Arclight Services", "rating": 5 }
+    ]
   }
 }

@@ -3,33 +3,639 @@ backend:
   repo: your-user/your-repo
   branch: main
 
+local_backend: true
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "home"
-    label: "Home"
+  # HOME PAGE
+  - name: home
+    label: Home
     files:
-      - label: "Home LV"
-        name: "home_lv"
-        file: "content/pages/home/lv.json"
+      - label: Home (LV)
+        name: home_lv
+        file: content/pages/home/lv.json
+        format: json
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "text" }
-          - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
+              - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
+              - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
+              - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+          - label: Intro
+            name: intro
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text, required: false }
+          - label: Industries
+            name: industriesSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Text, name: ctaText, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Why Choose (New Grid)
+            name: whyChoose
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Ownership Section
+            name: ownershipSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Button Text, name: buttonText, widget: string, required: false }
+              - { label: Button Href, name: buttonHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Testimonials Section
+            name: testimonialsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Quote, name: quote, widget: text }
+                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Author Role, name: authorRole, widget: string, required: false }
+                  - { label: Company, name: company, widget: string, required: false }
+                  - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+          - label: Stats
+            name: stats
+            widget: object
+            required: false
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+          - label: CTA Band
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
 
-      - label: "Home EN"
-        name: "home_en"
-        file: "content/pages/home/en.json"
+      - label: Home (EN)
+        name: home_en
+        file: content/pages/home/en.json
+        format: json
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "text" }
-          - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
+              - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
+              - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
+              - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+          - label: Intro
+            name: intro
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text, required: false }
+          - label: Industries
+            name: industriesSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Text, name: ctaText, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Why Choose (New Grid)
+            name: whyChoose
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Ownership Section
+            name: ownershipSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Button Text, name: buttonText, widget: string, required: false }
+              - { label: Button Href, name: buttonHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Testimonials Section
+            name: testimonialsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Quote, name: quote, widget: text }
+                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Author Role, name: authorRole, widget: string, required: false }
+                  - { label: Company, name: company, widget: string, required: false }
+                  - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+          - label: Stats
+            name: stats
+            widget: object
+            required: false
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+          - label: CTA Band
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
 
-      - label: "Home RU"
-        name: "home_ru"
-        file: "content/pages/home/ru.json"
+      - label: Home (RU)
+        name: home_ru
+        file: content/pages/home/ru.json
+        format: json
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "text" }
-          - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
+              - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
+              - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
+              - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+          - label: Intro
+            name: intro
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text, required: false }
+          - label: Industries
+            name: industriesSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Text, name: ctaText, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Why Choose (New Grid)
+            name: whyChoose
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Ownership Section
+            name: ownershipSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Button Text, name: buttonText, widget: string, required: false }
+              - { label: Button Href, name: buttonHref, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+                  - { label: Icon, name: icon, widget: string, required: false }
+          - label: Testimonials Section
+            name: testimonialsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Quote, name: quote, widget: text }
+                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Author Role, name: authorRole, widget: string, required: false }
+                  - { label: Company, name: company, widget: string, required: false }
+                  - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+          - label: Stats
+            name: stats
+            widget: object
+            required: false
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+          - label: CTA Band
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+              - { label: CTA Href, name: ctaHref, widget: string, required: false }
+
+  # SERVICES PAGE
+  - name: services
+    label: Services
+    files:
+      - label: Services (LV)
+        name: services_lv
+        file: content/pages/services/lv.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Intro, name: intro, widget: text, required: false }
+          - label: Sections
+            name: sections
+            widget: list
+            summary: "{{fields.title}} ({{fields.id}})"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: "What You Get Title", name: whatYouGetTitle, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                required: false
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+          - label: Why Outsource Section
+            name: whyOutsourceSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+
+      - label: Services (EN)
+        name: services_en
+        file: content/pages/services/en.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Intro, name: intro, widget: text, required: false }
+          - label: Sections
+            name: sections
+            widget: list
+            summary: "{{fields.title}} ({{fields.id}})"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: "What You Get Title", name: whatYouGetTitle, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                required: false
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+          - label: Why Outsource Section
+            name: whyOutsourceSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+
+      - label: Services (RU)
+        name: services_ru
+        file: content/pages/services/ru.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Intro, name: intro, widget: text, required: false }
+          - label: Sections
+            name: sections
+            widget: list
+            summary: "{{fields.title}} ({{fields.id}})"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: "What You Get Title", name: whatYouGetTitle, widget: string, required: false }
+              - label: Items
+                name: items
+                widget: list
+                required: false
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+          - label: Why Outsource Section
+            name: whyOutsourceSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+
+  # ABOUT
+  - name: about
+    label: About
+    files:
+      - { label: About (LV), name: about_lv, file: content/pages/about/lv.json, format: json, fields: &about_fields
+          [
+            { label: Hero, name: hero, widget: object, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Subtitle, name: subtitle, widget: text, required: false }
+            ]},
+            { label: Description Paragraphs, name: description, widget: list, required: false },
+            { label: Mission, name: mission, widget: object, required: false, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Text, name: text, widget: text }
+            ]},
+            { label: Values, name: values, widget: object, required: false, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Items, name: items, widget: list, fields: [
+                { label: Title, name: title, widget: string },
+                { label: Text, name: text, widget: text }
+              ]}
+            ]},
+            { label: Expertise, name: expertise, widget: object, required: false, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Items, name: items, widget: list, fields: [
+                { label: Title, name: title, widget: string },
+                { label: Text, name: text, widget: text }
+              ]}
+            ]},
+            { label: Language Support Text, name: languageSupportText, widget: text, required: false }
+          ] }
+      - { label: About (EN), name: about_en, file: content/pages/about/en.json, format: json, fields: *about_fields }
+      - { label: About (RU), name: about_ru, file: content/pages/about/ru.json, format: json, fields: *about_fields }
+
+  # CONTACT
+  - name: contact
+    label: Contact
+    files:
+      - label: Contact (LV)
+        name: contact_lv
+        file: content/pages/contact/lv.json
+        format: json
+        fields: &contact_fields
+          - label: Contact Page
+            name: contactPage
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: CTA Text, name: ctaText, widget: text, required: false }
+              - { label: Aside Title, name: asideTitle, widget: string, required: false }
+              - { label: Aside Subtitle, name: asideSubtitle, widget: text, required: false }
+              - { label: Success Title, name: successTitle, widget: string, required: false }
+              - { label: Success Body, name: successBody, widget: text, required: false }
+              - label: Form
+                name: form
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Company, name: company, widget: string }
+                  - { label: Email, name: email, widget: string }
+                  - { label: Phone, name: phone, widget: string }
+                  - { label: Service Label, name: serviceLabel, widget: string }
+                  - { label: Service Options, name: serviceOptions, widget: list }
+                  - { label: Standard Label, name: standardLabel, widget: string }
+                  - { label: Standard Options, name: standardOptions, widget: list }
+                  - { label: Message Label, name: message, widget: string }
+                  - { label: GDPR Text, name: gdprText, widget: text }
+                  - { label: Submit Label, name: submit, widget: string }
+      - { label: Contact (EN), name: contact_en, file: content/pages/contact/en.json, format: json, fields: *contact_fields }
+      - { label: Contact (RU), name: contact_ru, file: content/pages/contact/ru.json, format: json, fields: *contact_fields }
+
+  # FAQ
+  - name: faq
+    label: FAQ
+    files:
+      - label: FAQ (LV)
+        name: faq_lv
+        file: content/pages/faq/lv.json
+        format: json
+        fields: &faq_fields
+          - { label: Hero, name: hero, widget: object, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Subtitle, name: subtitle, widget: text, required: false }
+            ] }
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }
+          - label: CTA Band
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Button Text, name: buttonText, widget: string }
+      - { label: FAQ (EN), name: faq_en, file: content/pages/faq/en.json, format: json, fields: *faq_fields }
+      - { label: FAQ (RU), name: faq_ru, file: content/pages/faq/ru.json, format: json, fields: *faq_fields }
+
+  # PRIVACY
+  - name: privacy
+    label: Privacy
+    files:
+      - label: Privacy (LV)
+        name: privacy_lv
+        file: content/pages/privacy/lv.json
+        format: json
+        fields: &privacy_fields
+          - { label: Hero, name: hero, widget: object, fields: [
+              { label: Title, name: title, widget: string },
+              { label: Subtitle, name: subtitle, widget: text, required: false },
+              { label: Last Updated, name: lastUpdated, widget: string, required: false }
+            ] }
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - { label: Number, name: number, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false }
+              - { label: Bullet Items, name: items, widget: list, required: false }
+      - { label: Privacy (EN), name: privacy_en, file: content/pages/privacy/en.json, format: json, fields: *privacy_fields }
+      - { label: Privacy (RU), name: privacy_ru, file: content/pages/privacy/ru.json, format: json, fields: *privacy_fields }

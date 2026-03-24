@@ -25,7 +25,7 @@ export default function SectionHeading({
       {eyebrow && (
         <p className="text-sm uppercase tracking-wide text-accent/90">{eyebrow}</p>
       )}
-      <h2 className="text-3xl md:text-4xl font-semibold leading-tight">{title}</h2>
+      <h2 className="text-[26px] md:text-4xl font-semibold leading-tight heading-balance heading-wrap">{title}</h2>
       {subtitle && (
         <p className="text-base md:text-lg text-neutral-600">{subtitle}</p>
       )}

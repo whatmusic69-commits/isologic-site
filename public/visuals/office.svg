@@ -5,8 +5,8 @@
       <stop offset="100%" stop-color="#101010"/>
     </linearGradient>
     <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d1b256" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#d1b256" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#2D8FD0" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#006DB6" stop-opacity="0.06"/>
     </linearGradient>
   </defs>
   <rect width="100%" height="100%" fill="url(#bg)"/>
@@ -27,4 +27,3 @@
     <rect x="780" y="202" width="130" height="346" rx="2"/>
   </g>
 </svg>
-

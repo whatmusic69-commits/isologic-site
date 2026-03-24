@@ -1,24 +1,22 @@
 {
-  "hero": { "title": "About ISOLOGIC", "subtitle": "Independent auditor and advisor focused on practical outcomes." },
+  "hero": {
+    "title": "About ISOLogic",
+    "subtitle": "ISOLogic is a Latvian (Riga) based consultancy specialising in the development, implementation, and maintenance of ISO management systems. We provide independent compliance audits and lead auditing services for small and medium-sized organisations across Europe and internationally."
+  },
+  "description": [
+    "Our approach is professional, practical, and objective. We support organisations in meeting ISO standards (ISO 9001, EN 9100 and others), help them improve tender success, make internal systems easier to manage while strengthening risk management and operational performance."
+  ],
   "mission": {
-    "title": "Our mission",
-    "text": "Enable organizations to identify risks early, implement effective controls and meet regulations without slowing the business."
+    "title": "Our Mission: Guidance with Logic. Support in Every Step.",
+    "text": "At ISOLogic, we transform complex international standards into practical business tools. We are committed to a no-nonsense consultancy model where logic dictates the design and support defines the relationship."
   },
   "values": {
-    "title": "Values",
+    "title": "Our Mission & Values",
     "items": [
-      { "title": "Independence", "text": "Objective conclusions without compromise." },
-      { "title": "Accuracy", "text": "Evidence-based assessments and clear recommendations." },
-      { "title": "Pragmatism", "text": "Actionable solutions that work in reality." }
+      { "title": "Practical Logic", "text": "Systems built for people, not just for auditors." },
+      { "title": "Hands-on Support", "text": "On-site and remote guidance throughout the entire certification lifecycle and beyond." },
+      { "title": "Integrity & Transparency", "text": "We provide honest, direct feedback, helping you identify real opportunities for improvement." }
     ]
   },
-  "expertise": {
-    "title": "Expertise",
-    "items": [
-      { "title": "Financial audit", "text": "Preparation and support throughout the external audit cycle." },
-      { "title": "Internal controls", "text": "Implementation and evaluation aligned with COSO principles." },
-      { "title": "Regulatory compliance", "text": "Interpretation and implementation plans for sector regulations." }
-    ]
-  }
+  "languageSupportText": "To ensure seamless integration into your business, all documentation, training, and communication can be delivered in English, Latvian, or Russian."
 }
-

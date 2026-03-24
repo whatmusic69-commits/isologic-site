@@ -1,23 +1,22 @@
 {
-  "hero": { "title": "Par ISOLOGIC", "subtitle": "Neatkarīgs auditors un konsultants ar fokusēšanos uz praktisku rezultātu." },
+  "hero": {
+    "title": "Par ISOLogic",
+    "subtitle": "ISOLogic ir Latvijā (Rīgā) bāzēta neatkarīga ISO konsultāciju prakse, kas specializējas ISO pārvaldības sistēmu izstrādē, ieviešanā un uzturēšanā. Tiek nodrošināti neatkarīgi atbilstības auditi un vadošā auditora pakalpojumi maziem un vidējiem uzņēmumiem Eiropā un starptautiski."
+  },
+  "description": [
+    "Mūsu pieeja ir profesionāla, praktiska un objektīva. Mēs palīdzam organizācijām izpildīt ISO standartu prasības (ISO 9001, EN 9100 u.c.), uzlabot panākumus iepirkumos un vienkāršot iekšējās sistēmas, vienlaikus stiprinot risku pārvaldību un darbības efektivitāti."
+  ],
   "mission": {
-    "title": "Mūsu misija",
-    "text": "Palīdzēt uzņēmumiem savlaicīgi identificēt riskus, ieviest efektīvus kontroles mehānismus un droši atbilst regulām, saglabājot biznesa tempu."
+    "title": "Mūsu misija: Loģiska vadība. Atbalsts ikvienā posmā.",
+    "text": "ISOLogic pārveido sarežģītus starptautiskos standartus praktiskos biznesa instrumentos. Mēs pieturamies pie tiešas konsultāciju modeļa, kur loģika nosaka sistēmas izveidi, bet atbalsts – sadarbību."
   },
   "values": {
-    "title": "Vērtības",
+    "title": "Mūsu misija un vērtības",
     "items": [
-      { "title": "Neatkarība", "text": "Objektīvi secinājumi bez kompromisiem." },
-      { "title": "Precizitāte", "text": "Dati, pierādījumi un skaidri ieteikumi." },
-      { "title": "Pragmatika", "text": "Praktiski risinājumi, kas darbojas reālajā dzīvē." }
+      { "title": "Praktiska loģika", "text": "Sistēmas, kas radītas cilvēkiem, nevis tikai auditoriem." },
+      { "title": "Aktīvs atbalsts", "text": "Klātienes un attālinātas konsultācijas visā sertifikācijas ciklā un pēc tās." },
+      { "title": "Godīgums un atklātība", "text": "Skaidra un tieša atgriezeniskā saite, kas palīdz saskatīt reālas uzlabojumu iespējas." }
     ]
   },
-  "expertise": {
-    "title": "Ekspertīze",
-    "items": [
-      { "title": "Finanšu audits", "text": "Sagatavošanās un atbalsts ārējā audita ciklā." },
-      { "title": "Iekšējie kontroles", "text": "COSO pamatprincipu ieviešana un novērtēšana." },
-      { "title": "Regulatīvā atbilstība", "text": "Nozaru prasību interpretācija un ieviešanas plāni." }
-    ]
-  }
+  "languageSupportText": "Lai nodrošinātu maksimālu ērtību, visa dokumentācija, apmācības un komunikācija ir pieejama latviešu, angļu vai krievu valodā."
 }

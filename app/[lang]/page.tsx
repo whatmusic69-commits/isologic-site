@@ -7,6 +7,15 @@ import ServiceCard from "@/components/ui/service-card";
 import Reveal from "@/components/ui/reveal";
 import Button from "@/components/ui/button";
 import VisualPanel from "@/components/ui/visual-panel";
+import CtaBand from "@/components/ui/cta-band";
+import FeatureGrid from "@/components/ui/feature-grid";
+import StandardsSection from "@/components/ui/standards-section";
+import OwnershipSection from "@/components/ui/ownership-section";
+import TestimonialsSection from "@/components/ui/testimonials-section";
+import IndustriesSection from "@/components/ui/industries-section";
+import type { Metadata } from "next";
+import { buildAlternates, truncate } from "@/lib/seo";
+import { languages } from "@/lib/i18n";
 
 type HomeContent = {
   hero: {
@@ -20,6 +29,11 @@ type HomeContent = {
   intro?: { title: string; text?: string };
   servicesPreview?: { title: string; cards: Array<{ title: string; description: string }> };
   benefits?: { title: string; items: Array<{ title: string; text: string }> };
+  whyChoose?: { title: string; subtitle?: string; items: Array<{ title: string; description: string; icon?: string }> };
+  standardsSection?: { title: string; subtitle?: string; ctaText?: string; ctaHref?: string; items: Array<{ title: string; icon?: string }> };
+  ownershipSection?: { title: string; subtitle?: string; buttonText?: string; buttonHref?: string; items: Array<{ title: string; eyebrow?: string; description?: string; icon?: string }> };
+  testimonialsSection?: { title: string; subtitle?: string; rotationIntervalMs?: number; items: Array<{ quote: string; authorName: string; authorRole?: string; company?: string; rating?: number }> };
+  industriesSection?: { title: string; subtitle?: string; items: Array<{ title: string; icon?: string }> };
   stats?: { items: Array<{ value: string; label: string }> };
   ctaBand?: { title: string; subtitle?: string; ctaLabel?: string; ctaHref?: string };
 };
@@ -62,12 +76,19 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* Decorative visual panel */}
-      <section className="section">
-        <VisualPanel src="/visuals/office.svg" />
-      </section>
+      {content.industriesSection && (
+        <IndustriesSection title={content.industriesSection.title} subtitle={content.industriesSection.subtitle} items={content.industriesSection.items} />
+      )}
 
-      {content.servicesPreview && (
+      {content.standardsSection ? (
+        <StandardsSection
+          title={content.standardsSection.title}
+          subtitle={content.standardsSection.subtitle}
+          ctaText={content.standardsSection.ctaText}
+          ctaHref={content.standardsSection.ctaHref}
+          items={content.standardsSection.items}
+        />
+      ) : content.servicesPreview ? (
         <section className="section">
           <Reveal>
             <SectionHeading alignment="left" title={content.servicesPreview.title} />
@@ -80,9 +101,12 @@ export default async function HomePage({
             ))}
           </div>
         </section>
-      )}
+      ) : null}
 
-      {content.benefits && (
+      {content.whyChoose ? (
+        <FeatureGrid title={content.whyChoose.title} subtitle={content.whyChoose.subtitle} items={content.whyChoose.items} />
+      ) : content.benefits ? (
+        // Fallback to the previous layout if legacy content is present
         <section className="section">
           <Reveal>
             <SectionHeading alignment="left" title={content.benefits.title} />
@@ -98,7 +122,7 @@ export default async function HomePage({
             ))}
           </div>
         </section>
-      )}
+      ) : null}
 
       {content.stats && content.stats.items.length > 0 && (
         <section className="section-alt">
@@ -107,7 +131,7 @@ export default async function HomePage({
               {content.stats.items.map((s, i) => (
                 <Reveal key={i}>
                   <div className="card card-hover p-6 text-center">
-                    <div className="text-2xl md:text-3xl font-semibold text-accent">{s.value}</div>
+                    <div className="text-2xl md:text-3xl font-semibold text-black">{s.value}</div>
                     <div className="mt-1 text-sm text-neutral-600">{s.label}</div>
                   </div>
                 </Reveal>
@@ -117,21 +141,51 @@ export default async function HomePage({
         </section>
       )}
 
+      {content.ownershipSection && (
+        <OwnershipSection
+          title={content.ownershipSection.title}
+          subtitle={content.ownershipSection.subtitle}
+          buttonText={content.ownershipSection.buttonText}
+          buttonHref={content.ownershipSection.buttonHref}
+          items={content.ownershipSection.items}
+        />
+      )}
+
+      {content.testimonialsSection && content.testimonialsSection.items?.length > 0 && (
+        <TestimonialsSection
+          title={content.testimonialsSection.title}
+          subtitle={content.testimonialsSection.subtitle}
+          rotationIntervalMs={content.testimonialsSection.rotationIntervalMs}
+          items={content.testimonialsSection.items}
+        />
+      )}
+
       {content.ctaBand && (
         <section className="section-narrow">
-          <div className="panel-dark card-hover p-8 md:p-10 text-center">
-            <h3 className="text-2xl font-semibold">{content.ctaBand.title}</h3>
-            {content.ctaBand.subtitle && (
-              <p className="mt-2 text-neutral-300">{content.ctaBand.subtitle}</p>
-            )}
-            {content.ctaBand.ctaLabel && content.ctaBand.ctaHref && (
-              <div className="mt-6">
-                <a href={content.ctaBand.ctaHref} className="btn btn-primary">{content.ctaBand.ctaLabel}</a>
-              </div>
-            )}
-          </div>
+          <CtaBand
+            title={content.ctaBand.title}
+            subtitle={content.ctaBand.subtitle}
+            ctaLabel={content.ctaBand.ctaLabel}
+            ctaHref={content.ctaBand.ctaHref}
+          />
         </section>
       )}
     </main>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLang(lang)) return {};
+  const content = await getPageContent<HomeContent>("home", lang);
+  const title = content?.hero?.title || "Home";
+  const description = truncate(content?.hero?.subtitle || content?.intro?.text || "");
+  const { base, langs } = buildAlternates("");
+  return {
+    title,
+    description: description || undefined,
+    alternates: { canonical: `${base}/${lang}`, languages: langs },
+    openGraph: { title, description: description || undefined, url: `${base}/${lang}` },
+    twitter: { title, description: description || undefined },
+  };
 }

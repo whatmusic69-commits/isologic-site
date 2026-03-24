@@ -31,7 +31,7 @@ export default function LanguageSwitcher({ current, onDark = false }: { current:
           className={clsx(
             "text-xs md:text-sm px-2 py-1 rounded-md transition-colors",
             lng === current
-              ? "bg-[color:var(--accent)] text-[color:var(--foreground)]"
+              ? "bg-[color:var(--accent)] text-[color:var(--text-on-dark)]"
               : "text-neutral-700 hover:bg-[color:var(--surface-muted)]"
           )}
           aria-current={lng === current}

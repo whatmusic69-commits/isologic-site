@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Privacy Policy",
+    "subtitle": "This Privacy Policy explains how we collect, process and protect your personal data.",
+    "lastUpdated": "Last updated: [Insert Date]"
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title": "General Provisions",
+      "paragraphs": [
+        "This Privacy Policy explains how ISOLogic (the Controller) collects, processes, and protects your personal data when you visit our website or use our services. We process data in accordance with the EU General Data Protection Regulation (GDPR)."
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Data Controller",
+      "items": [
+        "Company Name: [Insert Legal Name]",
+        "Registration No.: [Insert Number]",
+        "Address: Riga, Latvia",
+        "Email: info@isologic.lv"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Data We Collect",
+      "paragraphs": [
+        "We collect information provided via our contact forms, including your name, company name, email address, and phone number."
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Purpose & Legal Basis",
+      "paragraphs": [
+        "We process your data based on your consent (Art 6.1.a GDPR) to respond to your inquiries and provide consultancy or auditing services."
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Data Retention",
+      "paragraphs": [
+        "Data is stored as long as necessary to fulfill the inquiry or as required by Latvian accounting and tax laws (typically 5 years for financial records)."
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Your Rights",
+      "paragraphs": [
+        "Under GDPR, you have the right to access, rectify, or erase your data, and the right to withdraw consent at any time. You may also file a complaint with the Data State Inspectorate (DVI) at dvi.gov.lv."
+      ]
+    }
+  ]
+}

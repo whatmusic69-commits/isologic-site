@@ -1,23 +1,82 @@
 {
-  "hero": { "title": "Pakalpojumi", "subtitle": "Skaidrs apjoms, efektīva piegāde un uzticams rezultāts." },
-  "services": {
-    "title": "Ko mēs darām",
+  "hero": {
+    "title": "Pakalpojumi",
+    "subtitle": "Strukturēti, augstas kvalitātes ISO pakalpojumi sertifikācijai un ilgtermiņa atbilstībai.",
+    "intro": "Ārpakalpojuma ekspertīze, pielāgota jūsu procesiem — ar skaidru piegādi un atbildību."
+  },
+  "sections": [
+    {
+      "id": "implementation",
+      "title": "ISO ieviešana",
+      "subtitle": "Jūsu ceļš uz sertifikāciju – loģiski un ar atbalstu.",
+      "description": "Ja zināt, kurš standarts jums nepieciešams, bet sistēmas izveide šķiet sarežģīta, ieviešanas atbalsts ir piemērots risinājums. Netiek piedāvāti tikai dokumentu paraugi — darbs notiek kā ārējam ISO partnerim, kopā ar jūsu komandu izstrādājot sistēmu, kas balstīta uz reālajiem uzņēmuma procesiem.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
+      "items": [
+        "Atbilstības analīze (Gap Analysis): padziļināts esošās situācijas izvērtējums atbilstoši standarta prasībām",
+        "Dokumentācijas izstrāde: skaidru un praktisku procedūru izveide bez liekas birokrātijas",
+        "Darbinieku apmācība: jūsu komanda izprot un pārliecinoši piemēro jaunos procesus",
+        "Iekšējais audits: rūpīga sistēmas pārbaude pirms sertifikācijas audita",
+        "Atbalsts sertifikācijas procesā: profesionāls atbalsts un konsultācijas ārējā audita laikā"
+      ]
+    },
+    {
+      "id": "internal-auditing",
+      "title": "Iekšējais audits",
+      "subtitle": "Obligāta prasība, kas kļūst par reālu biznesa vērtību.",
+      "description": "Iekšējais audits ir būtiska prasība ISO sertifikācijas uzturēšanai. Daudzi mazie un vidējie uzņēmumi izvēlas šo funkciju nodot ārpakalpojumā, lai nodrošinātu objektivitāti, ievērotu neatkarības principu un iegūtu skaidru skatījumu uz saviem procesiem no malas.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
+      "items": [
+        "Audita programmas plānošana: strukturēts gada plāns visām nepieciešamajām jomām",
+        "Izpilde un ziņošana: pārskatāmi atzinumi ar sakņu cēloņu analīzi un praktiskiem ieteikumiem",
+        "Atbalsts korektīvajām darbībām: praktiska palīdzība neatbilstību novēršanā un uzraudzībā"
+      ]
+    },
+    {
+      "id": "iso-maintenance",
+      "title": "ISO uzturēšana (Ārpakalpojuma kvalitātes vadītājs)",
+      "subtitle": "Sertifikācijas uzturēšana, kamēr jūs koncentrējaties uz biznesa attīstību.",
+      "description": "Sertifikācijas iegūšana ir tikai sākums. Uzturēšanas pakalpojums nodrošina nepārtrauktu ekspertu atbalstu visa gada garumā, palīdzot saglabāt atbilstību bez papildu sloga jūsu komandai.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
+      "items": [
+        "Regulāras sistēmas pārbaudes: lai novērstu atbilstības pasliktināšanos",
+        "Sagatavošanās uzraudzības auditiem: komandas un dokumentācijas gatavība trešās puses auditam",
+        "Izmaiņu uzraudzība: dokumentācijas aktualizēšana saskaņā ar standartu un normatīvo aktu izmaiņām",
+        "Nepārtraukts atbalsts: klātienes vizītes un prioritāra saziņa e-pastā un pa tālruni"
+      ]
+    },
+    {
+      "id": "lead-auditing",
+      "title": "Vadošā auditora pakalpojumi",
+      "subtitle": "Ekspertīze piegādes ķēdēm (otrā puse) un trešajai pusei.",
+      "description": "Papildus konsultācijām tiek nodrošināta augsta līmeņa audita ekspertīze akreditētām sertifikācijas iestādēm un starptautiskām organizācijām. Kā sertificēts vadošais auditors (CQI un IRCA) tiek veikti:",
+      "items": [
+        "Trešās puses auditi: neatkarīgi atbilstības novērtējumi un sertifikācijas auditi (piem., ISO 9001 u.c.)",
+        "Otrās puses (piegādātāju) auditi: kritisko piegādātāju padziļināta novērtēšana, lai mazinātu riskus un nodrošinātu atbilstību piegādes ķēdē"
+      ]
+    }
+  ],
+  "standardsSection": {
+    "title": "Standarti, ar kuriem mēs strādājam",
+    "intro": "Mēs nodrošinām specializētas konsultācijas atbilstoši visplašāk atzītajiem starptautiskajiem standartiem:",
     "items": [
-      { "title": "Gatavība ārējam auditam", "description": "Pilns sagatavošanās cikls: dokumenti, walkthrough un sadarbība ar auditoriem." },
-      { "title": "Kontroļu izstrāde un pārskats", "description": "Kontroles sistēmas atbilstoši COSO, pielāgotas jūsu riskiem." },
-      { "title": "Atbilstības konsultācijas", "description": "Trūkumu analīze, rīcības plāni un nepārtraukts atbalsts." },
-      { "title": "Politikas un procedūras", "description": "Praktiskas politikas un SOP, kas ir skaidras un lietojamas." },
-      { "title": "Riska novērtēšana", "description": "Strukturēta pieeja risku identificēšanai un prioritizēšanai." },
-      { "title": "Apmācības un izpratne", "description": "Mērķētas sesijas, lai ieviestu kontroles un atbilstību komandās." }
+      "ISO 9001 (Kvalitātes vadība)",
+      "EN 9100 / AS9100 (Aviācija, kosmoss un aizsardzība)",
+      "ISO 14001 (Vides pārvaldība)",
+      "ISO 27001 (Informācijas drošība)",
+      "ISO 45001 (Arodveselība un darba drošība)",
+      "ISO 22000 (Pārtikas drošības pārvaldības sistēma) / HACCP"
     ]
   },
-  "process": {
-    "title": "Kā mēs strādājam",
-    "steps": [
-      { "title": "Iepazīšanās", "text": "Mērķi, ierobežojumi un pašreizējais stāvoklis." },
-      { "title": "Novērtējums", "text": "Datu balstīta analīze, lai noteiktu trūkumus un prioritātes." },
-      { "title": "Ieviešana", "text": "Praktiskas darbības, skaidra atbildība un termiņi." }
+  "whyOutsourceSection": {
+    "title": "Kāpēc izvēlēties ISO pārvaldības ārpakalpojumu?",
+    "intro": "Iekšējā ISO pārvaldība var novest pie \"atbilstības inerces\", kad sistēma kļūst par nastu, nevis vērtību. ISOLogic nodrošina pragmatisku un izturīgu alternatīvu:",
+    "items": [
+      "Izmaksu efektivitāte: piekļuve vadošā auditora kompetencei par daļu no pilnas slodzes kvalitātes vadītāja izmaksām",
+      "Darbības nepārtrauktība: netiek apdraudēta sertifikācija, ja uzņēmumu pamet galvenais darbinieks — tiek nodrošināta zināšanu nepārtrauktība",
+      "Neatkarība: objektīvs, neatkarīgs skats, kas atbilst ISO prasībām un kam uzticas sertifikācijas iestādes",
+      "Fokuss uz ieņēmumiem: jūsu komanda koncentrējas uz pamatbiznesu, kamēr mēs pārvaldām atbilstības prasības",
+      "Labākā prakse: izmantojam pieredzi no Eiropas nozarēm, lai identificētu neefektivitātes",
+      "Daudzvalodu atbalsts un starptautiska pieeja: dokumentācija un saziņa latviešu, krievu un angļu valodā atbilstoši jūsu tirgus vajadzībām"
     ]
   }
 }
-

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" aria-hidden="true">
+  <defs>
+    <clipPath id="clip">
+      <rect x="0" y="0" width="512" height="512" rx="96" ry="96" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="512" height="512" fill="#fff"/>
+    <!-- Zoom image slightly and center it -->
+    <image x="-38.4" y="-38.4" width="588.8" height="588.8" preserveAspectRatio="xMidYMid slice"
+           href="data:image/png;base64,${B64}"/>
+  </g>
+</svg>
+

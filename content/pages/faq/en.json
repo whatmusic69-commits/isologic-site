@@ -1,10 +1,45 @@
 {
-  "hero": { "title": "Frequently asked questions", "subtitle": "Clear answers to common topics." },
+  "hero": { "title": "Frequently Asked Questions" },
   "items": [
-    { "question": "What industries do you work with?", "answer": "We support financial services, technology and professional services, with experience applicable to other sectors." },
-    { "question": "Do you provide ongoing compliance support?", "answer": "Yes. We offer periodic reviews and on-call advisory for internal controls and regulatory changes." },
-    { "question": "Can you coordinate with our external auditors?", "answer": "Absolutely. We prepare documentation and liaise to streamline requests and walkthroughs." },
-    { "question": "How do engagements typically start?", "answer": "We begin with a focused discovery to understand objectives, timelines and current state, then propose a clear scope." }
-  ]
+    {
+      "question": "How can an ISO consultant help my business?",
+      "answer": "As a specialized ISO consultant in Riga, Latvia we provide the expertise needed to build a lean Quality Management System (QMS). We guide you through the entire ISO implementation process, ensuring your business meets the requirements for ISO 9001, EN 9100, and other key standards."
+    },
+    {
+      "question": "Why is ISO 9001 certification important?",
+      "answer": "ISO 9001 certification is a global benchmark for quality. It improves internal efficiency, reduces waste, and is often a mandatory \"ticket to trade\" for international supply chains and government tenders."
+    },
+    {
+      "question": "What is the difference between AS 9100 and EN 9100?",
+      "answer": "Both refer to the same aerospace quality standard. AS 9100 is the American designation, while EN 9100 is the European version used by companies in Latvia and across Europe."
+    },
+    {
+      "question": "Why is an ISO internal audit essential?",
+      "answer": "An ISO internal audit (first party audit) is a mandatory requirement to maintain your certificate. Outsourcing this to an independent expert ensures total objectivity and identifies risks before your official surveillance audit (third party audit)."
+    },
+    {
+      "question": "How long is the ISO implementation process?",
+      "answer": "ISO implementation and certification typically take 3-12 months, depending on organizational size, complexity, and existing processes. Small businesses with simple, existing procedures may achieve this in 3–6 months, while larger or more complex organisations usually require 6–18 months."
+    },
+    {
+      "question": "What is an ISO Lead Auditor?",
+      "answer": "An ISO Lead Auditor is a certified professional qualified to lead teams in assessing an organisation's management system against specific ISO standards (e.g., 9001, 27001)."
+    },
+    {
+      "question": "What is ISO system maintenance?",
+      "answer": "ISO maintenance is a retainer service where we act as your outsourced Quality Manager. We handle documentation updates, regulatory monitoring, and audit preparation so your staff can focus on core operations."
+    },
+    {
+      "question": "Can ISO consultancy and auditing be done remotely?",
+      "answer": "Absolutely. While we are a consultant based in Riga and available for on-site visits, some of the implementation and documentation review can be handled remotely via secure digital platforms. This flexibility allows us to support organisations across Europe and internationally while minimizing travel costs for our clients."
+    },
+    {
+      "question": "Will ISO certification increase my company’s bureaucracy?",
+      "answer": "Not with ISOLogic. Our \"Guidance with Logic\" approach focuses on lean ISO implementation. We replace complex, redundant paperwork with practical digital documentation and efficient processes that actually make your internal systems easier to manage."
+    }
+  ],
+  "ctaBand": {
+    "title": "Still have questions?",
+    "buttonText": "Contact us"
+  }
 }
-

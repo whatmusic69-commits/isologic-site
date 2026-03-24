@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Lang } from "@/lib/i18n";
 import { ui } from "@/lib/ui";
@@ -31,18 +32,21 @@ export default function Navbar({ lang }: { lang: Lang }) {
   const links = [
     { href: `/${lang}`, label: t.home, match: `/${lang}` },
     { href: `/${lang}/about`, label: t.about, match: `/${lang}/about` },
-    { href: `/${lang}/services`, label: t.services, match: `/${lang}/services`, dropdown: t.servicesDropdown.items.map((i) => ({ label: i.label, href: `/${lang}/services/${i.slug}` })) },
-    { href: `/${lang}/faq`, label: t.faq, match: `/${lang}/faq` },
+    { href: `/${lang}/services`, label: t.services, match: `/${lang}/services`, dropdown: t.servicesDropdown.items.map((i) => ({ label: i.label, href: `/${lang}/services#${i.slug}` })) },
     { href: `/${lang}/contact`, label: t.contact, match: `/${lang}/contact` },
+    { href: `/${lang}/faq`, label: t.faq, match: `/${lang}/faq` },
   ];
 
   function isActive(match: string) {
     if (!pathname) return false;
+    // Home should only be active on exact match, not on subpaths
+    if (match === `/${lang}`) return pathname === match;
+    // Other routes are active on exact match or nested paths
     return pathname === match || pathname.startsWith(match + "/");
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-[var(--background)] text-[var(--foreground)] border-b" style={{ borderColor: "var(--border)" }}>
+    <header className="md:sticky md:top-0 z-40 bg-[var(--background)] text-[var(--foreground)] border-b" style={{ borderColor: "var(--border)" }}>
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
           <button
@@ -55,8 +59,8 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <span className="block h-0.5 w-5 bg-current mb-1"></span>
             <span className="block h-0.5 w-5 bg-current"></span>
           </button>
-          <a href={`/${lang}`} className="text-xl font-semibold" title="ISOLOGIC">
-            ISOLOGIC
+          <a href={`/${lang}`} aria-label="ISOLOGIC" className="block" title="ISOLOGIC">
+            <Image src="/Logo.svg" alt="ISOLOGIC" width={120} height={28} />
           </a>
         </div>
 

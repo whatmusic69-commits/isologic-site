@@ -1,10 +1,45 @@
 {
-  "hero": { "title": "Biežāk uzdotie jautājumi", "subtitle": "Skaidras atbildes uz populāriem jautājumiem." },
+  "hero": { "title": "Biežāk uzdotie jautājumi (FAQ)" },
   "items": [
-    { "question": "Ar kādām nozarēm mēs strādājam?", "answer": "Finanšu pakalpojumi, tehnoloģijas un profesionālie pakalpojumi; pieredze pielietojama arī citur." },
-    { "question": "Vai nodrošināt nepārtrauktu atbilstības atbalstu?", "answer": "Jā. Piedāvājam periodiskus pārskatus un konsultācijas par iekšējām kontrolēm un regulējuma izmaiņām." },
-    { "question": "Vai sadarbojaties ar mūsu ārējiem auditoriem?", "answer": "Jā. Sagatavojam dokumentus un koordinējam pieprasījumus un walkthrough procesu." },
-    { "question": "Kā parasti sākas projekts?", "answer": "Sākam ar īsu izpēti par mērķiem, termiņiem un situāciju, tad piedāvājam skaidru apjomu." }
-  ]
+    {
+      "question": "Kā ISO konsultants var palīdzēt manam uzņēmumam?",
+      "answer": "Kā specializēts ISO konsultants Latvijā, mēs nodrošinām zināšanas, kas nepieciešamas, lai izveidotu efektīvu Kvalitātes vadības sistēmu (QMS). Mēs vadām jūs cauri visam ISO ieviešanas procesam, nodrošinot jūsu uzņēmuma atbilstību ISO 9001, EN 9100 un citu būtisku standartu prasībām."
+    },
+    {
+      "question": "Kāpēc ISO 9001 sertifikācija ir svarīga?",
+      "answer": "ISO 9001 sertifikācija ir globāls kvalitātes standarts. Tā uzlabo iekšējo efektivitāti, samazina resursu izšķērdēšanu un bieži vien ir obligāta \"biļete dalībai\" starptautiskās piegādes ķēdēs un valsts iepirkumos."
+    },
+    {
+      "question": "Kāda ir atšķirība starp AS 9100 un EN 9100?",
+      "answer": "Abi nosaukumi attiecas uz vienu un to pašu aviācijas nozares kvalitātes standartu. AS 9100 ir Amerikas apzīmējums, savukārt EN 9100 ir Eiropas versija, ko izmanto uzņēmumi Latvijā un visā Eiropā."
+    },
+    {
+      "question": "Kāpēc ISO iekšējais audits ir būtisks?",
+      "answer": "ISO iekšējais audits ir obligāta prasība sertifikāta uzturēšanai. Šī procesa uzticēšana neatkarīgam ekspertam nodrošina pilnīgu objektivitāti un palīdz identificēt riskus pirms oficiālā uzraudzības audita."
+    },
+    {
+      "question": "Cik ilgs ir ISO ieviešanas process?",
+      "answer": "ISO ieviešana un sertifikācija parasti aizņem no 3 līdz 12 mēnešiem, atkarībā no organizācijas lieluma, sarežģītības un esošajiem procesiem. Mazie uzņēmumi ar vienkāršām procedūrām to var paveikt 3–6 mēnešos, savukārt lielākām organizācijām parasti nepieciešami 6–18 mēneši."
+    },
+    {
+      "question": "Kas ir ISO vadošais auditors (Lead Auditor)?",
+      "answer": "ISO vadošais auditors ir sertificēts profesionālis, kurš ir kvalificēts vadīt auditoru komandas, lai novērtētu organizācijas vadības sistēmu atbilstību konkrētiem ISO standartiem (piemēram, ISO 9001)."
+    },
+    {
+      "question": "Kas ir ISO sistēmas uzturēšana?",
+      "answer": "ISO uzturēšana ir pastāvīgs atbalsta pakalpojums, kurā mēs darbojamies kā jūsu ārpakalpojuma kvalitātes vadītājs. Mēs pārvaldām dokumentācijas atjauninājumus, uzraugām atbilstību regulējumam un gatavojam uzņēmumu auditiem, lai jūsu darbinieki varētu koncentrēties uz pamatdarbību."
+    },
+    {
+      "question": "Vai ISO konsultācijas un auditus var veikt attālināti?",
+      "answer": "Pilnīgi noteikti. Lai gan esam konsultanti Rīgā un esam pieejami klātienes vizītēm, daļu no ieviešanas un dokumentācijas izstrādes var veikt attālināti, izmantojot drošas digitālās platformas. Šī elastība ļauj mums atbalstīt organizācijas visā Eiropā, vienlaikus samazinot ceļošanas izmaksas mūsu klientiem."
+    },
+    {
+      "question": "Vai ISO sertifikācija palielinās mana uzņēmuma birokrātiju?",
+      "answer": "Ar ISOLogic – nē. Mūsu pieeja \"Loģiska vadība\" (Guidance with Logic) ir vērsta uz kompaktu ISO ieviešanu. Mēs aizstājam sarežģītu, lieku papīru kalnus ar praktisku digitālo dokumentāciju un efektīviem procesiem, kas atvieglo iekšējo sistēmu pārvaldību."
+    }
+  ],
+  "ctaBand": {
+    "title": "Palika vēl jautājumi?",
+    "buttonText": "Sazināties"
+  }
 }
-

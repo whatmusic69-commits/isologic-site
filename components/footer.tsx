@@ -20,12 +20,13 @@ export default function Footer({ lang }: { lang: Lang }) {
             <li><Link className="hover:text-accent" href={`/${lang}/services`}>{t.links.services}</Link></li>
             <li><Link className="hover:text-accent" href={`/${lang}/faq`}>{t.links.faq}</Link></li>
             <li><Link className="hover:text-accent" href={`/${lang}/contact`}>{t.links.contact}</Link></li>
+            <li><Link className="hover:text-accent" href={`/${lang}/privacy`}>{t.links.privacy}</Link></li>
           </ul>
         </div>
         <div>
           <p className="text-sm font-semibold text-neutral-900">{t.contact}</p>
           <ul className="mt-3 space-y-1 text-sm text-neutral-700">
-            <li>Email: info@isologic.example</li>
+            <li>Email: info@isologic.lv</li>
             <li>+371 0000 0000</li>
             <li>Riga, Brīvības iela 1</li>
           </ul>

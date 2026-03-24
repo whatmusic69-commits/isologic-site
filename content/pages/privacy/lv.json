@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Privātuma politika",
+    "subtitle": "Šī Privātuma politika skaidro, kā mēs apkopojam, apstrādājam un aizsargājam personas datus.",
+    "lastUpdated": "Atjaunots: [Insert Date]"
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title": "Vispārīgie noteikumi",
+      "paragraphs": [
+        "Šī Privātuma politika skaidro, kā ISOLogic (Pārzinis) vāc, apstrādā un aizsargā jūsu personas datus, kad apmeklējat mūsu tīmekļa vietni vai izmantojat mūsu pakalpojumus. Mēs apstrādājam datus saskaņā ar ES Vispārīgo datu aizsardzības regulu (VDAR)."
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Pārzinis",
+      "items": [
+        "Nosaukums: [Insert Legal Name]",
+        "Reģ. Nr.: [Insert Number]",
+        "Adrese: Rīga, Latvija",
+        "E-pasts: info@isologic.lv"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Dati, kurus mēs apkopojam",
+      "paragraphs": [
+        "Mēs apkopojam informāciju, kas sniegta saziņas formās, tostarp jūsu vārdu, uzvārdu, uzņēmuma nosaukumu, e-pasta adresi un tālruņa numuru."
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Apstrādes nolūks un tiesiskais pamats",
+      "paragraphs": [
+        "Mēs apstrādājam jūsu datus, pamatojoties uz jūsu piekrišanu (VDAR 6.1.a pants), lai atbildētu uz jūsu pieprasījumiem un sniegtu konsultāciju vai audita pakalpojumus."
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Glabāšanas ilgums",
+      "paragraphs": [
+        "Dati tiek glabāti tik ilgi, cik nepieciešams pieprasījuma izpildei vai cik to nosaka Latvijas grāmatvedības un nodokļu likumi (parasti 5 gadi finanšu dokumentiem)."
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Jūsu tiesības",
+      "paragraphs": [
+        "Saskaņā ar VDAR jums ir tiesības piekļūt saviem datiem, pieprasīt to labošanu vai dzēšanu, kā arī jebkurā laikā atsaukt piekrišanu. Jums ir tiesības iesniegt sūdzību Datu valsts inspekcijai (DVI) vietnē dvi.gov.lv."
+      ]
+    }
+  ]
+}

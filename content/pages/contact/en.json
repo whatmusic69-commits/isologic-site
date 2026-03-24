@@ -1,9 +1,38 @@
 {
-  "hero": { "title": "Contact us", "subtitle": "Let’s discuss your audit or compliance priorities." },
-  "details": {
-    "email": "info@isologic.example",
-    "phone": "+44 0000 0000",
-    "address": "Riga, Brīvības iela 1",
-    "ctaLabel": "Send us a message"
+  "contactPage": {
+    "title": "Get Your ISO Certification Working for You",
+    "subtitle": "Whether you are pursuing a new certification, preparing for an upcoming audit, or need an expert to manage your existing system, we provide the logic and support to get you there.",
+    "ctaText": "Let’s discuss how we can help you with ISO standards.",
+    "asideTitle": "Contact Us",
+    "asideSubtitle": "Let’s discuss your ISO requirements.",
+    "successTitle": "✅ Thank you for reaching out.",
+    "successBody": "Your message has been received and will be reviewed shortly. You will be contacted regarding your ISO consultancy request.",
+    "form": {
+      "name": "Name",
+      "company": "Company Name",
+      "email": "Email Address",
+      "phone": "Phone / WhatsApp",
+      "serviceLabel": "Interested in",
+      "serviceOptions": [
+        "ISO Implementation",
+        "Internal Audit Support",
+        "ISO Maintenance",
+        "Lead Auditor Services",
+        "Other"
+      ],
+      "standardLabel": "Standard(s)",
+      "standardOptions": [
+        "ISO 9001 (Quality Management)",
+        "EN 9100 (Aerospace)",
+        "ISO 14001 (Environmental)",
+        "ISO 45001 (Health & Safety)",
+        "ISO 22000 (Food Safety)",
+        "ISO 27001 (Information Security)",
+        "Other / Multiple"
+      ],
+      "message": "Message",
+      "gdprText": "I consent to the collection and storage of my data by ISOLogic for the sole purpose of responding to this inquiry. I understand that my information will be handled in accordance with the Privacy Policy.",
+      "submit": "Get a Consultation"
+    }
   }
 }

@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-user/your-repo
+  repo: whatmusic69-commits/isologic-site
   branch: main
 
 local_backend: true

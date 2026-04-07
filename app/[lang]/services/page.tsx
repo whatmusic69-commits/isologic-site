@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { JSX } from "react";
 import { getPageContent } from "@/lib/content";
 import { isValidLang } from "@/lib/i18n";
 import SectionHeading from "@/components/ui/section-heading";

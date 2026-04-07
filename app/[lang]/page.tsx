@@ -156,12 +156,12 @@ export default async function HomePage({
         />
       )}
 
-      {false && content.testimonialsSection && content.testimonialsSection.items?.length > 0 && (
+      {false && ((content.testimonialsSection?.items?.length ?? 0) > 0) && (
         <TestimonialsSection
-          title={content.testimonialsSection.title}
-          subtitle={content.testimonialsSection.subtitle}
-          rotationIntervalMs={content.testimonialsSection.rotationIntervalMs}
-          items={content.testimonialsSection.items}
+          title={content.testimonialsSection?.title ?? ""}
+          subtitle={content.testimonialsSection?.subtitle}
+          rotationIntervalMs={content.testimonialsSection?.rotationIntervalMs}
+          items={content.testimonialsSection?.items ?? []}
         />
       )}
 

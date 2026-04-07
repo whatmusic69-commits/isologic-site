@@ -23,6 +23,16 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                required: false
+                field: { label: Paragraph, name: paragraph, widget: text }
+              - label: Checklist
+                name: checklist
+                widget: list
+                required: false
+                field: { label: Item, name: item, widget: string }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
@@ -34,6 +44,30 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Text, name: text, widget: text, required: false }
+          - label: Services Preview
+            name: servicesPreview
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Benefits (legacy layout)
+            name: benefits
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
           - label: Industries
             name: industriesSection
             widget: object
@@ -56,6 +90,16 @@ collections:
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Groups
+                name: groups
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field: { label: Item, name: item, widget: string }
               - label: Items
                 name: items
                 widget: list
@@ -142,6 +186,16 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                required: false
+                field: { label: Paragraph, name: paragraph, widget: text }
+              - label: Checklist
+                name: checklist
+                widget: list
+                required: false
+                field: { label: Item, name: item, widget: string }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
@@ -153,6 +207,30 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Text, name: text, widget: text, required: false }
+          - label: Services Preview
+            name: servicesPreview
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Benefits (legacy layout)
+            name: benefits
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
           - label: Industries
             name: industriesSection
             widget: object
@@ -175,6 +253,16 @@ collections:
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Groups
+                name: groups
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field: { label: Item, name: item, widget: string }
               - label: Items
                 name: items
                 widget: list
@@ -261,6 +349,16 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                required: false
+                field: { label: Paragraph, name: paragraph, widget: text }
+              - label: Checklist
+                name: checklist
+                widget: list
+                required: false
+                field: { label: Item, name: item, widget: string }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
@@ -272,6 +370,30 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Text, name: text, widget: text, required: false }
+          - label: Services Preview
+            name: servicesPreview
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Benefits (legacy layout)
+            name: benefits
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
           - label: Industries
             name: industriesSection
             widget: object
@@ -294,6 +416,16 @@ collections:
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
+              - label: Groups
+                name: groups
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field: { label: Item, name: item, widget: string }
               - label: Items
                 name: items
                 widget: list

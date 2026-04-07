@@ -40,12 +40,26 @@ export default async function AboutPage({
       {/* Removed large visual panel section as requested */}
 
       {content.description && content.description.length > 0 && (
-        <section className="section section-tight">
+        // Tighter spacing for intro block
+        <section className="section section-compact">
           <Reveal>
             <div className="card card-hover p-8">
               <div className="space-y-4 text-neutral-700">
                 {content.description.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i}>
+                    {/* Emphasize specific words only on EN as requested */}
+                    {lang === "en"
+                      ? p
+                          .split(/(professional|practical|objective)/gi)
+                          .map((part, idx) =>
+                            /^(professional|practical|objective)$/i.test(part) ? (
+                              <strong key={idx}>{part}</strong>
+                            ) : (
+                              <span key={idx}>{part}</span>
+                            )
+                          )
+                      : p}
+                  </p>
                 ))}
               </div>
             </div>
@@ -54,10 +68,28 @@ export default async function AboutPage({
       )}
 
       {content.mission && (
-        <section className="section section-tight">
+        // Tighter spacing for mission block
+        <section className="section section-compact" style={{ paddingBottom: "1rem" }}>
           <Reveal>
             <div className="card card-hover p-8">
-              <h3 className="text-xl font-semibold">{content.mission.title}</h3>
+              <h3 className="text-xl font-semibold">
+                {/* For EN, emphasize the key phrase within the title; keep prefix normal */}
+                {lang === "en"
+                  ? (() => {
+                      const title = content.mission.title;
+                      const m = title.match(/^(Our Mission:\s*)(.*)$/);
+                      if (m) {
+                        return (
+                          <>
+                            <span className="font-normal">{m[1]}</span>
+                            <span className="font-semibold">{m[2]}</span>
+                          </>
+                        );
+                      }
+                      return title;
+                    })()
+                  : content.mission.title}
+              </h3>
               <p className="mt-3 text-neutral-700">{content.mission.text}</p>
             </div>
           </Reveal>
@@ -65,7 +97,8 @@ export default async function AboutPage({
       )}
 
       {content.values && (
-        <section className="section section-tight">
+        // Pull the section upward for better flow (reduce top padding more)
+        <section className="section section-compact" style={{ paddingTop: "1rem" }}>
           <Reveal>
             <SectionHeading alignment="left" title={content.values.title} />
           </Reveal>
@@ -80,7 +113,7 @@ export default async function AboutPage({
       )}
 
       {content.expertise && (
-        <section className="section">
+        <section className="section section-tight">
           <Reveal>
             <SectionHeading alignment="left" title={content.expertise.title} />
           </Reveal>
@@ -101,7 +134,19 @@ export default async function AboutPage({
         <section className="section-narrow section-tight">
           <Reveal>
             <div className="card card-hover p-8 text-center">
-              <p className="text-neutral-800">{content.languageSupportText}</p>
+              <p className="text-neutral-800">
+                {lang === "en"
+                  ? content.languageSupportText
+                      ?.split(/(English|Latvian|Russian)/g)
+                      .map((part, idx) =>
+                        /^(English|Latvian|Russian)$/.test(part) ? (
+                          <strong key={idx}>{part}</strong>
+                        ) : (
+                          <span key={idx}>{part}</span>
+                        )
+                      )
+                  : content.languageSupportText}
+              </p>
             </div>
           </Reveal>
         </section>

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { getBaseUrl } from "@/lib/site";
 import Script from "next/script";
+import BackToTop from "@/components/ui/back-to-top";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <BackToTop />
         {gaId && (
           <>
             <Script

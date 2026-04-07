@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import Reveal from "./reveal";
 import clsx from "../util/clsx";
+import { ToolsIcon, BadgeCheckIcon, AwardIcon, ShieldIcon } from "./icons";
 
 type OwnershipItem = {
   title: string; // short, prominent, often uppercase
@@ -71,52 +72,17 @@ export default function OwnershipSection({
 }
 
 function Icon({ name }: { name?: string }) {
-  const common = {
-    width: 24,
-    height: 24,
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 1.8,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-    "aria-hidden": true,
-    focusable: false,
-  };
-
+  const size = "w-6 h-6";
   switch (name) {
     case "wrench":
-      return (
-        <svg {...common}>
-          <path d="M14 7a4 4 0 1 0-5 5l-6 6 2 2 6-6a4 4 0 0 0 3-7Z" />
-        </svg>
-      );
+      return <ToolsIcon className={size} />;
     case "badge-a":
-      return (
-        <svg {...common}>
-          <rect x="4" y="3" width="16" height="18" rx="2" />
-          <path d="M9 14h6M8 10h8" />
-          <path d="M10 7l2-2 2 2" />
-        </svg>
-      );
+      return <BadgeCheckIcon className={size} />;
     case "award":
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="8" r="4" />
-          <path d="M8 12v8l4-2 4 2v-8" />
-        </svg>
-      );
+      return <AwardIcon className={size} />;
     case "shield":
-      return (
-        <svg {...common}>
-          <path d="M12 2 4.5 5v6.5c0 4.5 3.3 7.7 7.5 9.5 4.2-1.8 7.5-5 7.5-9.5V5L12 2Z" />
-        </svg>
-      );
+      return <ShieldIcon className={size} />;
     default:
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="12" r="8" />
-        </svg>
-      );
+      return <ToolsIcon className={size} />;
   }
 }

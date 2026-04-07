@@ -45,10 +45,10 @@ export default async function ContactPage({
 
       {/* 2. MAIN CONTACT SECTION */}
       <section className="section">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
           {/* LEFT: text content */}
           <Reveal>
-            <div className="card card-hover p-6 md:p-8 h-full">
+            <div className="card card-hover p-6 md:p-8 md:self-start">
               {page.asideTitle && (
                 <h3 className="text-xl font-semibold text-neutral-900">{page.asideTitle}</h3>
               )}

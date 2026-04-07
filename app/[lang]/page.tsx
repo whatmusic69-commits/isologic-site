@@ -21,6 +21,8 @@ type HomeContent = {
   hero: {
     title: string;
     subtitle?: string;
+    paragraphs?: string[];
+    checklist?: string[];
     primaryCtaLabel?: string;
     primaryCtaHref?: string;
     secondaryCtaLabel?: string;
@@ -30,12 +32,12 @@ type HomeContent = {
   servicesPreview?: { title: string; cards: Array<{ title: string; description: string }> };
   benefits?: { title: string; items: Array<{ title: string; text: string }> };
   whyChoose?: { title: string; subtitle?: string; items: Array<{ title: string; description: string; icon?: string }> };
-  standardsSection?: { title: string; subtitle?: string; ctaText?: string; ctaHref?: string; items: Array<{ title: string; icon?: string }> };
+  standardsSection?: { title: string; subtitle?: string; ctaText?: string; ctaHref?: string; items?: Array<{ title: string; icon?: string }>; groups?: Array<{ title: string; bullets: string[] }> };
   ownershipSection?: { title: string; subtitle?: string; buttonText?: string; buttonHref?: string; items: Array<{ title: string; eyebrow?: string; description?: string; icon?: string }> };
   testimonialsSection?: { title: string; subtitle?: string; rotationIntervalMs?: number; items: Array<{ quote: string; authorName: string; authorRole?: string; company?: string; rating?: number }> };
   industriesSection?: { title: string; subtitle?: string; items: Array<{ title: string; icon?: string }> };
   stats?: { items: Array<{ value: string; label: string }> };
-  ctaBand?: { title: string; subtitle?: string; ctaLabel?: string; ctaHref?: string };
+  ctaBand?: { title: string; subtitle?: string; ctaLabel?: string; ctaHref?: string; secondaryLabel?: string; secondaryHref?: string };
 };
 
 export default async function HomePage({
@@ -56,6 +58,8 @@ export default async function HomePage({
       <HeroSection
         title={content.hero.title}
         subtitle={content.hero.subtitle}
+        paragraphs={content.hero.paragraphs}
+        checklist={content.hero.checklist}
         primaryCta={
           content.hero.primaryCtaLabel && content.hero.primaryCtaHref
             ? { label: content.hero.primaryCtaLabel, href: content.hero.primaryCtaHref }
@@ -86,7 +90,8 @@ export default async function HomePage({
           subtitle={content.standardsSection.subtitle}
           ctaText={content.standardsSection.ctaText}
           ctaHref={content.standardsSection.ctaHref}
-          items={content.standardsSection.items}
+          items={content.standardsSection.items || []}
+          groups={content.standardsSection.groups}
         />
       ) : content.servicesPreview ? (
         <section className="section">
@@ -151,7 +156,7 @@ export default async function HomePage({
         />
       )}
 
-      {content.testimonialsSection && content.testimonialsSection.items?.length > 0 && (
+      {false && content.testimonialsSection && content.testimonialsSection.items?.length > 0 && (
         <TestimonialsSection
           title={content.testimonialsSection.title}
           subtitle={content.testimonialsSection.subtitle}
@@ -167,6 +172,8 @@ export default async function HomePage({
             subtitle={content.ctaBand.subtitle}
             ctaLabel={content.ctaBand.ctaLabel}
             ctaHref={content.ctaBand.ctaHref}
+            secondaryLabel={content.ctaBand.secondaryLabel}
+            secondaryHref={content.ctaBand.secondaryHref}
           />
         </section>
       )}

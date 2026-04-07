@@ -8,6 +8,7 @@ import { ui } from "@/lib/ui";
 import LanguageSwitcher from "./language-switcher";
 import clsx from "./util/clsx";
 import { useRef, useState } from "react";
+import { ChevronDownIcon } from "./ui/icons";
 
 export default function Navbar({ lang }: { lang: Lang }) {
   const pathname = usePathname();
@@ -81,9 +82,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
                     aria-expanded={servicesOpen}
                   >
                     {l.label}
-                    <span className={clsx("transition-transform", servicesOpen ? "rotate-180" : "rotate-0")}>
-                      ▾
-                    </span>
+                    <ChevronDownIcon className={clsx("transition-transform", servicesOpen ? "rotate-180" : "rotate-0")} />
                   </Link>
                   <div
                     className={clsx(
@@ -142,15 +141,24 @@ export default function Navbar({ lang }: { lang: Lang }) {
             if (l.dropdown) {
               return (
                 <div key={l.href} className="space-y-2">
-                  <button
-                    className="w-full text-left nav-link flex items-center justify-between"
-                    onClick={() => setServicesOpen((v) => !v)}
-                    aria-expanded={servicesOpen}
-                    aria-controls="mobile-services"
-                  >
-                    <span className={clsx(isActive(l.match) && "nav-link-active")}>{l.label}</span>
-                    <span className={clsx("transition-transform", servicesOpen ? "rotate-180" : "rotate-0")}>▾</span>
-                  </button>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className={clsx("nav-link", isActive(l.match) && "nav-link-active")}
+                    >
+                      {l.label}
+                    </Link>
+                    <button
+                      className="nav-link p-1"
+                      onClick={() => setServicesOpen((v) => !v)}
+                      aria-expanded={servicesOpen}
+                      aria-controls="mobile-services"
+                      aria-label="Toggle services"
+                    >
+                      <ChevronDownIcon className={clsx("inline-block transition-transform", servicesOpen ? "rotate-180" : "rotate-0")} />
+                    </button>
+                  </div>
                   <div
                     id="mobile-services"
                     className={clsx(

@@ -23,6 +23,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Image Alt, name: imageAlt, widget: string, required: false }
               - label: Paragraphs
                 name: paragraphs
                 widget: list
@@ -186,6 +187,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Image Alt, name: imageAlt, widget: string, required: false }
               - label: Paragraphs
                 name: paragraphs
                 widget: list
@@ -349,6 +351,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Image Alt, name: imageAlt, widget: string, required: false }
               - label: Paragraphs
                 name: paragraphs
                 widget: list

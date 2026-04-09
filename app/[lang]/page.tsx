@@ -23,6 +23,7 @@ type HomeContent = {
     subtitle?: string;
     paragraphs?: string[];
     checklist?: string[];
+    imageAlt?: string;
     primaryCtaLabel?: string;
     primaryCtaHref?: string;
     secondaryCtaLabel?: string;
@@ -60,6 +61,8 @@ export default async function HomePage({
         subtitle={content.hero.subtitle}
         paragraphs={content.hero.paragraphs}
         checklist={content.hero.checklist}
+        imageSrc="/homePage.jpg"
+        imageAlt={content.hero.imageAlt}
         primaryCta={
           content.hero.primaryCtaLabel && content.hero.primaryCtaHref
             ? { label: content.hero.primaryCtaLabel, href: content.hero.primaryCtaHref }
@@ -72,13 +75,7 @@ export default async function HomePage({
         }
       />
 
-      {content.intro && (
-        <section className="section">
-          <Reveal>
-            <SectionHeading alignment="center" title={content.intro.title} subtitle={content.intro.text} />
-          </Reveal>
-        </section>
-      )}
+      {/* As requested by the client, remove the "Trusted partner..." intro text block entirely */}
 
       {content.industriesSection && (
         <IndustriesSection title={content.industriesSection.title} subtitle={content.industriesSection.subtitle} items={content.industriesSection.items} />

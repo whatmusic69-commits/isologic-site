@@ -8,12 +8,12 @@ export default function Footer({ lang }: { lang: Lang }) {
   const t = ui.footer[lang];
   return (
     <footer className="mt-16 bg-[color:var(--surface-dark)] text-[color:var(--text-on-dark)]">
-      <div className="section grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
+      <div className="mx-auto max-w-6xl px-6 footer-section grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
         <div className="md:col-span-2">
           <Link href={`/${lang}`} className="text-xl font-semibold tracking-tight hover:text-[color:var(--accent)] transition-colors">ISOlogic</Link>
-          <p className="mt-3 max-w-md text-sm/6 opacity-90">{t.tagline}</p>
+          <p className="mt-2 max-w-md text-sm/6 opacity-90">{t.tagline}</p>
           {/* Socials */}
-          <div className="mt-4">
+          <div className="mt-3">
             <a href="#" aria-label="LinkedIn" className="inline-flex items-center justify-center w-9 h-9 rounded-full border transition-colors hover:bg-[color:var(--accent)] hover:text-[color:var(--text-on-dark)]" style={{ borderColor: "var(--border-dark)" }}>
               <LinkedinIcon className="w-5 h-5" />
             </a>
@@ -21,7 +21,7 @@ export default function Footer({ lang }: { lang: Lang }) {
         </div>
         <div>
           <p className="text-sm font-semibold text-white/90">{t.quickLinks}</p>
-          <ul className="mt-3 space-y-2 text-sm">
+          <ul className="mt-2 space-y-1.5 text-sm">
             <li><Link className="hover:text-[color:var(--accent)] transition-colors" href={`/${lang}`}>{t.links.home}</Link></li>
             <li><Link className="hover:text-[color:var(--accent)] transition-colors" href={`/${lang}/about`}>{t.links.about}</Link></li>
             <li><Link className="hover:text-[color:var(--accent)] transition-colors" href={`/${lang}/services`}>{t.links.services}</Link></li>
@@ -32,7 +32,7 @@ export default function Footer({ lang }: { lang: Lang }) {
         </div>
         <div>
           <p className="text-sm font-semibold text-white/90">{t.contact}</p>
-          <ul className="mt-3 space-y-2 text-sm">
+          <ul className="mt-2 space-y-1.5 text-sm">
             <li className="flex items-start gap-2">
               <MailIcon className="mt-0.5 w-4 h-4 text-white/80" />
               <a className="hover:text-[color:var(--accent)] transition-colors" href="mailto:info@isologic.lv">info@isologic.lv</a>
@@ -56,7 +56,7 @@ export default function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
       <div className="border-t mt-2" style={{ borderColor: "var(--border-dark)" }}>
-        <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-white/70">
+        <div className="mx-auto max-w-6xl px-6 py-3 text-xs text-white/70">
           © {new Date().getFullYear()} ISOlogic — {t.rights}
         </div>
       </div>

@@ -101,7 +101,7 @@ h1, h2, h3 {
 /* Section spacing */
 .section { @apply mx-auto max-w-6xl px-6 py-16 md:py-24; }
 .section-narrow { @apply mx-auto max-w-3xl px-6 py-16 md:py-20; }
-.section-alt { background: var(--surface-muted); }
+.section-alt { background: var(--background); }
 
 /* Dark premium panel for selected sections (hero/CTA) */
 .panel-dark { border: 1px solid var(--border-dark); background: var(--surface-dark); color: var(--text-on-dark); border-radius: 1.5rem; }
@@ -116,4 +116,26 @@ h1, h2, h3 {
 .section-compact { padding-top: 1.75rem; padding-bottom: 1.75rem; }
 @media (min-width: 768px) {
   .section-compact { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+}
+
+/* Footer compact sizing (reduce vertical space) */
+.footer-section { padding-top: 2rem; padding-bottom: 1.75rem; }
+@media (min-width: 640px) { /* sm */
+  .footer-section { padding-top: 2.25rem; padding-bottom: 2rem; }
+}
+@media (min-width: 768px) { /* md */
+  .footer-section { padding-top: 3.5rem; padding-bottom: 3rem; }
+}
+
+/* Hero background tuning for responsive composition */
+.hero-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* mobile default */
+}
+@media (min-width: 768px) { /* tablet */
+  .hero-bg { background-position: center; }
+}
+@media (min-width: 1024px) { /* desktop */
+  .hero-bg { background-position: right center; }
 }

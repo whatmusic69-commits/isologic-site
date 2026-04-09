@@ -42,14 +42,14 @@ function IconBox({ name }: { name?: string }) {
 export default function StandardsSection({ title, subtitle, ctaText, ctaHref, items, groups }: StandardsSectionProps & { groups?: { title: string; bullets: string[] }[] }) {
   return (
     <section className="section">
-      {/* 1) Centered header */}
+      {/* Centered header */}
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
           <SectionHeading alignment="center" title={title} subtitle={subtitle} />
         </Reveal>
       </div>
 
-      {/* 3) Grid of equal cards */}
+      {/* Grid of cards (light style) */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
         {groups && groups.length > 0
           ? groups.map((g, i) => (
@@ -63,6 +63,12 @@ export default function StandardsSection({ title, subtitle, ctaText, ctaHref, it
               </Reveal>
             ))}
       </div>
+
+      {ctaText && ctaHref && (
+        <div className="mt-8 text-center">
+          <a href={ctaHref} className="btn btn-primary">{ctaText}</a>
+        </div>
+      )}
     </section>
   );
 }
@@ -72,7 +78,6 @@ function Card({ title, bullets, iconHint }: { title: string; bullets: string[]; 
   return (
     <div className="card card-hover p-5 md:p-6 h-full">
       <div className="flex items-start gap-3">
-        {/* 4) Small icon top-left */}
         <div className="text-neutral-900 mt-0.5" aria-hidden>
           <Icon className="w-5 h-5" />
         </div>

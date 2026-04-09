@@ -31,14 +31,17 @@ export default function BackToTop() {
       aria-label="Back to top"
       className={clsx(
         "fixed right-4 bottom-4 z-40 rounded-full border shadow-lg bg-white",
+        // Center icon perfectly
+        "inline-flex items-center justify-center",
         "text-neutral-900 hover:text-[color:var(--text-on-dark)]",
         "hover:bg-[color:var(--accent)] transition-colors duration-200",
         "focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)]",
+        "p-0 leading-none",
         visible ? "opacity-100" : "opacity-0 pointer-events-none",
       )}
       style={{ width: 48, height: 48, borderColor: "var(--border)" }}
     >
-      <ArrowUpIcon />
+      <ArrowUpIcon className="w-5 h-5" />
     </button>
   );
 }

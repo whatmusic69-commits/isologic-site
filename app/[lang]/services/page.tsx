@@ -7,6 +7,7 @@ import Reveal from "@/components/ui/reveal";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
 import CollapsibleSection from "@/components/ui/collapsible-section";
+import Image from "next/image";
 import {
   DocumentIcon,
   GlobeIcon,
@@ -35,6 +36,10 @@ type ServicesSection = {
   description?: string;
   whatYouGetTitle?: string;
   items?: string[];
+  pricingTimeline?: { title: string; paragraphs: string[] };
+  note?: string;
+  ctaText?: string;
+  ctaButtonLabel?: string;
 };
 
 type StandardsSection = { title: string; intro?: string; items: string[] };
@@ -45,6 +50,7 @@ type ServicesContent = {
   sections: ServicesSection[];
   standardsSection?: StandardsSection;
   whyOutsourceSection?: WhyOutsourceSection;
+  bottomSection?: { paragraphs: string[] };
 };
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -63,49 +69,98 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
       </section>
 
       {/* Services sections as collapsible blocks */}
-      <section className="section section-compact" style={{ paddingTop: 0 }}>
+          <section className="section section-compact" style={{ paddingTop: 0 }}>
         <div className="space-y-4">
-          {content.sections?.map((sec, idx) => (
-            <Reveal key={sec.id || idx}>
-              <div id={sec.id}>
-                <CollapsibleSection title={sec.title} subtitle={sec.subtitle} defaultOpen={false}>
-                  {sec.description && (
-                    <div className="max-w-3xl text-neutral-700">{sec.description}</div>
-                  )}
-                  {sec.items && sec.items.length > 0 && (
-                    <div className="mt-6">
-                      {sec.whatYouGetTitle && (
-                        <h3 className="text-base md:text-lg font-semibold text-neutral-900">{sec.whatYouGetTitle}</h3>
-                      )}
-                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {sec.items.map((raw, i) => {
-                          const [title, ...rest] = String(raw).split(":");
-                          const heading = title.trim();
-                          const body = rest.join(":").trim();
-                          const Icon = pickServiceIcon(heading);
-                          return (
-                            <div key={i} className="card card-hover p-5 h-full">
-                              <div className="flex items-start gap-3">
-                                {Icon && <Icon className="mt-0.5 w-7 h-7 text-neutral-900" />}
-                                <div>
-                                  <div className="text-sm font-semibold tracking-wide text-neutral-900">
-                                    {heading.toUpperCase()}
+          {content.sections?.map((sec, idx) => {
+            const img = pickServiceImage(sec.id);
+            const imageFirst = idx % 2 === 0; // alternate left/right on desktop
+
+            return (
+              <Reveal key={sec.id || idx}>
+                <div id={sec.id}>
+                  <CollapsibleSection title={sec.title} subtitle={sec.subtitle} defaultOpen={false}>
+                    {/* Intro: for sections with image → 2-col row; without image → full-width text */}
+                    {img ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
+                        <div className={imageFirst ? "md:order-2" : "md:order-1"}>
+                          {sec.description && (
+                            <div className="text-neutral-700 whitespace-pre-line">{sec.description}</div>
+                          )}
+                        </div>
+                        <div className={imageFirst ? "md:order-1" : "md:order-2"}>
+                          <div className="card overflow-hidden">
+                            <div className="relative w-full h-[200px] md:h-[280px]">
+                              <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      // No image (e.g., Lead Auditing): intro spans full width for cleaner balance
+                      sec.description ? (
+                        <div className="text-neutral-700 whitespace-pre-line">
+                          {sec.description}
+                        </div>
+                      ) : null
+                    )}
+
+                    {/* What You Get cards */}
+                    {sec.items && sec.items.length > 0 && (
+                      <div className="mt-6">
+                        {sec.whatYouGetTitle && (
+                          <h3 className="text-base md:text-lg font-semibold text-neutral-900">{sec.whatYouGetTitle}</h3>
+                        )}
+                        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          {sec.items.map((raw, i) => {
+                            const [title, ...rest] = String(raw).split(":");
+                            const heading = title.trim();
+                            const body = rest.join(":").trim();
+                            const Icon = pickServiceIcon(heading);
+                            return (
+                              <div key={i} className="card card-hover p-5 h-full">
+                                <div className="flex items-start gap-3">
+                                  {Icon && <Icon className="mt-0.5 w-7 h-7 text-neutral-900" />}
+                                  <div>
+                                    <div className="text-sm font-semibold tracking-wide text-neutral-900">{heading.toUpperCase()}</div>
+                                    {body && <p className="mt-1 text-sm leading-6 text-neutral-700">{body}</p>}
                                   </div>
-                                  {body && (
-                                    <p className="mt-1 text-sm leading-6 text-neutral-700">{body}</p>
-                                  )}
                                 </div>
                               </div>
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </CollapsibleSection>
-              </div>
-            </Reveal>
-          ))}
+                    )}
+
+                    {/* Optional pricing/timeline after cards */}
+                    {sec.pricingTimeline && (
+                      <div className="mt-6 card card-hover p-5 md:p-6">
+                        <h3 className="text-base md:text-lg font-semibold text-neutral-900">{sec.pricingTimeline.title}</h3>
+                        <div className="mt-3 space-y-3 text-neutral-700">
+                          {sec.pricingTimeline.paragraphs.map((p, i) => (
+                            <p key={i} className="text-sm md:text-base leading-6">{p}</p>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Optional note & CTA after cards/pricing */}
+                    {sec.note && (
+                      <p className="mt-6 text-neutral-700">{sec.note}</p>
+                    )}
+                    {sec.ctaText && (
+                      <div className="mt-6 card card-hover p-5 md:p-6">
+                        <div className="text-neutral-900 font-medium">{sec.ctaText}</div>
+                        <div className="mt-3">
+                          <a href={`/${lang}/contact`} className="btn btn-primary">{sec.ctaButtonLabel || "Contact us"}</a>
+                        </div>
+                      </div>
+                    )}
+                  </CollapsibleSection>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </section>
 
@@ -165,6 +220,19 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
           </div>
         </div>
       </section>
+
+      {/* Bottom notes / lead auditor availability */}
+      {content.bottomSection && content.bottomSection.paragraphs?.length > 0 && (
+        <section className="section section-compact">
+          <Reveal>
+            <div className="card card-hover p-6 md:p-8 text-neutral-700 space-y-3">
+              {content.bottomSection.paragraphs.map((p, i) => (
+                <p key={i} className="text-sm md:text-base leading-6">{p}</p>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      )}
     </main>
   );
 }
@@ -216,4 +284,19 @@ function pickStandardIcon(s: string): IconType | null {
   if (/45001/.test(t)) return HardHatIcon; // health & safety
   if (/22000|haccp/.test(t)) return FoodIcon; // food safety
   return DocumentIcon;
+}
+
+function pickServiceImage(id: string): { src: string; alt: string } | null {
+  switch (id) {
+    case "implementation":
+      return { src: "/ServicesGlasses.jpg", alt: "ISO Implementation / Certification" };
+    case "internal-auditing":
+      return { src: "/ServicesLaptop.jpg", alt: "Internal Auditing" };
+    case "iso-maintenance":
+      return { src: "/ServicesWarehouse.jpg", alt: "ISO Maintenance / Support" };
+    case "food-safety-haccp":
+      return { src: "/ServicesGrocery.jpg", alt: "Food Safety & HACCP Compliance" };
+    default:
+      return null;
+  }
 }

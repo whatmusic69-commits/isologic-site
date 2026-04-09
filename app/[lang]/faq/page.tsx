@@ -23,11 +23,11 @@ export default async function FAQPage({
 
   return (
     <main>
-      <section className="section">
+      <section className="section section-compact">
         <SectionHeading alignment="left" title={content.hero.title} subtitle={content.hero.subtitle} />
       </section>
 
-      <section className="section">
+      <section className="section section-compact" style={{ paddingTop: 0 }}>
         <FAQAccordion items={content.items} />
       </section>
 

@@ -38,6 +38,9 @@ import {
   Box,
   Layers,
   Award,
+  Phone,
+  Mail,
+  MapPin,
 } from "lucide-react";
 import { Check } from "lucide-react";
 
@@ -183,4 +186,31 @@ export function AwardIcon({ className }: { className?: string }) {
 
 export function CheckIcon({ className }: { className?: string }) {
   return <Check className={className} aria-hidden />;
+}
+
+// Footer contact/social icons
+export function PhoneIcon({ className }: { className?: string }) {
+  return <Phone className={className} aria-hidden />;
+}
+
+export function MailIcon({ className }: { className?: string }) {
+  return <Mail className={className} aria-hidden />;
+}
+
+export function MapPinIcon({ className }: { className?: string }) {
+  return <MapPin className={className} aria-hidden />;
+}
+
+export function LinkedinIcon({ className }: { className?: string }) {
+  // Inline SVG to avoid dependency on lucide-react icon availability across versions
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5ZM.3 8.25h4.4V24H.3V8.25Zm7.7 0h4.215v2.142h.06c.587-1.113 2.022-2.285 4.166-2.285 4.459 0 5.28 2.936 5.28 6.754V24h-4.4v-7.02c0-1.675-.03-3.831-2.335-3.831-2.336 0-2.693 1.825-2.693 3.71V24H8V8.25Z"/>
+    </svg>
+  );
 }

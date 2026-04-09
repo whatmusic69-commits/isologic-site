@@ -9,33 +9,43 @@
       "id": "implementation",
       "title": "ISO Implementation",
       "subtitle": "Your path to certification handled with logic and support.",
-      "description": "If you know which standard you need but are overwhelmed by the complexity of building the system, our Implementation Support is the solution. We don't just provide templates we act as your outsourced ISO department, working alongside your team to build a system based on your actual operations.",
+      "description": "If you know which standard you need but are overwhelmed by the complexity of building the system, our Implementation Support is the solution. We don't just provide templates we act as your outsourced ISO department, working alongside your team to build a system based on your actual operations.\n\nBy the end of the process, you will have a fully implemented, audit-ready management system aligned with ISO requirements.",
       "whatYouGetTitle": "What You Get",
       "items": [
         "Gap Analysis: A deep dive to identify exactly where you stand against the standard.",
         "Documentation Development: Creating lean, practical procedures—no fluff.",
         "Staff Training: Ensuring your team understands, owns, and confidently operates the processes.",
         "Internal Auditing: A rigorous \"dry run\" to test the system before the official assessment.",
-        "Certification Support: Expert on-site presence and guidance during your external audit."
-      ]
+        "Certification Support: Expert on-site presence and guidance during your external audit.",
+        "ONGOING SUPPORT: Continuous guidance and hands-on support to ensure your system is effectively implemented and maintained"
+      ],
+      "pricingTimeline": {
+        "title": "Pricing & Timeline",
+        "paragraphs": [
+          "ISO implementation timelines typically range from 3 to 12 months, depending on organisational size, complexity and the maturity of existing processes.",
+          "Projects are tailored to each business, with a strong focus on supporting small and medium-sized organisations, including startups. ISOlogic understands the practical and financial constraints these businesses face and delivers solutions that are proportionate, flexible and designed to remain accessible without unnecessary overhead.",
+          "A more accurate timeline and cost can be provided following an initial discussion."
+        ]
+      }
     },
     {
       "id": "internal-auditing",
       "title": "Internal Auditing",
       "subtitle": "Turning a compliance requirement into a business asset.",
-      "description": "Internal auditing (first party auditing) is a mandatory requirement to maintain your ISO certification. While some organisations use internal staff, many SMEs benefit from Outsourced Internal Auditing to ensure total objectivity, meet independence requirements, and gain a \"fresh set of eyes\" on their operations.",
+      "description": "Internal auditing (first party auditing) is a mandatory requirement to maintain your ISO certification. While some organisations use internal staff, many SMEs benefit from Outsourced Internal Auditing to ensure total objectivity, meet independence requirements, and gain a \"fresh set of eyes\" on their operations.\n\nInternal audits can be delivered as a one-off service or as part of an ongoing audit programme. ISOlogic offers a flexible, cost-effective approach tailored to your organisation’s size and audit scope.",
       "whatYouGetTitle": "What You Get",
       "items": [
         "Audit Program Planning: A structured annual schedule to cover all required areas.",
         "Execution & Reporting: Comprehensive audits with clear, actionable findings and root cause analysis.",
-        "Corrective Action and Follow-up Support: Practical help on addressing non-conformities."
+        "Corrective Action and Follow-up Support: Practical help on addressing non-conformities.",
+        "MANAGEMENT REVIEW SUPPORT: Supporting management review processes with clear insights, audit outputs and practical recommendations."
       ]
     },
     {
       "id": "iso-maintenance",
       "title": "ISO Maintenance (Outsourced QMS / System Manager)",
       "subtitle": "Keeping your certification healthy while you focus on growth.",
-      "description": "Achieving certification is a major milestone but maintaining it requires continuous attention. Our Maintenance Retainer provides you with an expert \"on-call\" to manage your system throughout the year, ensuring you stay compliant without overstretching your internal staff.",
+      "description": "Achieving certification is a major milestone but maintaining it requires continuous attention. Our Maintenance Retainer provides you with an expert \"on-call\" to manage your system throughout the year, ensuring you stay compliant without overstretching your internal staff.\n\nISO maintenance support is typically delivered on a flexible monthly basis, tailored to your organisation’s needs and level of support required.",
       "whatYouGetTitle": "What You Get",
       "items": [
         "Regular System Health Checks: Proactive reviews to prevent \"compliance drift.\"",
@@ -43,6 +53,24 @@
         "Regulatory & Standard Updates: We monitor changes so you don't have to.",
         "Ongoing Advisory: On-site visits, priority email and phone support for any ISO-related queries."
       ]
+    },
+    {
+      "id": "food-safety-haccp",
+      "title": "Food Safety & HACCP Compliance",
+      "subtitle": "Simple, practical guidance to help you meet food safety requirements with confidence.",
+      "description": "Setting up or running a food business involves strict regulatory requirements, and understanding HACCP principles can be challenging. ISOlogic provides clear, practical support to help you implement food safety systems that meet PVD (Food and Veterinary Service) requirements in Latvia — without unnecessary complexity.\n\nIn addition to HACCP-based systems, ISOlogic supports businesses working towards ISO 22000 Food Safety Management Systems, helping align local PVD requirements with internationally recognised food safety standards.",
+      "whatYouGetTitle": "What You Get",
+      "items": [
+        "HACCP SYSTEM SETUP: Structured development of your food safety system tailored to your business.",
+        "DOCUMENTATION & RECORDS: Preparation of required HACCP documentation, procedures and logs.",
+        "PVD COMPLIANCE SUPPORT: Guidance to ensure your business meets local Food and Veterinary Service requirements.",
+        "STAFF TRAINING: Practical training to ensure your team understands and follows food safety procedures.",
+        "INSPECTION PREPARATION: Support to ensure you are fully prepared for PVD inspections.",
+        "ONGOING SUPPORT: Continuous guidance to maintain compliance and adapt as your business grows."
+      ],
+      "note": "Designed specifically for small and medium-sized food businesses, ISOlogic provides practical, proportionate and cost-effective HACCP support tailored to your operation.",
+      "ctaText": "Starting a new food business? Get in touch for practical, affordable food safety support tailored to your needs.",
+      "ctaButtonLabel": "Get HACCP support"
     },
     {
       "id": "lead-auditing",
@@ -77,6 +105,13 @@
       "Focus on Revenue: Your team stays focused on core operations while we handle the technical complexities of compliance.",
       "Fresh Perspective: We apply \"best practice\" insights from across European industries to identify inefficiencies you may have overlooked.",
       "Multilingual Support & Global Reach: We bridge the gap between local operations and international markets. Whether you need your system in English for European clients or in Latvian or Russian for local compliance, we deliver all documentation and communication in the language your business needs to grow."
+    ]
+  }
+  ,
+  "bottomSection": {
+    "paragraphs": [
+      "Available as a freelance and contract ISO Lead Auditor for third-party ISO certification audits, supplier audits and external auditing assignments across Latvia and Europe.",
+      "CQI & IRCA certified ISO auditor providing services to certification bodies and organisations seeking qualified lead auditors for ISO 9001 and other management system standards. Engagements are delivered on a contract or assignment basis, tailored to certification body and organisational requirements."
     ]
   }
 }

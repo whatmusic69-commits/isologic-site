@@ -4,6 +4,8 @@ import { isValidLang } from "@/lib/i18n";
 import SectionHeading from "@/components/ui/section-heading";
 import Reveal from "@/components/ui/reveal";
 import ValueCard from "@/components/ui/value-card";
+import ContactForm, { ContactFormSchema } from "@/components/ui/contact-form";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
 
@@ -14,6 +16,30 @@ type AboutContent = {
   values?: { title: string; items: Array<{ title: string; text: string }> };
   expertise?: { title: string; items: Array<{ title: string; text: string }> };
   languageSupportText?: string;
+};
+
+// New v2 structure for About page (English initially)
+type AboutV2 = {
+  v2?: boolean;
+  hero: { title: string; subtitle?: string; text?: string };
+  imageSection?: { imageAlt?: string; paragraphs: string[] };
+  cta?: { text: string; buttonLabel: string; targetId?: string };
+  coreExpertise?: { paragraphs: string[] };
+  foodSupport?: { paragraphs: string[]; ctaText?: string; buttonLabel?: string };
+  additionalExpertise?: { paragraphs: string[] };
+};
+
+type ContactPageContent = {
+  contactPage: {
+    title: string;
+    subtitle?: string;
+    ctaText?: string;
+    asideTitle?: string;
+    asideSubtitle?: string;
+    successTitle?: string;
+    successBody?: string;
+    form: ContactFormSchema;
+  };
 };
 
 export default async function AboutPage({
@@ -27,7 +53,142 @@ export default async function AboutPage({
     notFound();
   }
 
-  const content = await getPageContent<AboutContent>("about", lang);
+  const aboutRaw = await getPageContent<any>("about", lang);
+
+  // If the new v2 structure is present, render the new layout
+  const v2: AboutV2 | null = (aboutRaw && (aboutRaw.v2 || aboutRaw.imageSection || aboutRaw.coreExpertise)) ? (aboutRaw as AboutV2) : null;
+
+  if (v2) {
+    const contact = await getPageContent<ContactPageContent>("contact", lang);
+    const hero = v2.hero || { title: "About" };
+
+    return (
+      <main>
+        {/* Section 1 — Hero / Intro */}
+        <section className="section">
+          <Reveal>
+            <SectionHeading alignment="left" title={hero.title} subtitle={hero.subtitle} />
+          </Reveal>
+          {hero.text && (
+            <div className="mt-4 max-w-3xl text-neutral-700">
+              {hero.text}
+            </div>
+          )}
+        </section>
+
+        {/* Section 2 — Image + Text */}
+        {v2.imageSection && (
+          <section className="section section-tight">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+              {/* Image */}
+              <Reveal>
+                <div className="card overflow-hidden relative aspect-[16/9] md:aspect-auto md:h-full">
+                  <Image
+                    src="/AboutUs.jpg"
+                    alt={v2.imageSection.imageAlt || "About ISOlogic"}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    priority={false}
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+              {/* Text */}
+              <Reveal>
+                <div className="card card-hover p-6 md:p-8 text-neutral-700">
+                  {v2.imageSection.paragraphs.map((p, i) => (
+                    <p key={i} className={i === 0 ? "text-neutral-900 font-semibold" : "mt-4"}>{p}</p>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
+
+        {/* Section 3 — CTA */}
+        {v2.cta && (
+          <section className="section-narrow section-tight">
+            <div className="card card-hover p-8 text-center">
+              <h3 className="text-xl font-semibold text-neutral-900">{v2.cta.text}</h3>
+              <div className="mt-4">
+                <a href={`#${v2.cta.targetId || "contact"}`} className="btn btn-primary">{v2.cta.buttonLabel}</a>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Section 4 — Core Expertise */}
+        {v2.coreExpertise && (
+          <section className="section section-compact">
+            <Reveal>
+              <div className="card card-hover p-6 md:p-8 text-neutral-700">
+                {v2.coreExpertise.paragraphs.map((p, i) => (
+                  <p key={i} className={i > 0 ? "mt-3" : undefined}>{p}</p>
+                ))}
+              </div>
+            </Reveal>
+          </section>
+        )}
+
+        {/* Section 5 — Food Business Support */}
+        {v2.foodSupport && (
+          <section className="section section-compact">
+            <Reveal>
+              <div className="card card-hover p-6 md:p-8 text-neutral-700">
+                {v2.foodSupport.paragraphs.map((p, i) => (
+                  <p key={i} className={i > 0 ? "mt-3" : undefined}>{p}</p>
+                ))}
+                {(v2.foodSupport.ctaText || v2.foodSupport.buttonLabel) && (
+                  <div className="mt-5 text-center">
+                    {v2.foodSupport.ctaText && (
+                      <div className="mb-3 text-neutral-900 font-medium">{v2.foodSupport.ctaText}</div>
+                    )}
+                    <a href="#contact" className="btn btn-primary">{v2.foodSupport.buttonLabel || "Contact us"}</a>
+                  </div>
+                )}
+              </div>
+            </Reveal>
+          </section>
+        )}
+
+        {/* Section 6 — Additional Expertise */}
+        {v2.additionalExpertise && (
+          <section className="section section-compact">
+            <Reveal>
+              <div className="card card-hover p-6 md:p-8 text-neutral-700">
+                {v2.additionalExpertise.paragraphs.map((p, i) => (
+                  <p key={i} className={i > 0 ? "mt-3" : undefined}>{p}</p>
+                ))}
+              </div>
+            </Reveal>
+          </section>
+        )}
+
+        {/* Section 7 — Contact Form */}
+        <section id="contact" className="section">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+            {/* LEFT: text block reusing contact content copy */}
+            <Reveal>
+              <div className="card card-hover p-6 md:p-8 md:self-start">
+                <h3 className="text-xl font-semibold text-neutral-900">{contact.contactPage.asideTitle || contact.contactPage.title}</h3>
+                {contact.contactPage.asideSubtitle && (
+                  <p className="mt-3 text-neutral-700">{contact.contactPage.asideSubtitle}</p>
+                )}
+              </div>
+            </Reveal>
+            {/* RIGHT: form */}
+            <Reveal>
+              <div className="card card-hover p-6 md:p-8">
+                <ContactForm form={contact.contactPage.form} successTitle={contact.contactPage.successTitle} successBody={contact.contactPage.successBody} />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
+  const content = aboutRaw as AboutContent;
 
   return (
     <main>
@@ -158,9 +319,12 @@ export default async function AboutPage({
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   if (!isValidLang(lang)) return {};
-  const content = await getPageContent<AboutContent>("about", lang);
-  const title = content?.hero?.title || "About";
-  const description = truncate(content?.hero?.subtitle || content?.mission?.text || "");
+  const aboutRaw = await getPageContent<any>("about", lang);
+  const isV2 = !!(aboutRaw && (aboutRaw.v2 || aboutRaw.imageSection || aboutRaw.coreExpertise));
+  const title = isV2 ? (aboutRaw?.hero?.title ?? "About") : (aboutRaw?.hero?.title ?? "About");
+  const description = truncate(
+    isV2 ? (aboutRaw?.hero?.text || aboutRaw?.hero?.subtitle || "") : (aboutRaw?.hero?.subtitle || aboutRaw?.mission?.text || "")
+  );
   const { base, langs } = buildAlternates("/about");
   return {
     title,

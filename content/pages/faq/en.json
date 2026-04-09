@@ -36,7 +36,13 @@
     {
       "question": "Will ISO certification increase my company’s bureaucracy?",
       "answer": "Not with ISOLogic. Our \"Guidance with Logic\" approach focuses on lean ISO implementation. We replace complex, redundant paperwork with practical digital documentation and efficient processes that actually make your internal systems easier to manage."
-    }
+    },
+    { "question": "Do I need a food safety system for my business in Latvia?", "answer": "Yes. All food businesses in Latvia are required to implement a food safety (paškontroles) system based on HACCP principles to comply with PVD (Food and Veterinary Service) requirements." },
+    { "question": "What is a food safety (paškontroles) system?", "answer": "A food safety system is a structured approach to managing risks in food handling. In Latvia, these systems are based on HACCP principles and are designed to identify, control and prevent potential hazards throughout your processes." },
+    { "question": "Is HACCP required in Latvia?", "answer": "In practice, businesses are required to implement a food safety system based on HACCP principles rather than a standalone “HACCP certification.” The focus is on practical implementation of food safety procedures aligned with PVD requirements." },
+    { "question": "Who needs to complete the “minimum hygiene requirements” training?", "answer": "Training is required for employees who start working in food handling and do not have a relevant food-related qualification, as well as those who have not worked in the food sector for more than three years." },
+    { "question": "How often do employees need to renew food hygiene training?", "answer": "Food hygiene training must typically be refreshed at least once every three years to ensure knowledge remains up to date and compliant with Latvian regulations." },
+    { "question": "What is ISO 22000 and how is it different from HACCP?", "answer": "ISO 22000 is an international food safety management standard that incorporates HACCP principles within a broader management system framework. It is typically used by larger or more complex food businesses." }
   ],
   "ctaBand": {
     "title": "Still have questions?",

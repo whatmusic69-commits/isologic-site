@@ -46,6 +46,9 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Smooth in-page anchor scrolling for CTA buttons */
+html { scroll-behavior: smooth; }
+
 /* Display typography for headings */
 h1, h2, h3 {
   font-family: var(--font-display);

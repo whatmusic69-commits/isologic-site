@@ -27,7 +27,7 @@ export const ui: {
       home: "Home",
       about: "About us",
       services: "Services",
-      contact: "Contact",
+      contact: "Contacts",
       faq: "FAQs",
       servicesDropdown: {
         items: [
@@ -63,7 +63,7 @@ export const ui: {
       rights: "Visas tiesības aizsargātas.",
     },
     en: {
-      tagline: "Independent audit and compliance advisory. Precision. Trust. Results.",
+      tagline: "Guidance with Logic. Support in Every Step.",
       quickLinks: "Quick links",
       contact: "Contact",
       links: { home: "Home", about: "About us", services: "Services", faq: "FAQs", contact: "Contact", privacy: "Privacy Policy" },

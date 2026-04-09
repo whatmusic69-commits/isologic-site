@@ -44,8 +44,9 @@ export default function CollapsibleSection({
       <div
         id={panelId}
         className={clsx(
-          "transition-[max-height,opacity] duration-300 ease-out",
-          open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-70"
+          // Use natural height when open to avoid clipping; animate opacity only
+          "transition-opacity duration-300 ease-out",
+          open ? "max-h-none opacity-100" : "max-h-0 opacity-70 overflow-hidden"
         )}
       >
         <div className="px-5 md:px-6 pb-5 md:pb-6">

@@ -2,7 +2,7 @@
   "hero": {
     "title": "Privacy Policy",
     "subtitle": "This Privacy Policy explains how we collect, process and protect your personal data.",
-    "lastUpdated": "Last updated: [Insert Date]"
+    "lastUpdated": "Last updated: 10 April 2026"
   },
   "sections": [
     {
@@ -16,8 +16,7 @@
       "number": 2,
       "title": "Data Controller",
       "items": [
-        "Company Name: [Insert Legal Name]",
-        "Registration No.: [Insert Number]",
+        "Company Name: ISOlogic",
         "Address: Riga, Latvia",
         "Email: info@isologic.lv"
       ]
@@ -40,7 +39,7 @@
       "number": 5,
       "title": "Data Retention",
       "paragraphs": [
-        "Data is stored as long as necessary to fulfill the inquiry or as required by Latvian accounting and tax laws (typically 5 years for financial records)."
+        "Data is stored as long as necessary to fulfill the inquiry or as required by Latvian accounting and tax laws."
       ]
     },
     {

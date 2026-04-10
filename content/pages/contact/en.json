@@ -14,11 +14,12 @@
       "phone": "Phone / WhatsApp",
       "serviceLabel": "Interested in",
       "serviceOptions": [
-        "ISO Implementation",
-        "Internal Audit Support",
-        "ISO Maintenance",
-        "Lead Auditor Services",
-        "Other"
+        "implementation",
+        "internal-auditing",
+        "iso-maintenance",
+        "food-safety-haccp",
+        "lead-auditing",
+        "other"
       ],
       "standardLabel": "Standard(s)",
       "standardOptions": [

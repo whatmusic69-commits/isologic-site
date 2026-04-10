@@ -1,0 +1,54 @@
+{
+  "en": {
+    "nav": {
+      "implementation": "ISO Implementation",
+      "internal-auditing": "Internal Auditing",
+      "iso-maintenance": "ISO Maintenance",
+      "lead-auditing": "Lead Auditing Services",
+      "food-safety-haccp": "Food Safety & HACCP Compliance"
+    },
+    "contact": {
+      "implementation": "ISO Implementation",
+      "internal-auditing": "Internal Audit Support",
+      "iso-maintenance": "ISO Maintenance",
+      "lead-auditing": "Lead Auditor Services",
+      "food-safety-haccp": "Food Safety & HACCP Compliance",
+      "other": "Other"
+    }
+  },
+  "lv": {
+    "nav": {
+      "implementation": "ISO ieviešana",
+      "internal-auditing": "Iekšējais audits",
+      "iso-maintenance": "ISO uzturēšana",
+      "lead-auditing": "Vadošā auditora pakalpojumi",
+      "food-safety-haccp": "Pārtikas drošība un HACCP"
+    },
+    "contact": {
+      "implementation": "ISO ieviešana",
+      "internal-auditing": "Iekšējā audita atbalsts",
+      "iso-maintenance": "ISO uzturēšana",
+      "lead-auditing": "Vadošā auditora pakalpojumi",
+      "food-safety-haccp": "Pārtikas drošība un HACCP",
+      "other": "Cits"
+    }
+  },
+  "ru": {
+    "nav": {
+      "implementation": "Внедрение ISO",
+      "internal-auditing": "Внутренний аудит",
+      "iso-maintenance": "Поддержка ISO",
+      "lead-auditing": "Услуги ведущего аудитора",
+      "food-safety-haccp": "Пищевая безопасность и HACCP"
+    },
+    "contact": {
+      "implementation": "Внедрение ISO",
+      "internal-auditing": "Поддержка внутреннего аудита",
+      "iso-maintenance": "Поддержка ISO",
+      "lead-auditing": "Услуги ведущего аудитора",
+      "food-safety-haccp": "Пищевая безопасность и HACCP",
+      "other": "Другое"
+    }
+  }
+}
+

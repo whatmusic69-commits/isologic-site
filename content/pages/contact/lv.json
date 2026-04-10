@@ -14,11 +14,12 @@
       "phone": "Tālrunis / WhatsApp",
       "serviceLabel": "Interesē",
       "serviceOptions": [
-        "ISO ieviešana",
-        "Iekšējā audita atbalsts",
-        "ISO uzturēšana",
-        "Vadošā auditora pakalpojumi",
-        "Cits"
+        "implementation",
+        "internal-auditing",
+        "iso-maintenance",
+        "food-safety-haccp",
+        "lead-auditing",
+        "other"
       ],
       "standardLabel": "Standarts(-i)",
       "standardOptions": [

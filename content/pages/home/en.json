@@ -124,14 +124,13 @@
     "subtitle": "How clients describe the value of working with ISOLOGIC.",
     "rotationIntervalMs": 6000,
     "items": [
-      { "quote": "ISOLOGIC clarified our scope and cut the noise. We moved from uncertainty to a concrete plan in days, not weeks.", "authorName": "Emma Clark", "authorRole": "COO", "company": "Finlytics", "rating": 5 },
-      { "quote": "Their audit preparation pack was spot‑on. Requests from external auditors became structured and fast to resolve.", "authorName": "Daniel Wong", "authorRole": "Head of Finance", "company": "Nimbus Tech", "rating": 5 },
-      { "quote": "Pragmatic control design that our teams actually follow. It works in practice, not just on paper.", "authorName": "Sofia Martins", "authorRole": "Risk Lead", "company": "Corevista", "rating": 5 },
-      { "quote": "We gained confidence ahead of a critical client assessment. Evidence was ready and defensible.", "authorName": "Liam Patel", "authorRole": "VP Operations", "company": "Axis Cloud", "rating": 5 },
-      { "quote": "Clear actions, owners and timelines. Steering meetings became shorter and more focused.", "authorName": "Grace Lee", "authorRole": "Compliance Manager", "company": "North & Co", "rating": 5 },
-      { "quote": "Independent perspective we needed. Findings were concise and solution‑oriented.", "authorName": "Oliver Brown", "authorRole": "CFO", "company": "Metronome", "rating": 5 },
-      { "quote": "They kept us audit‑ready all year. No last‑minute scramble before certification.", "authorName": "Hannah Schmidt", "authorRole": "QA Director", "company": "Helios Labs", "rating": 5 },
-      { "quote": "Documentation quality improved across the board. Processes are easier to train and sustain.", "authorName": "Jack Miller", "authorRole": "HR & Training", "company": "Arclight Services", "rating": 5 }
+      {
+        "quote": "Vēlamies pateikt lielu paldies Marijai no ISOlogic par sniegto atbalstu mūsu jaunā veikala darbības uzsākšanā. Viņa palīdzēja ne tikai ieviest pārtikas drošības prasības, bet arī praktiski apmācīja darbiniekus uz vietas, skaidri izskaidrojot normatīvās prasības, veselības pārbaudes un ikdienas kontroles procesus. Ļoti novērtējam profesionālu pieeju un spēju teoriju pārvērst saprotamā un praktiski pielietojamā risinājumā.",
+        "authorName": "MIX",
+        "company": "MIX",
+        "rating": 5,
+        "avatarSrc": "/mix_review.jpeg"
+      }
     ]
   }
 }

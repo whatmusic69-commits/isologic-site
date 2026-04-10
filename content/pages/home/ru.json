@@ -157,14 +157,13 @@
     "subtitle": "Как клиенты описывают ценность работы с ISOLOGIC.",
     "rotationIntervalMs": 6000,
     "items": [
-      { "quote": "ISOLOGIC прояснили объём и убрали лишнее. От неопределённости к чёткому плану за считанные дни.", "authorName": "Эмма Кларк", "authorRole": "Операционный директор", "company": "Finlytics", "rating": 5 },
-      { "quote": "Пакет подготовки к аудиту оказался точным. Запросы внешних аудиторов стали структурированными и быстрее закрывались.", "authorName": "Даниэль Вонг", "authorRole": "Руководитель финансистов", "company": "Nimbus Tech", "rating": 5 },
-      { "quote": "Прагматичный дизайн контролей, которым команды действительно следуют. Работает на практике, а не только на бумаге.", "authorName": "София Мартинс", "authorRole": "Риск-менеджер", "company": "Corevista", "rating": 5 },
-      { "quote": "Мы получили уверенность перед важной оценкой клиента. Доказательства были готовы и защитимы.", "authorName": "Лиам Патель", "authorRole": "Вице-президент по операциям", "company": "Axis Cloud", "rating": 5 },
-      { "quote": "Понятные действия, ответственные и сроки. Совещания стали короче и предметнее.", "authorName": "Грейс Ли", "authorRole": "Менеджер по соответствию", "company": "North & Co", "rating": 5 },
-      { "quote": "Независимый взгляд, который нам был нужен. Выводы лаконичные и ориентированы на решение.", "authorName": "Оливер Браун", "authorRole": "Финансовый директор", "company": "Metronome", "rating": 5 },
-      { "quote": "Мы были готовы к аудиту круглый год. Никакой спешки перед сертификацией.", "authorName": "Ханна Шмидт", "authorRole": "Директор по качеству", "company": "Helios Labs", "rating": 5 },
-      { "quote": "Качество документации выросло. Процессы легче обучать и поддерживать.", "authorName": "Джек Миллер", "authorRole": "Руководитель обучения", "company": "Arclight Services", "rating": 5 }
+      {
+        "quote": "Vēlamies pateikt lielu paldies Marijai no ISOlogic par sniegto atbalstu mūsu jaunā veikala darbības uzsākšanā. Viņa palīdzēja ne tikai ieviest pārtikas drošības prasības, bet arī praktiski apmācīja darbiniekus uz vietas, skaidri izskaidrojot normatīvās prasības, veselības pārbaudes un ikdienas kontroles procesus. Ļoti novērtējam profesionālu pieeju un spēju teoriju pārvērst saprotamā un praktiski pielietojamā risinājumā.",
+        "authorName": "MIX",
+        "company": "MIX",
+        "rating": 5,
+        "avatarSrc": "/mix_review.jpeg"
+      }
     ]
   }
 }

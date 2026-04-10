@@ -7,6 +7,8 @@ import Reveal from "@/components/ui/reveal";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
 import CollapsibleSection from "@/components/ui/collapsible-section";
+import HashAccordionOpener from "@/components/ui/hash-accordion-opener";
+import CtaBand from "@/components/ui/cta-band";
 import Image from "next/image";
 import {
   DocumentIcon,
@@ -40,6 +42,7 @@ type ServicesSection = {
   note?: string;
   ctaText?: string;
   ctaButtonLabel?: string;
+  extraParagraphs?: string[];
 };
 
 type StandardsSection = { title: string; intro?: string; items: string[] };
@@ -51,6 +54,7 @@ type ServicesContent = {
   standardsSection?: StandardsSection;
   whyOutsourceSection?: WhyOutsourceSection;
   bottomSection?: { paragraphs: string[] };
+  ctaBand?: { title: string; subtitle?: string; ctaLabel?: string; ctaHref?: string; secondaryLabel?: string; secondaryHref?: string };
 };
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -61,6 +65,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
 
   return (
     <main>
+      {/* Client-side: open correct section based on URL hash */}
+      <HashAccordionOpener />
       {/* Hero (compact, title only) */}
       <section className="section section-compact" style={{ paddingBottom: "1.25rem" }}>
         <Reveal>
@@ -156,6 +162,17 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                         </div>
                       </div>
                     )}
+
+                    {/* Additional paragraphs (e.g., Lead Auditor availability inside the section) */}
+                    {sec.extraParagraphs && sec.extraParagraphs.length > 0 && (
+                      <div className="mt-6 card card-hover p-5 md:p-6">
+                        <div className="space-y-3 text-neutral-700">
+                          {sec.extraParagraphs.map((p, i) => (
+                            <p key={i} className="text-sm md:text-base leading-6">{p}</p>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </CollapsibleSection>
                 </div>
               </Reveal>
@@ -211,28 +228,21 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         </section>
       )}
 
-      {/* CTA at bottom */}
-      <section className="section-narrow" style={{ paddingTop: 0 }}>
-        <div className="card card-hover p-8 text-center">
-          <h3 className="text-xl font-semibold">{lang === "lv" ? "Sazinieties ar mums" : lang === "ru" ? "Свяжитесь с нами" : "Contact us"}</h3>
-          <div className="mt-4">
-            <a href={`/${lang}/contact`} className="btn btn-primary">{lang === "lv" ? "Atvērt kontaktu formu" : lang === "ru" ? "Открыть форму" : "Open contact form"}</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom notes / lead auditor availability */}
-      {content.bottomSection && content.bottomSection.paragraphs?.length > 0 && (
-        <section className="section section-compact">
-          <Reveal>
-            <div className="card card-hover p-6 md:p-8 text-neutral-700 space-y-3">
-              {content.bottomSection.paragraphs.map((p, i) => (
-                <p key={i} className="text-sm md:text-base leading-6">{p}</p>
-              ))}
-            </div>
-          </Reveal>
+      {/* CTA at bottom (matches Ready to Get Started? design) */}
+      {content.ctaBand && (
+        <section className="section-narrow" style={{ paddingTop: 0 }}>
+          <CtaBand
+            title={content.ctaBand.title}
+            subtitle={content.ctaBand.subtitle}
+            ctaLabel={content.ctaBand.ctaLabel}
+            ctaHref={content.ctaBand.ctaHref}
+            secondaryLabel={content.ctaBand.secondaryLabel}
+            secondaryHref={content.ctaBand.secondaryHref}
+          />
         </section>
       )}
+
+      {/* Removed separate bottom notes block: integrated into Lead Auditing section */}
     </main>
   );
 }

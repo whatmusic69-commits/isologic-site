@@ -127,60 +127,11 @@
     "rotationIntervalMs": 6000,
     "items": [
       {
-        "quote": "ISOLOGIC precizēja apjomu un noņēma lieko. No neskaidrības līdz konkrētam plānam pāris dienās.",
-        "authorName": "Emma Klāra",
-        "authorRole": "COO",
-        "company": "Finlytics",
-        "rating": 5
-      },
-      {
-        "quote": "Audita sagatavošanas materiāli bija ļoti precīzi. Pieprasījumi no auditoriem kļuva strukturēti un ātri izpildāmi.",
-        "authorName": "Daniels Vongs",
-        "authorRole": "Finanšu vadītājs",
-        "company": "Nimbus Tech",
-        "rating": 5
-      },
-      {
-        "quote": "Pragmatisks kontroļu dizains, ko komandas patiešām ievēro. Darbojas praksē, ne tikai dokumentos.",
-        "authorName": "Sofija Martinsa",
-        "authorRole": "Riska vadītāja",
-        "company": "Corevista",
-        "rating": 5
-      },
-      {
-        "quote": "Ieguvām pārliecību pirms svarīgas klienta pārbaudes. Pierādījumi bija gatavi un aizstāvami.",
-        "authorName": "Liams Patels",
-        "authorRole": "Operāciju vadītājs",
-        "company": "Axis Cloud",
-        "rating": 5
-      },
-      {
-        "quote": "Skaidras darbības, atbildīgie un termiņi. Vadības sapulces kļuva īsākas un fokusētākas.",
-        "authorName": "Grace Lī",
-        "authorRole": "Atbilstības vadītāja",
-        "company": "North & Co",
-        "rating": 5
-      },
-      {
-        "quote": "Neatkarīgs skats, kas bija nepieciešams. Secinājumi – lakoniski un uz risinājumu vērsti.",
-        "authorName": "Olivers Brauns",
-        "authorRole": "Finanšu direktors",
-        "company": "Metronome",
-        "rating": 5
-      },
-      {
-        "quote": "Gada garumā uzturēja gatavību auditam. Vairs nav pēdējā brīža steigas pirms sertifikācijas.",
-        "authorName": "Hanna Šmita",
-        "authorRole": "Kvalitātes vadītāja",
-        "company": "Helios Labs",
-        "rating": 5
-      },
-      {
-        "quote": "Dokumentācijas kvalitāte uzlabojās visā organizācijā. Procesi vieglāk apmācāmi un uzturami.",
-        "authorName": "Džeks Millers",
-        "authorRole": "Apmācību vadītājs",
-        "company": "Arclight Services",
-        "rating": 5
+        "quote": "Vēlamies pateikt lielu paldies Marijai no ISOlogic par sniegto atbalstu mūsu jaunā veikala darbības uzsākšanā. Viņa palīdzēja ne tikai ieviest pārtikas drošības prasības, bet arī praktiski apmācīja darbiniekus uz vietas, skaidri izskaidrojot normatīvās prasības, veselības pārbaudes un ikdienas kontroles procesus. Ļoti novērtējam profesionālu pieeju un spēju teoriju pārvērst saprotamā un praktiski pielietojamā risinājumā.",
+        "authorName": "MIX",
+        "company": "MIX",
+        "rating": 5,
+        "avatarSrc": "/mix_review.jpeg"
       }
     ]
   },

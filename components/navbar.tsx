@@ -33,7 +33,20 @@ export default function Navbar({ lang }: { lang: Lang }) {
   const links = [
     { href: `/${lang}`, label: t.home, match: `/${lang}` },
     { href: `/${lang}/about`, label: t.about, match: `/${lang}/about` },
-    { href: `/${lang}/services`, label: t.services, match: `/${lang}/services`, dropdown: t.servicesDropdown.items.map((i) => ({ label: i.label, href: `/${lang}/services#${i.slug}` })) },
+    {
+      href: `/${lang}/services`,
+      label: t.services,
+      match: `/${lang}/services`,
+      dropdown: t.servicesDropdown.items.map((i) => {
+        // Map internal slugs to preferred public hash anchors
+        const anchor = i.slug === "implementation"
+          ? "iso-implementation"
+          : i.slug === "food-safety-haccp"
+          ? "food-safety"
+          : i.slug;
+        return { label: i.label, href: `/${lang}/services#${anchor}` };
+      }),
+    },
     { href: `/${lang}/contact`, label: t.contact, match: `/${lang}/contact` },
     { href: `/${lang}/faq`, label: t.faq, match: `/${lang}/faq` },
   ];

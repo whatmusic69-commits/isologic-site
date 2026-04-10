@@ -8,6 +8,165 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
+  # TRANSLATIONS
+  - name: translations
+    label: Translations
+    files:
+      - label: UI (nav/footer)
+        name: ui_translations
+        file: content/translations/ui.json
+        format: json
+        fields:
+          - label: Latvian (lv)
+            name: lv
+            widget: object
+            fields:
+              - { label: Nav, name: nav, widget: object, fields: [
+                  { label: Home, name: home, widget: string },
+                  { label: About, name: about, widget: string },
+                  { label: Services, name: services, widget: string },
+                  { label: Contact, name: contact, widget: string },
+                  { label: FAQs, name: faq, widget: string }
+                ] }
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - { label: Tagline, name: tagline, widget: string }
+                  - { label: Quick Links, name: quickLinks, widget: string }
+                  - { label: Contact, name: contact, widget: string }
+                  - label: Links
+                    name: links
+                    widget: object
+                    fields:
+                      - { label: Home, name: home, widget: string }
+                      - { label: About, name: about, widget: string }
+                      - { label: Services, name: services, widget: string }
+                      - { label: FAQs, name: faq, widget: string }
+                      - { label: Contact, name: contact, widget: string }
+                      - { label: Privacy, name: privacy, widget: string }
+                  - { label: Rights, name: rights, widget: string }
+          - label: English (en)
+            name: en
+            widget: object
+            fields:
+              - { label: Nav, name: nav, widget: object, fields: [
+                  { label: Home, name: home, widget: string },
+                  { label: About, name: about, widget: string },
+                  { label: Services, name: services, widget: string },
+                  { label: Contact, name: contact, widget: string },
+                  { label: FAQs, name: faq, widget: string }
+                ] }
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - { label: Tagline, name: tagline, widget: string }
+                  - { label: Quick Links, name: quickLinks, widget: string }
+                  - { label: Contact, name: contact, widget: string }
+                  - label: Links
+                    name: links
+                    widget: object
+                    fields:
+                      - { label: Home, name: home, widget: string }
+                      - { label: About, name: about, widget: string }
+                      - { label: Services, name: services, widget: string }
+                      - { label: FAQs, name: faq, widget: string }
+                      - { label: Contact, name: contact, widget: string }
+                      - { label: Privacy, name: privacy, widget: string }
+                  - { label: Rights, name: rights, widget: string }
+          - label: Russian (ru)
+            name: ru
+            widget: object
+            fields:
+              - { label: Nav, name: nav, widget: object, fields: [
+                  { label: Home, name: home, widget: string },
+                  { label: About, name: about, widget: string },
+                  { label: Services, name: services, widget: string },
+                  { label: Contact, name: contact, widget: string },
+                  { label: FAQs, name: faq, widget: string }
+                ] }
+              - label: Footer
+                name: footer
+                widget: object
+                fields:
+                  - { label: Tagline, name: tagline, widget: string }
+                  - { label: Quick Links, name: quickLinks, widget: string }
+                  - { label: Contact, name: contact, widget: string }
+                  - label: Links
+                    name: links
+                    widget: object
+                    fields:
+                      - { label: Home, name: home, widget: string }
+                      - { label: About, name: about, widget: string }
+                      - { label: Services, name: services, widget: string }
+                      - { label: FAQs, name: faq, widget: string }
+                      - { label: Contact, name: contact, widget: string }
+                      - { label: Privacy, name: privacy, widget: string }
+                  - { label: Rights, name: rights, widget: string }
+
+      - label: Service labels (nav + contact)
+        name: services_translations
+        file: content/translations/services.json
+        format: json
+        fields:
+          - label: English (en)
+            name: en
+            widget: object
+            fields:
+              - { label: Nav labels, name: nav, widget: object, fields: [
+                    { label: ISO Implementation, name: implementation, widget: string },
+                    { label: Internal Auditing, name: "internal-auditing", widget: string },
+                    { label: ISO Maintenance, name: "iso-maintenance", widget: string },
+                    { label: Food Safety & HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Lead Auditing, name: "lead-auditing", widget: string }
+                ] }
+              - { label: Contact select, name: contact, widget: object, fields: [
+                    { label: ISO Implementation, name: implementation, widget: string },
+                    { label: Internal Audit Support, name: "internal-auditing", widget: string },
+                    { label: ISO Maintenance, name: "iso-maintenance", widget: string },
+                    { label: Food Safety & HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Lead Auditor Services, name: "lead-auditing", widget: string },
+                    { label: Other, name: other, widget: string }
+                ] }
+          - label: Latvian (lv)
+            name: lv
+            widget: object
+            fields:
+              - { label: Nav labels, name: nav, widget: object, fields: [
+                    { label: ISO ieviešana, name: implementation, widget: string },
+                    { label: Iekšējais audits, name: "internal-auditing", widget: string },
+                    { label: ISO uzturēšana, name: "iso-maintenance", widget: string },
+                    { label: Pārtikas drošība un HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Vadošā auditora pakalpojumi, name: "lead-auditing", widget: string }
+                ] }
+              - { label: Contact select, name: contact, widget: object, fields: [
+                    { label: ISO ieviešana, name: implementation, widget: string },
+                    { label: Iekšējā audita atbalsts, name: "internal-auditing", widget: string },
+                    { label: ISO uzturēšana, name: "iso-maintenance", widget: string },
+                    { label: Pārtikas drošība un HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Vadošā auditora pakalpojumi, name: "lead-auditing", widget: string },
+                    { label: Cits, name: other, widget: string }
+                ] }
+          - label: Russian (ru)
+            name: ru
+            widget: object
+            fields:
+              - { label: Nav labels, name: nav, widget: object, fields: [
+                    { label: Внедрение ISO, name: implementation, widget: string },
+                    { label: Внутренний аудит, name: "internal-auditing", widget: string },
+                    { label: Поддержка ISO, name: "iso-maintenance", widget: string },
+                    { label: Пищевая безопасность и HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Услуги ведущего аудитора, name: "lead-auditing", widget: string }
+                ] }
+              - { label: Contact select, name: contact, widget: object, fields: [
+                    { label: Внедрение ISO, name: implementation, widget: string },
+                    { label: Поддержка внутреннего аудита, name: "internal-auditing", widget: string },
+                    { label: Поддержка ISO, name: "iso-maintenance", widget: string },
+                    { label: Пищевая безопасность и HACCP, name: "food-safety-haccp", widget: string },
+                    { label: Услуги ведущего аудитора, name: "lead-auditing", widget: string },
+                    { label: Другое, name: other, widget: string }
+                ] }
   # HOME PAGE
   - name: home
     label: Home
@@ -155,6 +314,7 @@ collections:
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+                  - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
           - label: Stats
             name: stats
             widget: object
@@ -319,6 +479,7 @@ collections:
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+                  - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
           - label: Stats
             name: stats
             widget: object
@@ -483,6 +644,7 @@ collections:
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
+                  - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
           - label: Stats
             name: stats
             widget: object
@@ -544,6 +706,7 @@ collections:
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
           - label: Standards Section
             name: standardsSection
             widget: object
@@ -601,6 +764,18 @@ collections:
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
+          - label: CTA Band (bottom)
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
+              - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
+              - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
+              - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
           - label: Standards Section
             name: standardsSection
             widget: object
@@ -658,6 +833,18 @@ collections:
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
+          - label: CTA Band (bottom)
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
+              - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
+              - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
+              - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
           - label: Standards Section
             name: standardsSection
             widget: object
@@ -678,6 +865,18 @@ collections:
               - label: Items
                 name: items
                 widget: list
+
+          - label: CTA Band (bottom)
+            name: ctaBand
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text, required: false }
+              - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
+              - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
+              - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
+              - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
           - label: Bottom Section (Lead Auditor Availability)
             name: bottomSection
             widget: object
@@ -724,6 +923,18 @@ collections:
             required: false
             fields:
               - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+          - label: Principles Section (3 cards + statement)
+            name: principlesSection
+            widget: object
+            required: false
+            fields:
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+              - { label: Statement, name: statement, widget: text }
           - label: Food Business Support
             name: foodSupport
             widget: object

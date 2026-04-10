@@ -6,6 +6,7 @@ import Reveal from "@/components/ui/reveal";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
 import ContactForm, { ContactFormSchema } from "@/components/ui/contact-form";
+import servicesTranslations from "@/content/translations/services.json";
 
 type ContactPageContent = {
   contactPage: {
@@ -30,6 +31,12 @@ export default async function ContactPage({
   const content = await getPageContent<ContactPageContent>("contact", lang);
 
   const page = content.contactPage;
+  // Map service option slugs to localized labels from shared translations.
+  const svc = (servicesTranslations as any)[lang as keyof typeof servicesTranslations]?.contact || {};
+  const formWithMappedServices: ContactFormSchema = {
+    ...page.form,
+    serviceOptions: page.form.serviceOptions.map((opt: string) => (opt in svc ? svc[opt as keyof typeof svc] : opt)),
+  };
 
   return (
     <main>
@@ -61,7 +68,7 @@ export default async function ContactPage({
           {/* RIGHT: form */}
           <Reveal>
             <div className="card card-hover p-6 md:p-8">
-              <ContactForm form={page.form} successTitle={page.successTitle} successBody={page.successBody} />
+              <ContactForm form={formWithMappedServices} successTitle={page.successTitle} successBody={page.successBody} />
             </div>
           </Reveal>
         </div>

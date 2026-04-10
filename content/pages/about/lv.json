@@ -37,5 +37,22 @@
       "The consultancy is led by Marija Nesterovica, an ISO professional with extensive experience across integrated management systems and a certified ISO 9001 Lead Auditor. This combination of technical knowledge and audit expertise allows ISOlogic to deliver systems that are robust, audit-ready and designed for long-term sustainability.",
       "Based in Riga, ISOlogic supports businesses across Latvia and Europe, providing clear, structured and results-driven ISO consultancy without unnecessary complexity."
     ]
+  },
+  "principlesSection": {
+    "cards": [
+      {
+        "title": "Praktiska loģika",
+        "text": "Sistēmas cilvēkiem, ne tikai auditoriem."
+      },
+      {
+        "title": "Praktisks atbalsts",
+        "text": "Atbalsts klātienē un attālināti visā sertifikācijas dzīves ciklā un pēc tā."
+      },
+      {
+        "title": "Godīgums un caurspīdīgums",
+        "text": "Sniedzam godīgu, tiešu atgriezenisko saiti, palīdzot saskatīt īstas uzlabošanas iespējas."
+      }
+    ],
+    "statement": "Lai nodrošinātu vienmērīgu integrāciju jūsu uzņēmumā, visa dokumentācija, apmācības un komunikācija var tikt nodrošināta <strong>angļu</strong>, <strong>latviešu</strong> vai <strong>krievu</strong> valodā."
   }
 }

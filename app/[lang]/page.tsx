@@ -153,7 +153,7 @@ export default async function HomePage({
         />
       )}
 
-      {false && ((content.testimonialsSection?.items?.length ?? 0) > 0) && (
+      {(content.testimonialsSection?.items?.length ?? 0) > 0 && (
         <TestimonialsSection
           title={content.testimonialsSection?.title ?? ""}
           subtitle={content.testimonialsSection?.subtitle}
@@ -185,11 +185,22 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const title = content?.hero?.title || "Home";
   const description = truncate(content?.hero?.subtitle || content?.intro?.text || "");
   const { base, langs } = buildAlternates("");
+  const image = `${base}/homePage.jpg`;
   return {
     title,
     description: description || undefined,
     alternates: { canonical: `${base}/${lang}`, languages: langs },
-    openGraph: { title, description: description || undefined, url: `${base}/${lang}` },
-    twitter: { title, description: description || undefined },
+    openGraph: {
+      title,
+      description: description || undefined,
+      url: `${base}/${lang}`,
+      images: [{ url: image, alt: content?.hero?.imageAlt || title }],
+    },
+    twitter: {
+      title,
+      description: description || undefined,
+      images: [image],
+      card: "summary_large_image",
+    },
   };
 }

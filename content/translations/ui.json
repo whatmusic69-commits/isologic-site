@@ -1,0 +1,72 @@
+{
+  "lv": {
+    "nav": {
+      "home": "Sākums",
+      "about": "Par mums",
+      "services": "Pakalpojumi",
+      "contact": "Kontakti",
+      "faq": "BUJ"
+    },
+    "footer": {
+      "tagline": "Neatkarīgs audits un atbilstības konsultācijas. Precizitāte, uzticamība, rezultāts.",
+      "quickLinks": "Noderīgas saites",
+      "contact": "Saziņa",
+      "links": {
+        "home": "Sākums",
+        "about": "Par mums",
+        "services": "Pakalpojumi",
+        "faq": "BUJ",
+        "contact": "Kontakti",
+        "privacy": "Privātuma politika"
+      },
+      "rights": "Visas tiesības aizsargātas."
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About us",
+      "services": "Services",
+      "contact": "Contacts",
+      "faq": "FAQs"
+    },
+    "footer": {
+      "tagline": "Guidance with Logic. Support in Every Step.",
+      "quickLinks": "Quick links",
+      "contact": "Contact",
+      "links": {
+        "home": "Home",
+        "about": "About us",
+        "services": "Services",
+        "faq": "FAQs",
+        "contact": "Contact",
+        "privacy": "Privacy Policy"
+      },
+      "rights": "All rights reserved."
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "services": "Услуги",
+      "contact": "Контакты",
+      "faq": "Вопросы"
+    },
+    "footer": {
+      "tagline": "Независимый аудит и консультирование по соответствию. Точность. Доверие. Результат.",
+      "quickLinks": "Ссылки",
+      "contact": "Контакты",
+      "links": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "faq": "Вопросы",
+        "contact": "Контакты",
+        "privacy": "Политика конфиденциальности"
+      },
+      "rights": "Все права защищены."
+    }
+  }
+}
+

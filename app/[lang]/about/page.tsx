@@ -29,6 +29,13 @@ type AboutV2 = {
   additionalExpertise?: { paragraphs: string[] };
 };
 
+type AboutPrinciples = {
+  principlesSection?: {
+    cards: Array<{ title: string; text: string }>;
+    statement: string;
+  };
+};
+
 type ContactPageContent = {
   contactPage: {
     title: string;
@@ -54,6 +61,7 @@ export default async function AboutPage({
   }
 
   const aboutRaw = await getPageContent<any>("about", lang);
+  const principles: AboutPrinciples["principlesSection"] | undefined = (aboutRaw as AboutPrinciples)?.principlesSection;
 
   // If the new v2 structure is present, render the new layout
   const v2: AboutV2 | null = (aboutRaw && (aboutRaw.v2 || aboutRaw.imageSection || aboutRaw.coreExpertise)) ? (aboutRaw as AboutV2) : null;
@@ -75,6 +83,8 @@ export default async function AboutPage({
             </div>
           )}
         </section>
+
+        
 
         {/* Section 2 — Image + Text */}
         {v2.imageSection && (
@@ -164,6 +174,29 @@ export default async function AboutPage({
           </section>
         )}
 
+        {/* Restored 3-card + statement block — directly above contact form */}
+        {principles && (
+          <section className="section section-compact">
+            <Reveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                {principles.cards.map((c, i) => (
+                  <div key={i} className="card card-hover p-6 h-full">
+                    <h3 className="text-lg font-semibold">{c.title}</h3>
+                    <p className="mt-3 text-neutral-600 text-sm leading-6">{c.text}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 md:mt-6">
+                <div className="max-w-3xl mx-auto">
+                  <div className="card card-hover p-6 md:p-8 text-center text-neutral-800">
+                    <span dangerouslySetInnerHTML={{ __html: principles.statement }} />
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+        )}
+
         {/* Section 7 — Contact Form */}
         <section id="contact" className="section">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
@@ -199,6 +232,8 @@ export default async function AboutPage({
       </section>
 
       {/* Removed large visual panel section as requested */}
+
+      
 
       {content.description && content.description.length > 0 && (
         // Tighter spacing for intro block

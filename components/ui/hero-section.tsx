@@ -49,38 +49,40 @@ export default function HeroSection({
 
         {/* Supporting content below image */}
         <div className="px-6 sm:px-8 md:px-12 py-8 md:py-10">
-          {subtitle && (
-            <p className="max-w-3xl text-base md:text-lg text-neutral-700">
-              {subtitle}
-            </p>
-          )}
-          {paragraphs && paragraphs.length > 0 && (
-            <div className="mt-4 max-w-3xl space-y-3 text-neutral-700">
-              {paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          )}
-          {checklist && checklist.length > 0 && (
-            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
-              {checklist.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-neutral-900">
-                  <span className="mt-0.5 text-accent" aria-hidden><CheckIcon className="w-4 h-4" /></span>
-                  <span className="text-sm leading-6">{c}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-          {(primaryCta || secondaryCta) && (
-            <div className="mt-7 flex flex-wrap gap-3">
-              {primaryCta && (
-                <a href={primaryCta.href} className="btn btn-primary">{primaryCta.label}</a>
-              )}
-              {secondaryCta && (
-                <a href={secondaryCta.href} className="btn btn-secondary">{secondaryCta.label}</a>
-              )}
-            </div>
-          )}
+          <div className="mx-auto md:max-w-4xl lg:max-w-5xl">
+            {subtitle && (
+              <p className="text-base md:text-lg text-neutral-700">
+                {subtitle}
+              </p>
+            )}
+            {paragraphs && paragraphs.length > 0 && (
+              <div className="mt-4 space-y-3 text-neutral-700">
+                {paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            )}
+            {checklist && checklist.length > 0 && (
+              <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {checklist.map((c, i) => (
+                  <li key={i} className="flex items-start gap-2 text-neutral-900">
+                    <span className="mt-0.5 text-accent" aria-hidden><CheckIcon className="w-4 h-4" /></span>
+                    <span className="text-sm leading-6">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {(primaryCta || secondaryCta) && (
+              <div className="mt-7 flex flex-wrap gap-3 md:justify-center">
+                {primaryCta && (
+                  <a href={primaryCta.href} className="btn btn-primary">{primaryCta.label}</a>
+                )}
+                {secondaryCta && (
+                  <a href={secondaryCta.href} className="btn btn-secondary">{secondaryCta.label}</a>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

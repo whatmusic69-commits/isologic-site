@@ -80,6 +80,10 @@
       "items": [
         "Third-Party Audits: Partnering with international Certification Bodies to perform independent compliance assessments and certification audits (e.g., ISO 9001, etc.)",
         "Second-Party (Supplier) Audits: Helping organisations mitigate risk by conducting deep-dive audits of their critical suppliers to ensure quality and compliance across the entire supply chain."
+      ],
+      "extraParagraphs": [
+        "Available as a freelance and contract ISO Lead Auditor for third-party ISO certification audits, supplier audits and external auditing assignments across Latvia and Europe.",
+        "CQI & IRCA certified ISO auditor providing services to certification bodies and organisations seeking qualified lead auditors for ISO 9001 and other management system standards. Engagements are delivered on a contract or assignment basis, tailored to certification body and organisational requirements."
       ]
     }
   ],
@@ -108,10 +112,13 @@
     ]
   }
   ,
-  "bottomSection": {
-    "paragraphs": [
-      "Available as a freelance and contract ISO Lead Auditor for third-party ISO certification audits, supplier audits and external auditing assignments across Latvia and Europe.",
-      "CQI & IRCA certified ISO auditor providing services to certification bodies and organisations seeking qualified lead auditors for ISO 9001 and other management system standards. Engagements are delivered on a contract or assignment basis, tailored to certification body and organisational requirements."
-    ]
+  "ctaBand": {
+    "title": "Готовы начать?",
+    "subtitle": "Свяжитесь с ISOLogic уже сегодня, чтобы получить экспертную поддержку в Латвии.",
+    "ctaLabel": "Запросить консультацию",
+    "ctaHref": "/ru/contact",
+    "secondaryLabel": "Позвонить",
+    "secondaryHref": "tel:+37122331164"
   }
+
 }

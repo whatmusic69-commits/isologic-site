@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import SectionHeading from "./section-heading";
 import Reveal from "./reveal";
 import clsx from "../util/clsx";
+import Image from "next/image";
 
 type Testimonial = {
   quote: string;
@@ -11,6 +12,7 @@ type Testimonial = {
   authorRole?: string;
   company?: string;
   rating?: number; // 1..5
+  avatarSrc?: string;
 };
 
 export default function TestimonialsSection({
@@ -24,7 +26,7 @@ export default function TestimonialsSection({
   rotationIntervalMs?: number;
   items: Testimonial[];
 }) {
-  const groupSize = 4;
+  const groupSize = 2;
   const groups = useMemo(() => chunk(items, groupSize), [items]);
   const [index, setIndex] = useState(0);
   const [fading, setFading] = useState(false);
@@ -60,7 +62,7 @@ export default function TestimonialsSection({
 
       <div
         className={clsx(
-          "mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-300",
+          "mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 transition-opacity duration-300",
           fading ? "opacity-0" : "opacity-100"
         )}
       >
@@ -71,7 +73,7 @@ export default function TestimonialsSection({
               <p className="text-sm leading-6 text-neutral-700">{t.quote}</p>
             </div>
             <div className="mt-5 flex items-center gap-3">
-              <Avatar name={t.authorName} company={t.company} />
+              <Avatar name={t.authorName} company={t.company} avatarSrc={t.avatarSrc} />
               <div className="min-w-0">
                 <div className="font-medium text-neutral-900 truncate">{t.authorName}</div>
                 <div className="text-xs text-neutral-600 truncate">
@@ -117,7 +119,14 @@ function QuoteMark() {
   );
 }
 
-function Avatar({ name, company }: { name: string; company?: string }) {
+function Avatar({ name, company, avatarSrc }: { name: string; company?: string; avatarSrc?: string }) {
+  if (avatarSrc) {
+    return (
+      <div className="h-9 w-9 rounded-full overflow-hidden border" style={{ borderColor: "var(--border)" }} aria-hidden>
+        <Image src={avatarSrc} alt={name || company || ""} width={36} height={36} className="h-9 w-9 object-cover" />
+      </div>
+    );
+  }
   const initials = getInitials(name || company || "");
   return (
     <div

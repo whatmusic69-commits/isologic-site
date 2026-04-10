@@ -2,7 +2,7 @@
   "hero": {
     "title": "Privātuma politika",
     "subtitle": "Šī Privātuma politika skaidro, kā mēs apkopojam, apstrādājam un aizsargājam personas datus.",
-    "lastUpdated": "Atjaunots: [Insert Date]"
+    "lastUpdated": "Atjaunots: 10. aprīlis 2026"
   },
   "sections": [
     {
@@ -16,8 +16,7 @@
       "number": 2,
       "title": "Pārzinis",
       "items": [
-        "Nosaukums: [Insert Legal Name]",
-        "Reģ. Nr.: [Insert Number]",
+        "Nosaukums: ISOlogic",
         "Adrese: Rīga, Latvija",
         "E-pasts: info@isologic.lv"
       ]
@@ -40,7 +39,7 @@
       "number": 5,
       "title": "Glabāšanas ilgums",
       "paragraphs": [
-        "Dati tiek glabāti tik ilgi, cik nepieciešams pieprasījuma izpildei vai cik to nosaka Latvijas grāmatvedības un nodokļu likumi (parasti 5 gadi finanšu dokumentiem)."
+        "Dati tiek glabāti tik ilgi, cik nepieciešams pieprasījuma izpildei vai cik to nosaka Latvijas grāmatvedības un nodokļu likumi."
       ]
     },
     {

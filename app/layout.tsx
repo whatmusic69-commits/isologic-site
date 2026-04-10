@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon_rounded.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon_rounded.png", type: "image/png", sizes: "192x192" },
-      { url: "/favicon_rounded.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: [{ url: "/favicon_rounded.png", type: "image/png" }],
-    apple: [{ url: "/favicon_rounded.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
   },
   robots: {
     index: true,

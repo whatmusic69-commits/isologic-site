@@ -79,36 +79,64 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         <div className="space-y-4">
           {content.sections?.map((sec, idx) => {
             const img = pickServiceImage(sec.id);
-            const imageFirst = idx % 2 === 0; // alternate left/right on desktop
+            // const imageFirst = idx % 2 === 0; // alternate left/right on desktop
 
             return (
               <Reveal key={sec.id || idx}>
                 <div id={sec.id}>
                   <CollapsibleSection title={sec.title} subtitle={sec.subtitle} defaultOpen={false}>
                     {/* Intro: for sections with image → 2-col row; without image → full-width text */}
-                    {img ? (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
-                        <div className={imageFirst ? "md:order-2" : "md:order-1"}>
-                          {sec.description && (
-                            <div className="text-neutral-700 whitespace-pre-line">{sec.description}</div>
-                          )}
-                        </div>
-                        <div className={imageFirst ? "md:order-1" : "md:order-2"}>
-                          <div className="card overflow-hidden">
-                            <div className="relative w-full h-[200px] md:h-[280px]">
-                              <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      // No image (e.g., Lead Auditing): intro spans full width for cleaner balance
-                      sec.description ? (
-                        <div className="text-neutral-700 whitespace-pre-line">
-                          {sec.description}
-                        </div>
-                      ) : null
-                    )}
+                                       {img ? (
+  <div className="relative">
+    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-5 lg:gap-0 items-start">
+      {/* Image */}
+      <div className="relative z-0">
+        <div className="relative overflow-hidden rounded-[28px] bg-neutral-100">
+          <div className="relative w-full h-[260px] md:h-[360px] lg:h-[430px]">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              sizes="(min-width: 1024px) 56vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Text strips */}
+      {sec.description && (
+        <div className="relative z-10 mt-4 lg:mt-0 lg:-ml-24 xl:-ml-28 lg:pt-8 flex flex-col gap-4">
+          {splitDescriptionBlocks(sec.description).slice(0, 3).map((paragraph, i) => (
+            <div
+              key={i}
+              className={[
+                "bg-white/95 border border-black/8",
+                "rounded-[22px]",
+                "px-5 py-4 md:px-6 md:py-5",
+                "text-neutral-700 text-base md:text-lg leading-8",
+                "shadow-[0_10px_28px_rgba(0,0,0,0.06)]",
+                i === 0
+                  ? "lg:max-w-[78%]"
+                  : i === 1
+                    ? "lg:max-w-[92%] lg:ml-12"
+                    : "lg:max-w-[84%]"
+              ].join(" ")}
+            >
+              {paragraph}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+) : (
+  sec.description ? (
+    <div className="text-neutral-700 whitespace-pre-line">
+      {sec.description}
+    </div>
+  ) : null
+)}
 
                     {/* What You Get cards */}
                     {sec.items && sec.items.length > 0 && (
@@ -218,7 +246,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
               const [lead, ...rest] = String(w).split(":");
               const body = rest.join(":").trim();
               return (
-                <div key={i} className="card card-hover p-5 h-full">
+                <div
+                  key={i}
+                  className="card relative overflow-hidden pl-6 card-hover p-5 h-full before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:bg-accent before:content-['']"
+                >
                   <div className="text-sm font-semibold tracking-wide text-neutral-900">{lead.trim().toUpperCase()}</div>
                   {body && <p className="mt-1 text-sm leading-6 text-neutral-800">{body}</p>}
                 </div>
@@ -264,6 +295,33 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 type IconType = (props: { className?: string }) => JSX.Element;
+
+function splitDescriptionBlocks(text: string): string[] {
+  const byParagraph = text
+    .split(/\n\s*\n/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  if (byParagraph.length > 1) return byParagraph;
+
+  const sentences =
+    text
+      .match(/[^.!?]+[.!?]+|[^.!?]+$/g)
+      ?.map((s) => s.trim())
+      .filter(Boolean) ?? [text];
+
+  if (sentences.length <= 2) return [text];
+
+  const targetBlocks = Math.min(3, sentences.length);
+  const perBlock = Math.ceil(sentences.length / targetBlocks);
+  const blocks: string[] = [];
+
+  for (let i = 0; i < sentences.length; i += perBlock) {
+    blocks.push(sentences.slice(i, i + perBlock).join(" "));
+  }
+
+  return blocks;
+}
 
 function pickServiceIcon(title: string): IconType | null {
   const t = title.toLowerCase();

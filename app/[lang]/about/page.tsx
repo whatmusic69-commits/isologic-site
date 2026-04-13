@@ -72,7 +72,49 @@ export default async function AboutPage({
 
     return (
       <main>
-        {/* Section 1 — Hero / Intro */}
+        {/* Section 1 — Hero-style image + content */}
+        {v2.imageSection && (
+          <section className="section section-tight">
+            <div className="mx-auto max-w-6xl">
+              <Reveal>
+                <div className="relative overflow-hidden rounded-[24px] min-h-[320px] md:min-h-[440px] lg:min-h-[520px]">
+                  <Image
+                    src="/AboutUs.jpg"
+                    alt={v2.imageSection.imageAlt || "About ISOlogic"}
+                    fill
+                    priority={false}
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+
+                  {/* subtle overlay for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
+
+                  {/* heading on image */}
+                  <div className="absolute inset-x-0 bottom-3 md:bottom-6 p-6 md:p-8 lg:p-10">
+                    <div className="max-w-3xl">
+                      <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                        {v2.imageSection.paragraphs[0]}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className="card max-w-5xl mx-auto -mt-6 md:-mt-10 lg:-mt-14 relative z-10 p-6 md:p-8 lg:p-10 text-neutral-700">
+                  {v2.imageSection.paragraphs.slice(1).map((p, i) => (
+                    <p key={i} className={i > 0 ? "mt-4" : undefined}>
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
+
+        {/* Section 2 — Intro (Our Mission & Values) */}
         <section className="section">
           <Reveal>
             <SectionHeading alignment="left" title={hero.title} subtitle={hero.subtitle} />
@@ -83,37 +125,6 @@ export default async function AboutPage({
             </div>
           )}
         </section>
-
-        
-
-        {/* Section 2 — Image + Text */}
-        {v2.imageSection && (
-          <section className="section section-tight">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-              {/* Image */}
-              <Reveal>
-                <div className="card overflow-hidden relative aspect-[16/9] md:aspect-auto md:h-full">
-                  <Image
-                    src="/AboutUs.jpg"
-                    alt={v2.imageSection.imageAlt || "About ISOlogic"}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    priority={false}
-                    className="object-cover"
-                  />
-                </div>
-              </Reveal>
-              {/* Text */}
-              <Reveal>
-                <div className="card card-hover p-6 md:p-8 text-neutral-700">
-                  {v2.imageSection.paragraphs.map((p, i) => (
-                    <p key={i} className={i === 0 ? "text-neutral-900 font-semibold" : "mt-4"}>{p}</p>
-                  ))}
-                </div>
-              </Reveal>
-            </div>
-          </section>
-        )}
 
         {/* Section 3 — CTA */}
         {v2.cta && (
@@ -180,7 +191,7 @@ export default async function AboutPage({
             <Reveal>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 {principles.cards.map((c, i) => (
-                  <div key={i} className="card card-hover p-6 h-full">
+                  <div key={i} className="card relative overflow-hidden card-hover p-6 h-full before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-accent before:rounded-t-2xl before:content-['']">
                     <h3 className="text-lg font-semibold">{c.title}</h3>
                     <p className="mt-3 text-neutral-600 text-sm leading-6">{c.text}</p>
                   </div>

@@ -132,7 +132,7 @@ export default async function HomePage({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {content.stats.items.map((s, i) => (
                 <Reveal key={i}>
-                  <div className="card card-hover p-6 text-center">
+                  <div className="card relative overflow-hidden card-hover p-6 text-center before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-accent before:rounded-t-2xl before:content-['']">
                     <div className="text-2xl md:text-3xl font-semibold text-black">{s.value}</div>
                     <div className="mt-1 text-sm text-neutral-600">{s.label}</div>
                   </div>

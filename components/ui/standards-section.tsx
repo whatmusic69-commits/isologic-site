@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import Reveal from "./reveal";
 import clsx from "../util/clsx";
-import { FlagIcon, EyeIcon, UserCogIcon, CloudIcon, SendIcon, RocketIcon, TreeIcon, ShieldIcon, FoodIcon, DocumentIcon } from "./icons";
+import { FlagIcon, EyeIcon, UserCogIcon, CloudIcon, SendIcon, RocketIcon, TreeIcon, ShieldIcon, FoodIcon, DocumentIcon, CheckIcon } from "./icons";
 
 type StandardsItem = {
   title: string;
@@ -76,7 +76,7 @@ export default function StandardsSection({ title, subtitle, ctaText, ctaHref, it
 function Card({ title, bullets, iconHint }: { title: string; bullets: string[]; iconHint?: string }) {
   const Icon = chooseGroupIcon(iconHint || title);
   return (
-    <div className="card card-hover p-5 md:p-6 h-full">
+    <div className="card relative overflow-hidden card-hover p-5 md:p-6 h-full before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-accent before:rounded-t-2xl before:content-['']">
       <div className="flex items-start gap-3">
         <div className="text-neutral-900 mt-0.5" aria-hidden>
           <Icon className="w-5 h-5" />
@@ -84,9 +84,14 @@ function Card({ title, bullets, iconHint }: { title: string; bullets: string[]; 
         <div>
           <div className="text-sm font-semibold tracking-wide uppercase text-neutral-900">{title}</div>
           {bullets && bullets.length > 0 && (
-            <ul className="mt-3 space-y-2 text-sm text-neutral-800">
+            <ul className="mt-3 space-y-2">
               {bullets.map((b, i) => (
-                <li key={i}>• {b}</li>
+                <li key={i} className="flex items-start gap-2 text-neutral-900">
+                  <span className="mt-0.5 text-accent" aria-hidden>
+                    <CheckIcon className="w-4 h-4" />
+                  </span>
+                  <span className="text-sm leading-6">{b}</span>
+                </li>
               ))}
             </ul>
           )}

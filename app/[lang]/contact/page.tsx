@@ -6,6 +6,7 @@ import Reveal from "@/components/ui/reveal";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
 import ContactForm, { ContactFormSchema } from "@/components/ui/contact-form";
+import { MailIcon, PhoneIcon, MapPinIcon } from "@/components/ui/icons";
 import servicesTranslations from "@/content/translations/services.json";
 
 type ContactPageContent = {
@@ -62,6 +63,30 @@ export default async function ContactPage({
               {page.asideSubtitle && (
                 <p className="mt-3 text-neutral-700">{page.asideSubtitle}</p>
               )}
+              {/* Inline contact details moved here to sit next to the form */}
+              <div className="mt-4">
+                <ul className="space-y-2 text-sm text-neutral-800">
+                  <li className="flex items-start gap-2">
+                    <MailIcon className="mt-0.5 w-4 h-4 text-accent" />
+                    <a className="hover:text-accent transition-colors" href="mailto:info@isologic.lv">info@isologic.lv</a>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <PhoneIcon className="mt-0.5 w-4 h-4 text-accent" />
+                    <a className="hover:text-accent transition-colors" href="tel:+37122331164">+371 22 33 11 64</a>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <MapPinIcon className="mt-0.5 w-4 h-4 text-accent" />
+                    <a
+                      className="hover:text-accent transition-colors"
+                      href="https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </Reveal>
 

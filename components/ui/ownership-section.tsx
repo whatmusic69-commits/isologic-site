@@ -37,7 +37,7 @@ export default function OwnershipSection({
           <Reveal key={i}>
             <div
               className={clsx(
-                "card card-hover p-6 h-full text-center",
+                "card relative overflow-hidden card-hover p-6 h-full text-center before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-accent before:rounded-t-2xl before:content-['']",
                 "transition duration-300 ease-out"
               )}
             >

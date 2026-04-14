@@ -902,11 +902,10 @@ collections:
             fields:
               - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
 
-  # ABOUT
+    # ABOUT
   - name: about
     label: About
     files:
-      - { label: About (LV), name: about_lv, file: content/pages/about/lv.json, format: json, fields: *about_v2_fields }
       - label: About (EN)
         name: about_en
         file: content/pages/about/en.json
@@ -967,8 +966,9 @@ collections:
             required: false
             fields:
               - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
-      - { label: About (RU), name: about_ru, file: content/pages/about/ru.json, format: json, fields: *about_v2_fields }
 
+      - { label: About (LV), name: about_lv, file: content/pages/about/lv.json, format: json, fields: *about_v2_fields }
+      - { label: About (RU), name: about_ru, file: content/pages/about/ru.json, format: json, fields: *about_v2_fields }
   # CONTACT
   - name: contact
     label: Contact

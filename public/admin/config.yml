@@ -684,7 +684,7 @@ collections:
               - { label: CTA Label, name: ctaLabel, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
 
-  # SERVICES PAGE
+    # SERVICES PAGE
   - name: services
     label: Services
     files:
@@ -815,7 +815,7 @@ collections:
                 name: items
                 widget: list
 
-            - label: Services (RU)
+      - label: Services (RU)
         name: services_ru
         file: content/pages/services/ru.json
         format: json

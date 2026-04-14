@@ -1,75 +1,105 @@
-const h = window.React.createElement;
+(function () {
+  const CMS = window.CMS;
 
-function safeGet(entry, path, fallback = "") {
-  const value = entry.getIn(path);
-  return value == null ? fallback : value;
-}
+  if (!CMS) {
+    console.error("Decap CMS not found");
+    return;
+  }
 
-function UiTranslationsPreview({ entry }) {
-  const lvNavHome = safeGet(entry, ["data", "lv", "nav", "home"]);
-  const lvNavAbout = safeGet(entry, ["data", "lv", "nav", "about"]);
-  const lvNavServices = safeGet(entry, ["data", "lv", "nav", "services"]);
-  const lvNavContact = safeGet(entry, ["data", "lv", "nav", "contact"]);
-  const lvNavFaq = safeGet(entry, ["data", "lv", "nav", "faq"]);
+  function get(entry, path, fallback = "") {
+    try {
+      const value = entry.getIn(path);
+      return value == null ? fallback : value;
+    } catch (e) {
+      return fallback;
+    }
+  }
 
-  const lvTagline = safeGet(entry, ["data", "lv", "footer", "tagline"]);
-  const lvQuickLinks = safeGet(entry, ["data", "lv", "footer", "quickLinks"]);
-  const lvFooterContact = safeGet(entry, ["data", "lv", "footer", "contact"]);
-  const lvPrivacy = safeGet(entry, ["data", "lv", "footer", "links", "privacy"]);
-  const lvRights = safeGet(entry, ["data", "lv", "footer", "rights"]);
+  class TranslationsPreview extends window.React.Component {
+    render() {
+      const entry = this.props.entry;
 
-  return h(
-    "div",
-    { className: "iso-preview" },
-    h(
-      "div",
-      { className: "iso-navbar" },
-      h("div", { className: "iso-brand" }, "ISOLOGIC"),
-      h(
+      const lvHome = get(entry, ["data", "lv", "nav", "home"], "Sākums");
+      const lvAbout = get(entry, ["data", "lv", "nav", "about"], "Par mums");
+      const lvServices = get(entry, ["data", "lv", "nav", "services"], "Pakalpojumi");
+      const lvContact = get(entry, ["data", "lv", "nav", "contact"], "Kontakti");
+      const lvFaq = get(entry, ["data", "lv", "nav", "faq"], "BUJ");
+
+      const lvTagline = get(
+        entry,
+        ["data", "lv", "footer", "tagline"],
+        "Neatkarīgs audits un atbilstības konsultācijas."
+      );
+      const lvQuickLinks = get(entry, ["data", "lv", "footer", "quickLinks"], "Noderīgas saites");
+      const lvFooterContact = get(entry, ["data", "lv", "footer", "contact"], "Saziņa");
+      const lvPrivacy = get(entry, ["data", "lv", "footer", "links", "privacy"], "Privātuma politika");
+      const lvRights = get(entry, ["data", "lv", "footer", "rights"], "Visas tiesības aizsargātas.");
+
+      return window.React.createElement(
         "div",
-        { className: "iso-nav-links" },
-        h("span", null, lvNavHome),
-        h("span", null, lvNavAbout),
-        h("span", null, lvNavServices),
-        h("span", null, lvNavContact),
-        h("span", null, lvNavFaq)
-      )
-    ),
-    h(
-      "div",
-      { className: "iso-hero" },
-      h("h1", null, "Preview"),
-      h("p", null, "Šis ir piemēra priekšskatījums Decap administrācijas labajā pusē.")
-    ),
-    h(
-      "div",
-      { className: "iso-footer" },
-      h(
-        "div",
-        { className: "iso-footer-col" },
-        h("h4", null, "ISOLOGIC"),
-        h("p", null, lvTagline)
-      ),
-      h(
-        "div",
-        { className: "iso-footer-col" },
-        h("h4", null, lvQuickLinks),
-        h("p", null, lvNavHome),
-        h("p", null, lvNavAbout),
-        h("p", null, lvNavServices),
-        h("p", null, lvNavFaq)
-      ),
-      h(
-        "div",
-        { className: "iso-footer-col" },
-        h("h4", null, lvFooterContact),
-        h("p", null, lvNavContact),
-        h("p", null, lvPrivacy)
-      ),
-      h("div", { className: "iso-rights" }, lvRights)
-    )
-  );
-}
+        { className: "iso-preview-wrap" },
+        window.React.createElement(
+          "div",
+          { className: "iso-preview-navbar" },
+          window.React.createElement("div", { className: "iso-preview-logo" }, "ISOLOGIC"),
+          window.React.createElement(
+            "div",
+            { className: "iso-preview-nav" },
+            window.React.createElement("span", null, lvHome),
+            window.React.createElement("span", null, lvAbout),
+            window.React.createElement("span", null, lvServices),
+            window.React.createElement("span", null, lvContact),
+            window.React.createElement("span", null, lvFaq)
+          )
+        ),
 
-window.CMS.registerPreviewStyle("/admin/preview.css");
-window.CMS.registerPreviewTemplate("translations", UiTranslationsPreview);
+        window.React.createElement(
+          "section",
+          { className: "iso-preview-hero" },
+          window.React.createElement("div", { className: "iso-preview-pill" }, "Live CMS Preview"),
+          window.React.createElement("h1", null, "Navigācija un kājene"),
+          window.React.createElement(
+            "p",
+            null,
+            "Šeit redzi aptuvenu vizuālu priekšskatījumu tam, kā teksts izskatīsies lapā."
+          )
+        ),
+
+        window.React.createElement(
+          "footer",
+          { className: "iso-preview-footer" },
+          window.React.createElement(
+            "div",
+            { className: "iso-preview-col" },
+            window.React.createElement("h4", null, "ISOLOGIC"),
+            window.React.createElement("p", null, lvTagline)
+          ),
+          window.React.createElement(
+            "div",
+            { className: "iso-preview-col" },
+            window.React.createElement("h4", null, lvQuickLinks),
+            window.React.createElement("p", null, lvHome),
+            window.React.createElement("p", null, lvAbout),
+            window.React.createElement("p", null, lvServices),
+            window.React.createElement("p", null, lvFaq)
+          ),
+          window.React.createElement(
+            "div",
+            { className: "iso-preview-col" },
+            window.React.createElement("h4", null, lvFooterContact),
+            window.React.createElement("p", null, lvContact),
+            window.React.createElement("p", null, lvPrivacy)
+          ),
+          window.React.createElement(
+            "div",
+            { className: "iso-preview-rights" },
+            lvRights
+          )
+        )
+      );
+    }
+  }
+
+  CMS.registerPreviewStyle("/admin/preview.css");
+  CMS.registerPreviewTemplate("translations", TranslationsPreview);
+})();

@@ -1,78 +1,94 @@
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
 }
 
-.iso-preview {
+.iso-preview-wrap {
   min-height: 100vh;
-  background: #f5f7fb;
+  background: #f4f6f8;
   color: #111827;
 }
 
-.iso-navbar {
+.iso-preview-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 32px;
+  gap: 20px;
+  padding: 18px 28px;
   background: #0f172a;
-  color: white;
+  color: #fff;
 }
 
-.iso-brand {
-  font-size: 22px;
+.iso-preview-logo {
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
 
-.iso-nav-links {
+.iso-preview-nav {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
   font-size: 14px;
 }
 
-.iso-hero {
-  padding: 56px 32px;
-  background: white;
+.iso-preview-hero {
+  background: #ffffff;
+  padding: 40px 28px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.iso-hero h1 {
+.iso-preview-pill {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.iso-preview-hero h1 {
   margin: 0 0 12px;
-  font-size: 32px;
+  font-size: 34px;
 }
 
-.iso-hero p {
+.iso-preview-hero p {
   margin: 0;
+  max-width: 700px;
   color: #475569;
-  max-width: 720px;
+  line-height: 1.6;
 }
 
-.iso-footer {
+.iso-preview-footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  padding: 32px;
+  padding: 32px 28px;
   background: #111827;
-  color: white;
+  color: #fff;
 }
 
-.iso-footer-col h4 {
+.iso-preview-col h4 {
   margin: 0 0 12px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-.iso-footer-col p {
+.iso-preview-col p {
   margin: 0 0 8px;
   color: #cbd5e1;
+  line-height: 1.5;
 }
 
-.iso-rights {
+.iso-preview-rights {
   grid-column: 1 / -1;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: #94a3b8;
   font-size: 13px;
 }

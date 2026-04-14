@@ -815,7 +815,7 @@ collections:
                 name: items
                 widget: list
 
-      - label: Services (RU)
+            - label: Services (RU)
         name: services_ru
         file: content/pages/services/ru.json
         format: json
@@ -827,6 +827,7 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
+
           - label: Sections
             name: sections
             widget: list
@@ -852,37 +853,6 @@ collections:
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
               - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
-          - label: CTA Band (bottom)
-            name: ctaBand
-            widget: object
-            required: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Subtitle, name: subtitle, widget: text, required: false }
-              - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
-              - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
-              - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
-              - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
-          - label: Standards Section
-            name: standardsSection
-            widget: object
-            required: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Intro, name: intro, widget: text, required: false }
-              - label: Items
-                name: items
-                widget: list
-          - label: Why Outsource Section
-            name: whyOutsourceSection
-            widget: object
-            required: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Intro, name: intro, widget: text, required: false }
-              - label: Items
-                name: items
-                widget: list
 
           - label: CTA Band (bottom)
             name: ctaBand
@@ -895,6 +865,29 @@ collections:
               - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
               - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
               - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
+
+          - label: Standards Section
+            name: standardsSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+
+          - label: Why Outsource Section
+            name: whyOutsourceSection
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - label: Items
+                name: items
+                widget: list
+
           - label: Bottom Section (Lead Auditor Availability)
             name: bottomSection
             widget: object

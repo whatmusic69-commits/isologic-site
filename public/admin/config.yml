@@ -129,6 +129,12 @@ collections:
                     { label: Lead Auditor Services, name: "lead-auditing", widget: string },
                     { label: Other, name: other, widget: string }
                 ] }
+              - { label: Taglines, name: taglines, widget: object, fields: [
+                    { label: Making ISO Practical (Implementation), name: implementation, widget: string },
+                    { label: Structured Audit Control (Internal Auditing), name: "internal-auditing", widget: string },
+                    { label: Ongoing ISO Support (Maintenance), name: "iso-maintenance", widget: string },
+                    { label: Food Safety Made Practical (Food Safety), name: "food-safety-haccp", widget: string }
+                ] }
           - label: Latvian (lv)
             name: lv
             widget: object
@@ -148,6 +154,12 @@ collections:
                     { label: Vadošā auditora pakalpojumi, name: "lead-auditing", widget: string },
                     { label: Cits, name: other, widget: string }
                 ] }
+              - { label: Taglines, name: taglines, widget: object, fields: [
+                    { label: Implementation tagline, name: implementation, widget: string },
+                    { label: Internal Auditing tagline, name: "internal-auditing", widget: string },
+                    { label: Maintenance tagline, name: "iso-maintenance", widget: string },
+                    { label: Food Safety tagline, name: "food-safety-haccp", widget: string }
+                ] }
           - label: Russian (ru)
             name: ru
             widget: object
@@ -166,6 +178,12 @@ collections:
                     { label: Пищевая безопасность и HACCP, name: "food-safety-haccp", widget: string },
                     { label: Услуги ведущего аудитора, name: "lead-auditing", widget: string },
                     { label: Другое, name: other, widget: string }
+                ] }
+              - { label: Taglines, name: taglines, widget: object, fields: [
+                    { label: Implementation tagline, name: implementation, widget: string },
+                    { label: Internal Auditing tagline, name: "internal-auditing", widget: string },
+                    { label: Maintenance tagline, name: "iso-maintenance", widget: string },
+                    { label: Food Safety tagline, name: "food-safety-haccp", widget: string }
                 ] }
   # HOME PAGE
   - name: home

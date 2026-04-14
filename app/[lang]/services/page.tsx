@@ -10,6 +10,7 @@ import CollapsibleSection from "@/components/ui/collapsible-section";
 import HashAccordionOpener from "@/components/ui/hash-accordion-opener";
 import CtaBand from "@/components/ui/cta-band";
 import Image from "next/image";
+import servicesTranslations from "@/content/translations/services.json";
 import {
   DocumentIcon,
   GlobeIcon,
@@ -86,57 +87,47 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                 <div id={sec.id}>
                   <CollapsibleSection title={sec.title} subtitle={sec.subtitle} defaultOpen={false}>
                     {/* Intro: for sections with image → 2-col row; without image → full-width text */}
-                                       {img ? (
-  <div className="relative">
-    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] gap-5 lg:gap-0 items-start">
-      {/* Image */}
-      <div className="relative z-0">
-        <div className="relative overflow-hidden rounded-[28px] bg-neutral-100">
-          <div className="relative w-full h-[260px] md:h-[360px] lg:h-[430px]">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              sizes="(min-width: 1024px) 56vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Text strips */}
-      {sec.description && (
-        <div className="relative z-10 mt-4 lg:mt-0 lg:-ml-24 xl:-ml-28 lg:pt-8 flex flex-col gap-4">
-          {splitDescriptionBlocks(sec.description).slice(0, 3).map((paragraph, i) => (
-            <div
-              key={i}
-              className={[
-                "bg-white/95 border border-black/8",
-                "rounded-[22px]",
-                "px-5 py-4 md:px-6 md:py-5",
-                "text-neutral-700 text-base md:text-lg leading-8",
-                "shadow-[0_10px_28px_rgba(0,0,0,0.06)]",
-                i === 0
-                  ? "lg:max-w-[78%]"
-                  : i === 1
-                    ? "lg:max-w-[92%] lg:ml-12"
-                    : "lg:max-w-[84%]"
-              ].join(" ")}
-            >
-              {paragraph}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
-) : (
-  sec.description ? (
-    <div className="text-neutral-700 whitespace-pre-line">
-      {sec.description}
-    </div>
-  ) : null
-)}
+                    {img ? (
+                      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-stretch">
+                        {/* Left: image block aligned to inner content width */}
+                        <div className="card card-hover p-0 overflow-hidden h-full">
+                          <div className="relative w-full aspect-[4/3]">
+                            {/* subtle overlay for readability */}
+                            <Image
+                              src={img.src}
+                              alt={img.alt}
+                              fill
+                              sizes="(min-width: 1024px) 48vw, (min-width: 768px) 50vw, 100vw"
+                              className="object-cover"
+                              priority={false}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" aria-hidden />
+                            {/* Tagline overlay: compact label on image */}
+                            {pickServiceTagline(lang, sec.id) && (
+                              <div className="absolute top-3 md:top-4 left-4 md:left-5">
+                                <div className="inline-flex items-center whitespace-normal max-w-[28ch] md:max-w-[30ch] xl:max-w-[34ch] rounded-2xl bg-black/50 text-white backdrop-blur-[2px] px-4 py-2.5 md:px-5 md:py-3 xl:px-6 shadow-[0_8px_22px_rgba(0,0,0,0.25)]">
+                                  <span className="text-xl md:text-3xl xl:text-4xl font-serif font-semibold leading-tight clamp-2">
+                                    {pickServiceTagline(lang, sec.id)}
+                                  </span>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {/* Right: text block aligned to inner content width */}
+                        <div className="card card-hover p-4 md:p-6 text-neutral-700 h-full">
+                          {sec.description && (
+                            <div className="whitespace-pre-line">{sec.description}</div>
+                          )}
+                        </div>
+                      </div>
+                    ) : (
+                      sec.description ? (
+                        <div className="text-neutral-700 whitespace-pre-line">
+                          {sec.description}
+                        </div>
+                      ) : null
+                    )}
 
                     {/* What You Get cards */}
                     {sec.items && sec.items.length > 0 && (
@@ -323,6 +314,51 @@ function splitDescriptionBlocks(text: string): string[] {
   return blocks;
 }
 
+// Split description into a short caption for the image (complete paragraph or sentences)
+// and the remaining text for the right-side block. Never cut mid-sentence.
+function splitForCaption(text: string): { caption: string; remainder: string } {
+  const raw = String(text || "");
+  if (!raw.trim()) return { caption: "", remainder: "" };
+
+  const paragraphs = raw
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  // If multiple paragraphs, use the first paragraph as the caption, rest to the right.
+  if (paragraphs.length > 1) {
+    return { caption: paragraphs[0], remainder: paragraphs.slice(1).join("\n\n") };
+  }
+
+  // Single long paragraph: split into sentences and build a short caption without cutting sentences.
+  const only = paragraphs[0] || raw.trim();
+  const sentences =
+    only.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map((s) => s.trim()).filter(Boolean) ?? [only];
+
+  // Build caption from complete sentences with sensible bounds.
+  const maxChars = 240; // target brevity for the overlay caption
+  const maxSentences = 2; // keep caption compact
+  const chosen: string[] = [];
+  let total = 0;
+  for (const s of sentences) {
+    if (chosen.length === 0) {
+      chosen.push(s);
+      total += s.length + 1;
+      continue;
+    }
+    if (chosen.length < maxSentences && total + s.length <= maxChars) {
+      chosen.push(s);
+      total += s.length + 1;
+    } else {
+      break;
+    }
+  }
+
+  const caption = chosen.join(" ");
+  const remainder = sentences.slice(chosen.length).join(" ");
+  return { caption, remainder };
+}
+
 function pickServiceIcon(title: string): IconType | null {
   const t = title.toLowerCase();
   if (t.includes("gap")) return SearchIcon;
@@ -366,5 +402,14 @@ function pickServiceImage(id: string): { src: string; alt: string } | null {
       return { src: "/ServicesGrocery.jpg", alt: "Food Safety & HACCP Compliance" };
     default:
       return null;
+  }
+}
+
+function pickServiceTagline(lang: string, id: string): string {
+  try {
+    const byLang = (servicesTranslations as any)[lang];
+    return (byLang?.taglines?.[id as keyof typeof byLang["taglines"]] as string) || "";
+  } catch {
+    return "";
   }
 }

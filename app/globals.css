@@ -139,3 +139,11 @@ h1, h2, h3 {
 @media (min-width: 1024px) { /* desktop */
   .hero-bg { background-position: right center; }
 }
+
+/* Utility: clamp text to two lines */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

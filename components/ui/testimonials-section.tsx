@@ -66,28 +66,34 @@ export default function TestimonialsSection({
           fading ? "opacity-0" : "opacity-100"
         )}
       >
-        {visible.map((t, i) => (
-          <article key={`${index}-${i}`} className="card card-hover p-6 h-full flex flex-col justify-between">
-            <div className="flex items-start gap-3">
-              <QuoteMark />
-              <p className="text-sm leading-6 text-neutral-700">{t.quote}</p>
-            </div>
-            <div className="mt-5 flex items-center gap-3">
-              <Avatar name={t.authorName} company={t.company} avatarSrc={t.avatarSrc} />
-              <div className="min-w-0">
-                <div className="font-medium text-neutral-900 truncate">{t.authorName}</div>
-                <div className="text-xs text-neutral-600 truncate">
-                  {[t.authorRole, t.company].filter(Boolean).join(" · ")}
-                </div>
-                {typeof t.rating === "number" && (
-                  <div className="mt-1">
-                    <Stars rating={t.rating} />
-                  </div>
-                )}
+        {visible.map((t, i) => {
+          const displayName = t.authorName || t.company || "";
+          const sublineParts = [t.authorRole, t.authorName ? t.company : undefined].filter(Boolean) as string[];
+          return (
+            <article key={`${index}-${i}`} className="card card-hover p-6 h-full flex flex-col justify-between">
+              <div className="flex items-start gap-3">
+                <QuoteMark />
+                <p className="text-sm leading-6 text-neutral-700">{t.quote}</p>
               </div>
-            </div>
-          </article>
-        ))}
+              <div className="mt-5 flex items-center gap-3">
+                <Avatar name={t.authorName || t.company || ""} company={t.company} avatarSrc={t.avatarSrc} />
+                <div className="min-w-0">
+                  {displayName && <div className="font-medium text-neutral-900 truncate">{displayName}</div>}
+                  {sublineParts.length > 0 && (
+                    <div className="text-xs text-neutral-600 truncate">
+                      {sublineParts.join(" · ")}
+                    </div>
+                  )}
+                  {typeof t.rating === "number" && (
+                    <div className="mt-1">
+                      <Stars rating={t.rating} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

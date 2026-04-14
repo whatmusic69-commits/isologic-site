@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.iso-preview {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+.iso-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: #0f172a;
+  color: white;
+}
+
+.iso-brand {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.iso-nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.iso-hero {
+  padding: 56px 32px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.iso-hero h1 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+.iso-hero p {
+  margin: 0;
+  color: #475569;
+  max-width: 720px;
+}
+
+.iso-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 32px;
+  background: #111827;
+  color: white;
+}
+
+.iso-footer-col h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.iso-footer-col p {
+  margin: 0 0 8px;
+  color: #cbd5e1;
+}
+
+.iso-rights {
+  grid-column: 1 / -1;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: #94a3b8;
+  font-size: 13px;
+}

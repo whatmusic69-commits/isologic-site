@@ -5,6 +5,7 @@ backend:
   base_url: https://isologic-site.vercel.app
   auth_endpoint: api/auth
 
+display_url: https://isologic.lv
 media_folder: "public/uploads"
 public_folder: "/uploads"
 

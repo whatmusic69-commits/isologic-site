@@ -1,6 +1,6 @@
 export async function GET(request) {
-  const { searchParams, origin } = new URL(request.url);
-  const code = searchParams.get("code");
+  const url = new URL(request.url);
+  const code = url.searchParams.get("code");
 
   if (!code) {
     return new Response("Missing code", { status: 400 });
@@ -29,22 +29,37 @@ export async function GET(request) {
   const data = await tokenRes.json();
 
   if (!data.access_token) {
-    return new Response(`OAuth failed: ${JSON.stringify(data)}`, {
-      status: 500,
-      headers: { "Content-Type": "text/plain; charset=utf-8" },
-    });
+    return new Response(
+      `OAuth failed: ${JSON.stringify(data, null, 2)}`,
+      {
+        status: 500,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      }
+    );
   }
+
+  const authData = {
+    token: data.access_token,
+    provider: "github",
+  };
 
   const html = `
     <!doctype html>
     <html>
       <body>
         <script>
-          window.opener.postMessage(
-            'authorization:github:success:${data.access_token}',
-            '${origin}'
-          );
-          window.close();
+          (function() {
+            function receiveMessage(e) {
+              window.opener.postMessage(
+                'authorization:github:success:' + JSON.stringify(${JSON.stringify(authData)}),
+                e.origin
+              );
+              window.close();
+            }
+
+            window.addEventListener("message", receiveMessage, false);
+            window.opener.postMessage("authorizing:github", "*");
+          })();
         </script>
       </body>
     </html>

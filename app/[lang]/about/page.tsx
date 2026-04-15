@@ -233,7 +233,6 @@ const formWithMappedServices: ContactFormSchema = {
             <Reveal>
               <div className="card card-hover p-6 md:p-8">
                 <ContactForm
-  lang={lang}
   form={formWithMappedServices}
   successTitle={contact.contactPage.successTitle}
   successBody={contact.contactPage.successBody}

@@ -8,6 +8,7 @@ import ContactForm, { ContactFormSchema } from "@/components/ui/contact-form";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates, truncate } from "@/lib/seo";
+import servicesTranslations from "@/content/translations/services.json";
 
 type AboutContent = {
   hero: { title: string; subtitle?: string };
@@ -69,6 +70,14 @@ export default async function AboutPage({
   if (v2) {
     const contact = await getPageContent<ContactPageContent>("contact", lang);
     const hero = v2.hero || { title: "About" };
+
+    const svc = (servicesTranslations as any)[lang as keyof typeof servicesTranslations]?.contact || {};
+const formWithMappedServices: ContactFormSchema = {
+  ...contact.contactPage.form,
+  serviceOptions: contact.contactPage.form.serviceOptions.map((opt: string) =>
+    opt in svc ? svc[opt as keyof typeof svc] : opt
+  ),
+};
 
     return (
       <main>
@@ -223,7 +232,12 @@ export default async function AboutPage({
             {/* RIGHT: form */}
             <Reveal>
               <div className="card card-hover p-6 md:p-8">
-                <ContactForm form={contact.contactPage.form} successTitle={contact.contactPage.successTitle} successBody={contact.contactPage.successBody} />
+                <ContactForm
+  lang={lang}
+  form={formWithMappedServices}
+  successTitle={contact.contactPage.successTitle}
+  successBody={contact.contactPage.successBody}
+/>
               </div>
             </Reveal>
           </div>

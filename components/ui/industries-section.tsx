@@ -38,18 +38,19 @@ export default function IndustriesSection({
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         {items.map((it, i) => (
           <Reveal key={i}>
-            <div className={clsx("card card-hover p-6 text-center h-full")}> 
-              <div
-                className="mx-auto h-14 w-14 rounded-full flex items-center justify-center text-[color:var(--text-on-dark)]"
-                style={{ background: "var(--surface-dark)", border: "1px solid var(--border-dark)" }}
-                aria-hidden
-              >
-                <Icon name={it.icon} />
-              </div>
-              <div className="mt-4 text-xs tracking-wider font-semibold uppercase text-neutral-900">
-                {it.title}
-              </div>
-            </div>
+            <div className={clsx("card card-hover p-5 md:p-6 text-center h-full flex flex-col items-center justify-center min-h-[180px] sm:min-h-[200px]")}>
+  <div
+    className="mx-auto h-14 w-14 rounded-full flex items-center justify-center text-[color:var(--text-on-dark)]"
+    style={{ background: "var(--surface-dark)", border: "1px solid var(--border-dark)" }}
+    aria-hidden
+  >
+    <Icon name={it.icon} />
+  </div>
+
+  <div className="mt-4 max-w-[140px] sm:max-w-[160px] text-sm sm:text-base font-semibold text-neutral-900 leading-tight break-words hyphens-auto">
+    {it.title}
+  </div>
+</div>
           </Reveal>
         ))}
       </div>

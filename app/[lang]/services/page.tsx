@@ -105,11 +105,17 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                             {/* Tagline overlay: compact label on image */}
                             {pickServiceTagline(lang, sec.id) && (
                               <div className="absolute top-3 md:top-4 left-4 md:left-5">
-                                <div className="inline-flex items-center whitespace-normal max-w-[28ch] md:max-w-[30ch] xl:max-w-[34ch] rounded-2xl bg-black/50 text-white backdrop-blur-[2px] px-4 py-2.5 md:px-5 md:py-3 xl:px-6 shadow-[0_8px_22px_rgba(0,0,0,0.25)]">
-                                  <span className="text-xl md:text-3xl xl:text-4xl font-serif font-semibold leading-tight clamp-2">
-                                    {pickServiceTagline(lang, sec.id)}
-                                  </span>
-                                </div>
+                                <div className="inline-flex items-center whitespace-normal max-w-[20ch] sm:max-w-[22ch] md:max-w-[24ch] lg:max-w-[26ch] xl:max-w-[28ch] rounded-2xl bg-black/50 text-white backdrop-blur-[2px] px-4 py-2.5 md:px-5 md:py-3 shadow-[0_8px_22px_rgba(0,0,0,0.25)]">
+  <span
+    className={`font-serif font-semibold leading-[1.05] break-words ${
+      lang === "en"
+        ? "text-xl md:text-3xl xl:text-4xl"
+        : "text-lg sm:text-xl md:text-2xl xl:text-3xl"
+    }`}
+  >
+    {pickServiceTagline(lang, sec.id)}
+  </span>
+</div>
                               </div>
                             )}
                           </div>

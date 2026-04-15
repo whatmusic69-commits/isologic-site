@@ -117,7 +117,7 @@ export default async function HomePage({
             {content.benefits.items.map((b, i) => (
               <Reveal key={i}>
                 <div className="card card-hover p-6 h-full">
-                  <h3 className="text-lg font-semibold">{b.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold leading-tight break-words hyphens-auto">{b.title}</h3>
                   <p className="mt-3 text-neutral-600 text-sm leading-6">{b.text}</p>
                 </div>
               </Reveal>
@@ -133,7 +133,7 @@ export default async function HomePage({
               {content.stats.items.map((s, i) => (
                 <Reveal key={i}>
                   <div className="card relative overflow-hidden card-hover p-6 text-center before:absolute before:top-0 before:left-0 before:w-full before:h-[2px] before:bg-accent before:rounded-t-2xl before:content-['']">
-                    <div className="text-2xl md:text-3xl font-semibold text-black">{s.value}</div>
+               <div className="text-xl md:text-2xl font-semibold text-black leading-tight break-words">{s.value}</div>
                     <div className="mt-1 text-sm text-neutral-600">{s.label}</div>
                   </div>
                 </Reveal>

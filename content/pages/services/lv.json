@@ -7,83 +7,83 @@
   "sections": [
     {
       "id": "implementation",
-      "title": "ISO Implementation",
-      "subtitle": "Your path to certification handled with logic and support.",
-      "description": "If you know which standard you need but are overwhelmed by the complexity of building the system, our Implementation Support is the solution. We don't just provide templates we act as your outsourced ISO department, working alongside your team to build a system based on your actual operations.\n\nBy the end of the process, you will have a fully implemented, audit-ready management system aligned with ISO requirements.",
-      "whatYouGetTitle": "What You Get",
+      "title": "ISO ieviešana",
+      "subtitle": "Skaidrs ceļš uz sertifikāciju ar loģisku pieeju un profesionālu atbalstu.",
+      "description": "Ja zināt, kurš standarts jums ir nepieciešams, bet sistēmas izveide šķiet pārāk sarežģīta, ISO ieviešanas atbalsts ir piemērots risinājums. ISOlogic neaprobežojas tikai ar veidņu nodrošināšanu — tas darbojas kā ārpakalpojuma ISO funkcija, sadarbojoties ar jūsu komandu, lai izveidotu sistēmu, kas balstīta uz jūsu reālajiem procesiem.\n\nProcesa noslēgumā tiek nodrošināta pilnībā ieviesta, auditam gatava vadības sistēma, kas ir saskaņota ar ISO prasībām.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
       "items": [
-        "Gap Analysis: A deep dive to identify exactly where you stand against the standard.",
-        "Documentation Development: Creating lean, practical procedures—no fluff.",
-        "Staff Training: Ensuring your team understands, owns, and confidently operates the processes.",
-        "Internal Auditing: A rigorous \"dry run\" to test the system before the official assessment.",
-        "Certification Support: Expert on-site presence and guidance during your external audit.",
-        "ONGOING SUPPORT: Continuous guidance and hands-on support to ensure your system is effectively implemented and maintained"
+        "Esošās situācijas analīze (GAP analīze): Detalizēts izvērtējums, lai noteiktu jūsu atbilstību standarta prasībām.",
+        "Dokumentācijas izstrāde: Praktisku un efektīvu procedūru izveide bez liekas sarežģītības.",
+        "Personāla apmācība: Nodrošinām, ka komanda izprot procesus, uzņemas atbildību un pārliecinoši tos ievieš praksē.",
+        "Iekšējais audits: Rūpīga sistēmas pārbaude pirms atbilstības audita veikšanas.",
+        "Atbalsts sertifikācijā: Profesionāls atbalsts un klātbūtne sertifikācijas iestādes audita laikā.",
+        "Pastāvīgs atbalsts: Nepārtraukta konsultēšana un atbalsts sistēmas uzturēšanai un pilnveidei."
       ],
       "pricingTimeline": {
-        "title": "Pricing & Timeline",
+        "title": "Izmaksas un izpildes termiņi",
         "paragraphs": [
-          "ISO implementation timelines typically range from 3 to 12 months, depending on organisational size, complexity and the maturity of existing processes.",
-          "Projects are tailored to each business, with a strong focus on supporting small and medium-sized organisations, including startups. ISOlogic understands the practical and financial constraints these businesses face and delivers solutions that are proportionate, flexible and designed to remain accessible without unnecessary overhead.",
-          "A more accurate timeline and cost can be provided following an initial discussion."
+          "ISO ieviešanas termiņi parasti svārstās no 3 līdz 12 mēnešiem atkarībā no organizācijas lieluma, sarežģītības un esošo procesu brieduma līmeņa.",
+          "Katrs projekts tiek pielāgots konkrētā uzņēmuma vajadzībām, īpašu uzmanību pievēršot mazajiem un vidējiem uzņēmumiem, tostarp jaunuzņēmumiem. ISOlogic izprot šo uzņēmumu praktiskos un finansiālos ierobežojumus, piedāvājot risinājumus, kas ir samērīgi, elastīgi un pieejami bez liekām izmaksām.",
+          "Precīzāks termiņš un izmaksu piedāvājums tiek sagatavots pēc sākotnējās konsultācijas."
         ]
       }
     },
     {
       "id": "internal-auditing",
-      "title": "Internal Auditing",
-      "subtitle": "Turning a compliance requirement into a business asset.",
-      "description": "Internal auditing (first party auditing) is a mandatory requirement to maintain your ISO certification. While some organisations use internal staff, many SMEs benefit from Outsourced Internal Auditing to ensure total objectivity, meet independence requirements, and gain a \"fresh set of eyes\" on their operations.\n\nInternal audits can be delivered as a one-off service or as part of an ongoing audit programme. ISOlogic offers a flexible, cost-effective approach tailored to your organisation’s size and audit scope.",
-      "whatYouGetTitle": "What You Get",
+      "title": "Iekšējais audits",
+      "subtitle": "Pārvēršot atbilstības prasības par biznesa priekšrocību.",
+      "description": "Iekšējais audits ir obligāta prasība ISO sertifikācijas uzturēšanai. Lai gan daļa organizāciju izmanto iekšējos resursus, daudzi mazie un vidējie uzņēmumi gūst būtisku ieguvumu no ārpakalpojuma iekšējā audita, kas nodrošina objektivitāti, atbilstību neatkarības prasībām un sniedz jaunu skatījumu uz uzņēmuma darbību.\n\nIekšējais audits var tikt veikts kā vienreizējs pakalpojums vai kā daļa no regulāras auditu programmas. ISOlogic piedāvā elastīgu un ekonomiski pamatotu pieeju, kas pielāgota organizācijas lielumam un audita apjomam.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
       "items": [
-        "Audit Program Planning: A structured annual schedule to cover all required areas.",
-        "Execution & Reporting: Comprehensive audits with clear, actionable findings and root cause analysis.",
-        "Corrective Action and Follow-up Support: Practical help on addressing non-conformities.",
-        "MANAGEMENT REVIEW SUPPORT: Supporting management review processes with clear insights, audit outputs and practical recommendations."
+        "Auditu programmas plānošana: Strukturēts gada plāns, kas aptver visas nepieciešamās jomas.",
+        "Auditu veikšana un ziņošana: Visaptveroši auditi ar skaidriem un praktiski izmantojamiem secinājumiem, tostarp pamatcēloņu analīzi.",
+        "Korektīvo darbību atbalsts: Praktisks atbalsts neatbilstību novēršanā.",
+        "Vadības pārskata atbalsts: Atbalsts vadības pārskata procesā, nodrošinot skaidrus ieskatus, auditu rezultātus un praktiskas rekomendācijas."
       ]
     },
     {
       "id": "iso-maintenance",
-      "title": "ISO Maintenance (Outsourced QMS / System Manager)",
-      "subtitle": "Keeping your certification healthy while you focus on growth.",
-      "description": "Achieving certification is a major milestone but maintaining it requires continuous attention. Our Maintenance Retainer provides you with an expert \"on-call\" to manage your system throughout the year, ensuring you stay compliant without overstretching your internal staff.\n\nISO maintenance support is typically delivered on a flexible monthly basis, tailored to your organisation’s needs and level of support required.",
-      "whatYouGetTitle": "What You Get",
+      "title": "ISO sistēmu uzturēšana (ārpakalpojuma kvalitātes vadības sistēmu pārvaldība)",
+      "subtitle": "Nodrošinām jūsu sertifikācijas atbilstību, kamēr jūs koncentrējaties uz uzņēmuma attīstību.",
+      "description": "Sertifikācijas iegūšana ir nozīmīgs sasniegums, taču tās uzturēšana prasa nepārtrauktu uzmanību. ISOlogic uzturēšanas pakalpojums nodrošina pieeju pieredzējušam speciālistam pēc pieprasījuma, kurš pārvalda sistēmu visa gada garumā, nodrošinot atbilstību bez liekas slodzes jūsu komandai.\n\nISO sistēmu uzturēšanas atbalsts parasti tiek nodrošināts elastīgā mēneša maksas formātā, pielāgojoties organizācijas vajadzībām un nepieciešamajam atbalsta apjomam.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
       "items": [
-        "Regular System Health Checks: Proactive reviews to prevent \"compliance drift.\"",
-        "Surveillance Audit Prep: Ensuring your team and documentation are ready for a third-party audit.",
-        "Regulatory & Standard Updates: We monitor changes so you don't have to.",
-        "Ongoing Advisory: On-site visits, priority email and phone support for any ISO-related queries."
+        "Regulāras sistēmas pārbaudes: Proaktīvs izvērtējums atbilstības uzturēšanai un riska samazināšanai.",
+        "Sagatavošana uzraudzības auditam: Nodrošinām, ka komanda un dokumentācija ir gatava trešās puses auditam.",
+        "Normatīvo prasību un standartu izmaiņu uzraudzība: Sekojam izmaiņām, lai jums par to nebūtu jāuztraucas.",
+        "Pastāvīgs konsultatīvais atbalsts: Atbalsts klātienē, kā arī prioritāra saziņa pa e-pastu un tālruni visos ar ISO saistītajos jautājumos."
       ]
     },
     {
       "id": "food-safety-haccp",
-      "title": "Food Safety & HACCP Compliance",
-      "subtitle": "Simple, practical guidance to help you meet food safety requirements with confidence.",
-      "description": "Setting up or running a food business involves strict regulatory requirements, and understanding HACCP principles can be challenging. ISOlogic provides clear, practical support to help you implement food safety systems that meet PVD (Food and Veterinary Service) requirements in Latvia — without unnecessary complexity.\n\nIn addition to HACCP-based systems, ISOlogic supports businesses working towards ISO 22000 Food Safety Management Systems, helping align local PVD requirements with internationally recognised food safety standards.",
-      "whatYouGetTitle": "What You Get",
+      "title": "Paškontroles sistēma (HACCP)",
+      "subtitle": "Skaidra un strukturēta pieeja pārtikas drošības prasību nodrošināšanai.",
+      "description": "Pārtikas biznesa uzsākšana vai vadīšana ir saistīta ar stingrām normatīvajām prasībām, un pārtikas drošības prasību izpratne var būt sarežģīta. ISOlogic nodrošina skaidru un praktisku atbalstu pārtikas drošības un paškontroles sistēmas (HACCP) izstrādē un ieviešanā, palīdzot nodrošināt atbilstību Pārtikas un veterinārā dienesta (PVD) prasībām Latvijā — bez liekas sarežģītības.\n\nPapildus paškontroles sistēmām ISOlogic atbalsta uzņēmumus arī ISO 22000 pārtikas drošības vadības sistēmu ieviešanā, palīdzot saskaņot vietējās PVD prasības ar starptautiski atzītiem pārtikas drošības standartiem.",
+      "whatYouGetTitle": "Ko jūs iegūstat",
       "items": [
-        "HACCP SYSTEM SETUP: Structured development of your food safety system tailored to your business.",
-        "DOCUMENTATION & RECORDS: Preparation of required HACCP documentation, procedures and logs.",
-        "PVD COMPLIANCE SUPPORT: Guidance to ensure your business meets local Food and Veterinary Service requirements.",
-        "STAFF TRAINING: Practical training to ensure your team understands and follows food safety procedures.",
-        "INSPECTION PREPARATION: Support to ensure you are fully prepared for PVD inspections.",
-        "ONGOING SUPPORT: Continuous guidance to maintain compliance and adapt as your business grows."
+        "Paškontroles sistēmas (HACCP) izstrāde un ieviešana: Strukturēta pārtikas drošības sistēmas izveide, pielāgota jūsu uzņēmuma darbībai.",
+        "Dokumentācija un uzskaite: Nepieciešamās paškontroles dokumentācijas, procedūru un uzskaites žurnālu sagatavošana.",
+        "Atbilstības nodrošināšana PVD prasībām: Atbalsts uzņēmuma atbilstības nodrošināšanai Pārtikas un veterinārā dienesta (PVD) prasībām.",
+        "Personāla apmācība: Praktiskas apmācības, lai komanda izprastu un ievērotu pārtikas drošības prasības.",
+        "Sagatavošana pārbaudēm: Atbalsts pilnīgas sagatavotības nodrošināšanai PVD pārbaudēm.",
+        "Pastāvīgs atbalsts: Nepārtraukta konsultēšana un atbalsts atbilstības uzturēšanai un pielāgošanai uzņēmuma attīstībai."
       ],
-      "note": "Designed specifically for small and medium-sized food businesses, ISOlogic provides practical, proportionate and cost-effective HACCP support tailored to your operation.",
-      "ctaText": "Starting a new food business? Get in touch for practical, affordable food safety support tailored to your needs.",
-      "ctaButtonLabel": "Get HACCP support"
+      "note": "Pielāgots mazajiem un vidējiem pārtikas nozares uzņēmumiem, ISOlogic nodrošina praktisku un samērīgu atbalstu, ar pieeju, kas pielāgota katra uzņēmuma vajadzībām un iespējām — bez liekas sarežģītības un nepamatotām izmaksām.",
+      "ctaText": "Uzsākat pārtikas biznesu? Sazinieties, lai saņemtu praktisku un pieejamu pārtikas drošības un paškontroles sistēmas atbalstu, kas pielāgots jūsu vajadzībām.",
+      "ctaButtonLabel": "Saņemt atbalstu"
     },
     {
       "id": "lead-auditing",
-      "title": "Lead Auditing Services",
-      "subtitle": "Specialised leadership for supply chains (second party) and third party requirements.",
-      "description": "Beyond consultancy, we provide high-level auditing expertise for accredited Certification Bodies and international organisations. As a certified Lead Auditor (CQI and IRCA Certified) we conduct:",
+      "title": "Vadošā audita pakalpojumi",
+      "subtitle": "Atbalsts otrās un trešās puses auditu prasību izpildei.",
+      "description": "Papildus konsultāciju pakalpojumiem ISOlogic nodrošina augsta līmeņa audita ekspertīzi akreditētām sertifikācijas iestādēm un starptautiskām organizācijām. Kā sertificēts vadošais auditors (CQI un IRCA sertificēts) ISOlogic veic:",
       "items": [
-        "Third-Party Audits: Partnering with international Certification Bodies to perform independent compliance assessments and certification audits (e.g., ISO 9001, etc.)",
-        "Second-Party (Supplier) Audits: Helping organisations mitigate risk by conducting deep-dive audits of their critical suppliers to ensure quality and compliance across the entire supply chain."
+        "Trešās puses auditus: Sadarbībā ar starptautiskām sertifikācijas iestādēm tiek veikti neatkarīgi atbilstības novērtējumi un sertifikācijas auditi (piemēram, ISO 9001 u.c.).",
+        "Otrās puses (piegādātāju) auditus: Palīdzam organizācijām mazināt riskus, veicot padziļinātus auditus to kritiskajiem piegādātājiem, lai nodrošinātu kvalitāti un atbilstību visā piegādes ķēdē."
       ],
       "extraParagraphs": [
-        "Available as a freelance and contract ISO Lead Auditor for third-party ISO certification audits, supplier audits and external auditing assignments across Latvia and Europe.",
-        "CQI & IRCA certified ISO auditor providing services to certification bodies and organisations seeking qualified lead auditors for ISO 9001 and other management system standards. Engagements are delivered on a contract or assignment basis, tailored to certification body and organisational requirements."
+        "Pieejams kā ārštata un līguma ISO vadošais auditors trešās puses ISO sertifikācijas auditiem, piegādātāju auditiem un citiem ārējiem audita uzdevumiem visā Latvijā un Eiropā.",
+        "CQI un IRCA sertificēts ISO auditors, kas sniedz pakalpojumus sertifikācijas iestādēm un organizācijām, kurām nepieciešami kvalificēti vadošie auditori ISO 9001 un citu vadības sistēmu standartu jomā. Pakalpojumi tiek nodrošināti uz līguma vai atsevišķu uzdevumu pamata, pielāgojoties sertifikācijas iestāžu un organizāciju prasībām."
       ]
     }
   ],
@@ -101,17 +101,16 @@
   },
   "whyOutsourceSection": {
     "title": "Kāpēc izvēlēties ISO pārvaldības ārpakalpojumu?",
-    "intro": "Iekšējā ISO pārvaldība var novest pie \"atbilstības inerces\", kad sistēma kļūst par nastu, nevis vērtību. ISOLogic nodrošina pragmatisku un izturīgu alternatīvu:",
+    "intro": "Iekšējā ISO pārvaldība var novest pie tā, ka sistēma kļūst par formalitāti, nevis efektivitātes instrumentu. Sadarbība ar ISOlogic nodrošina elastīgāku un ilgtspējīgāku pieeju:",
     "items": [
-      "Izmaksu efektivitāte: piekļuve vadošā auditora kompetencei par daļu no pilnas slodzes kvalitātes vadītāja izmaksām",
-      "Darbības nepārtrauktība: netiek apdraudēta sertifikācija, ja uzņēmumu pamet galvenais darbinieks — tiek nodrošināta zināšanu nepārtrauktība",
-      "Neatkarība: objektīvs, neatkarīgs skats, kas atbilst ISO prasībām un kam uzticas sertifikācijas iestādes",
-      "Fokuss uz ieņēmumiem: jūsu komanda koncentrējas uz pamatbiznesu, kamēr mēs pārvaldām atbilstības prasības",
-      "Labākā prakse: izmantojam pieredzi no Eiropas nozarēm, lai identificētu neefektivitātes",
-      "Daudzvalodu atbalsts un starptautiska pieeja: dokumentācija un saziņa latviešu, krievu un angļu valodā atbilstoši jūsu tirgus vajadzībām"
+      "Izmaksu efektivitāte: piekļuve vadošā auditora kompetencei bez pilnas slodzes speciālista uzturēšanas izmaksām.",
+      "Nepārtrauktība: tiek mazināts risks zaudēt sertifikāciju, ja uzņēmumu pamet galvenais darbinieks.",
+      "Neatkarība: objektīvs vērtējums, kam uzticas sertifikācijas iestādes.",
+      "Fokuss uz pamatdarbību: jūsu komanda koncentrējas uz svarīgākajiem uzdevumiem, kamēr mēs nodrošinām ISO pārvaldību.",
+      "Svaigs skatījums: praktiskas atziņas no Eiropas nozarēm, lai atklātu neefektivitātes.",
+      "Starptautiska pieeja un daudzvalodu atbalsts: dokumentācija un saziņa latviešu, krievu un angļu valodā atbilstoši jūsu uzņēmuma vajadzībām."
     ]
-  }
-  ,
+  },
   "ctaBand": {
     "title": "Gatavi sākt?",
     "subtitle": "Sazinieties ar ISOLogic jau šodien, lai saņemtu profesionālu atbalstu Latvijā.",
@@ -120,5 +119,4 @@
     "secondaryLabel": "Zvanīt",
     "secondaryHref": "tel:+37122331164"
   }
-
 }

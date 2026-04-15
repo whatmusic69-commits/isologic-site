@@ -1,5 +1,7 @@
 {
-  "hero": { "title": "Часто задаваемые вопросы" },
+  "hero": {
+    "title": "Часто задаваемые вопросы"
+  },
   "items": [
     {
       "question": "Как ISO-консультант может помочь бизнесу?",
@@ -37,12 +39,30 @@
       "question": "Увеличит ли ISO сертификация бюрократию?",
       "answer": "Нет. Подход «Guidance with Logic» направлен на создание эффективных и простых систем. Сложные и избыточные процедуры заменяются практичной цифровой документацией и процессами, которые упрощают управление бизнесом."
     },
-    { "question": "Do I need a food safety system for my business in Latvia?", "answer": "Yes. All food businesses in Latvia are required to implement a food safety (paškontroles) system based on HACCP principles to comply with PVD (Food and Veterinary Service) requirements." },
-    { "question": "What is a food safety (paškontroles) system?", "answer": "A food safety system is a structured approach to managing risks in food handling. In Latvia, these systems are based on HACCP principles and are designed to identify, control and prevent potential hazards throughout your processes." },
-    { "question": "Is HACCP required in Latvia?", "answer": "In practice, businesses are required to implement a food safety system based on HACCP principles rather than a standalone “HACCP certification.” The focus is on practical implementation of food safety procedures aligned with PVD requirements." },
-    { "question": "Who needs to complete the “minimum hygiene requirements” training?", "answer": "Training is required for employees who start working in food handling and do not have a relevant food-related qualification, as well as those who have not worked in the food sector for more than three years." },
-    { "question": "How often do employees need to renew food hygiene training?", "answer": "Food hygiene training must typically be refreshed at least once every three years to ensure knowledge remains up to date and compliant with Latvian regulations." },
-    { "question": "What is ISO 22000 and how is it different from HACCP?", "answer": "ISO 22000 is an international food safety management standard that incorporates HACCP principles within a broader management system framework. It is typically used by larger or more complex food businesses." }
+    {
+      "question": "Нужна ли система пищевой безопасности для бизнеса в Латвии?",
+      "answer": "Да. Все предприятия пищевой отрасли обязаны внедрить систему пищевой безопасности (систему самоконтроля на основе HACCP) для соответствия требованиям PVD в Латвии."
+    },
+    {
+      "question": "Что такое система пищевой безопасности (система самоконтроля)?",
+      "answer": "Система пищевой безопасности — это структурированный подход к управлению рисками при обращении с продуктами питания. В Латвии такие системы основаны на принципах HACCP и направлены на выявление, оценку и контроль рисков на всех этапах деятельности."
+    },
+    {
+      "question": "Требуется ли HACCP в Латвии?",
+      "answer": "На практике предприятия обязаны внедрить систему пищевой безопасности (систему самоконтроля), основанную на принципах HACCP, а не получать отдельную «сертификацию HACCP». Основное внимание уделяется практическому внедрению процедур пищевой безопасности в соответствии с требованиями Пищево-ветеринарной службы (PVD)."
+    },
+    {
+      "question": "Кому необходимо проходить обучение по минимальным требованиям гигиены?",
+      "answer": "Обучение требуется сотрудникам, которые начинают работать с продуктами питания и не имеют соответствующего профильного образования, а также тем, кто не работал в пищевой отрасли более трёх лет."
+    },
+    {
+      "question": "Как часто необходимо обновлять обучение по гигиене пищевых продуктов?",
+      "answer": "Обучение по гигиене пищевых продуктов, как правило, необходимо проходить не реже одного раза в три года для поддержания актуальности знаний и соответствия требованиям законодательства Латвии."
+    },
+    {
+      "question": "Что такое ISO 22000 и чем он отличается от HACCP?",
+      "answer": "ISO 22000 — это международный стандарт системы менеджмента пищевой безопасности, который включает принципы HACCP в более широкую систему управления. Как правило, он применяется более крупными или более сложными предприятиями пищевой отрасли."
+    }
   ],
   "ctaBand": {
     "title": "Остались вопросы?",

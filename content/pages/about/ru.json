@@ -1,58 +1,58 @@
 {
   "v2": true,
   "hero": {
-    "title": "Our Mission & Values",
-    "subtitle": "Guidance with Logic. Support in Every Step.",
-    "text": "At ISOlogic, we transform complex international standards into practical business tools. We are committed to a no-nonsense consultancy model where logic dictates the design and support defines the relationship."
+    "title": "Наша миссия и ценности",
+    "subtitle": "Логичный подход. Поддержка на каждом этапе.",
+    "text": "ISOlogic превращает сложные международные стандарты в практичные инструменты для бизнеса. Подход основан на ясной логике и реальной пользе, где решения принимаются обоснованно, а поддержка остаётся ключевой частью взаимодействия."
   },
   "imageSection": {
-    "imageAlt": "About ISOlogic",
+    "imageAlt": "Экспертиза ISOlogic",
     "paragraphs": [
-      "Expertise Behind ISOlogic",
-      "ISOlogic is built on over 15 years of hands-on experience in ISO compliance, auditing and management system implementation across multiple industries and both EU and Latvian regulatory environments. This capability is shaped by experience in high-security printing, textile and hygiene services, industrial manufacturing and advanced research and development environment operating under demanding European Space Agency (ESA) regulatory standards, providing a broad understanding of sector-specific challenges and enabling rapid adaptation to new business environments and the delivery of effective, tailored ISO solutions.",
-      "The consultancy specialises in the development, optimisation and certification support of internationally recognised standards, including ISO 9001, ISO 14001, ISO 27001, ISO 45001 and EN 9100 (Aerospace Quality Management Systems). This experience spans complex operational settings where compliance, risk management and performance improvement are critical."
+      "Экспертиза ISOlogic",
+      "ISOlogic основана на более чем 15-летнем практическом опыте в области соответствия требованиям ISO, проведения аудитов и внедрения систем управления в различных отраслях, а также в нормативной среде Европейского союза и Латвии. Данная экспертиза сформирована благодаря работе в сфере защищённой полиграфии, текстильных услуг, промышленного производства, а также в высокотехнологичных научно-исследовательских и производственных средах, функционирующих в соответствии с требованиями European Space Agency (ESA). Это обеспечивает глубокое понимание отраслевых особенностей, способность быстро адаптироваться к новым бизнес-средам и внедрять эффективные, адаптированные ISO-решения.",
+      "Консультационная деятельность включает разработку, оптимизацию и сопровождение сертификации по международно признанным стандартам, включая ISO 9001, ISO 14001, ISO 27001, ISO 45001 и EN 9100 (системы менеджмента качества в аэрокосмической отрасли). Опыт охватывает сложные операционные среды, где ключевую роль играют соблюдение требований, управление рисками и повышение эффективности деятельности."
     ]
   },
   "cta": {
-    "text": "Need ISO support? Let’s talk.",
-    "buttonLabel": "Contact us",
+    "text": "Нужна поддержка по ISO? Давайте обсудим.",
+    "buttonLabel": "Связаться с нами",
     "targetId": "contact"
   },
   "coreExpertise": {
     "paragraphs": [
-      "At the core of ISOlogic is practical, real-world expertise developed through direct involvement in internal, external and supplier audits, root cause analysis, regulatory compliance, contractor management, KPI monitoring and the delivery of internal training programmes. This ensures that every management system is not only aligned with ISO requirements, but also practical, efficient and tailored to the operational needs of each business."
+      "В основе ISOlogic лежит практический опыт, сформированный благодаря непосредственному участию во внутренних, внешних и аудитах поставщиков, анализе первопричин, обеспечении соответствия нормативным требованиям, управлении подрядчиками, мониторинге KPI и проведении внутренних обучающих программ. Это позволяет создавать системы управления, которые не только соответствуют требованиям ISO, но и являются практичными, эффективными и адаптированными к операционной деятельности каждого бизнеса."
     ]
   },
   "foodSupport": {
     "paragraphs": [
-      "ISOlogic also supports small and medium-sized food businesses with HACCP implementation and food safety systems, helping ensure compliance with local PVD (Food and Veterinary Service) requirements in Latvia. Services are tailored for both new and existing businesses, including convenience stores, takeaway outlets and other food operators, providing clear and structured guidance to achieve inspection readiness and ongoing compliance. With a strong focus on small businesses, ISOlogic delivers practical solutions that are not only effective, but also affordable and proportionate to the size of each operation."
+      "ISOlogic также оказывает поддержку малым и средним предприятиям пищевой отрасли во внедрении систем пищевой безопасности (paškontroles sistēma / HACCP), помогая обеспечивать соответствие требованиям PVD (Пищево-ветеринарной службы) в Латвии. Услуги адаптированы как для новых, так и для действующих предприятий, включая небольшие магазины, точки общественного питания и другие предприятия пищевой отрасли, обеспечивая понятный и структурированный подход для успешного прохождения проверок и поддержания соответствия требованиям. С особым фокусом на малый бизнес ISOlogic предлагает практичные решения, которые являются не только эффективными, но и экономически обоснованными и соразмерными масштабу деятельности каждого предприятия."
     ],
-    "ctaText": "Starting a new food business? Get in touch for practical, affordable HACCP support tailored to your needs.",
-    "buttonLabel": "Get HACCP support"
+    "ctaText": "Открываете пищевой бизнес? Свяжитесь с нами, чтобы получить практическую и доступную поддержку по пищевой безопасности и HACCP, адаптированную под ваши задачи.",
+    "buttonLabel": "Получить поддержку"
   },
   "additionalExpertise": {
     "paragraphs": [
-      "In addition, ISOlogic brings extensive experience in occupational health and safety, supporting organisations in developing safe systems of work, risk assessments, compliance with legislation, and alignment with ISO 45001 standards. This allows businesses to not only meet regulatory obligations but also create safer and more efficient working environments.",
-      "ISOlogic’s capability includes building management systems from the ground up — including the full implementation of EN 9100 within a Latvia-based research and development manufacturing environment operating within the European space sector.",
-      "The consultancy is led by Marija Nesterovica, an ISO professional with extensive experience across integrated management systems and a certified ISO 9001 Lead Auditor. This combination of technical knowledge and audit expertise allows ISOlogic to deliver systems that are robust, audit-ready and designed for long-term sustainability.",
-      "Based in Riga, ISOlogic supports businesses across Latvia and Europe, providing clear, structured and results-driven ISO consultancy without unnecessary complexity."
+      "ISOlogic также обладает обширным опытом в области охраны труда и безопасности, поддерживая организации в разработке безопасных систем работы, проведении оценки рисков, обеспечении соблюдения нормативных требований и внедрении стандартов ISO 45001. Это позволяет компаниям не только выполнять обязательные требования, но и создавать более безопасную и эффективную рабочую среду.",
+      "Экспертиза ISOlogic включает создание систем управления с нуля, включая полное внедрение стандарта EN 9100 в научно-исследовательской и производственной организации, базирующейся в Латвии и работающей в европейском космическом секторе.",
+      "Консультационная деятельность осуществляется под руководством Марии Нестеровичи — специалиста в области ISO с обширным опытом работы с интегрированными системами управления и сертифицированного ведущего аудитора ISO 9001. Это сочетание технических знаний и аудиторской экспертизы позволяет ISOlogic разрабатывать надёжные, готовые к аудиту системы, ориентированные на долгосрочную устойчивость.",
+      "Базируясь в Риге, ISOlogic оказывает поддержку компаниям по всей Латвии и Европе, предлагая чёткий, структурированный и ориентированный на результат подход к ISO-консалтингу без излишней сложности."
     ]
   },
   "principlesSection": {
     "cards": [
       {
-        "title": "Практическая логика",
-        "text": "Системы, созданные для людей, а не только для аудиторов."
+        "title": "Практичный подход",
+        "text": "Системы, разработанные для людей, а не только для аудиторов."
       },
       {
         "title": "Практическая поддержка",
-        "text": "Поддержка на месте и удаленно на всех этапах сертификации и после."
+        "text": "Сопровождение на месте и дистанционно на всех этапах сертификации и после её завершения."
       },
       {
-        "title": "Честность и прозрачность",
-        "text": "Мы даем честную, прямую обратную связь, помогая выявить реальные возможности для улучшения."
+        "title": "Открытость и прозрачность",
+        "text": "Честная и прямая обратная связь, помогающая выявить реальные возможности для улучшения."
       }
     ],
-    "statement": "Для бесшовной интеграции в ваш бизнес вся документация, обучение и коммуникации могут предоставляться на <strong>английском</strong>, <strong>латышском</strong> или <strong>русском</strong> языках."
+    "statement": "Для обеспечения эффективной интеграции в бизнес все документы, обучение и коммуникация могут предоставляться на <strong>английском, латышском или русском</strong> языках."
   }
 }

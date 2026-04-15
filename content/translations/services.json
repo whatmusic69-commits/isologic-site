@@ -39,10 +39,10 @@
       "other": "Cits"
     },
     "taglines": {
-      "implementation": "Making ISO Practical",
-      "internal-auditing": "Structured Audit Control",
-      "iso-maintenance": "Ongoing ISO Support",
-      "food-safety-haccp": "Food Safety Made Practical"
+      "implementation": "ISO — Vienkārši un Praktiski",
+      "internal-auditing": "Strukturēta audita pieeja",
+      "iso-maintenance": "Ilgtermiņa ISO atbalsts",
+      "food-safety-haccp": "Padarām pārtikas drošību praktiski pielietojamu"
     }
   },
   "ru": {
@@ -62,10 +62,10 @@
       "other": "Другое"
     },
     "taglines": {
-      "implementation": "Making ISO Practical",
-      "internal-auditing": "Structured Audit Control",
-      "iso-maintenance": "Ongoing ISO Support",
-      "food-safety-haccp": "Food Safety Made Practical"
+      "implementation": "Превращаем ISO в практический инструмент",
+      "internal-auditing": "Системный контроль аудита",
+      "iso-maintenance": "Поддержание системы ISO",
+      "food-safety-haccp": "Пищевая безопасность на практике"
     }
   }
 }

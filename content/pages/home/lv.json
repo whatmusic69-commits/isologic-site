@@ -1,45 +1,64 @@
 {
-  "ctaBand": {
-    "title": "Vēlaties stiprināt atbilstību?",
-    "subtitle": "Pārrunāsim jūsu situāciju un prioritātes.",
-    "ctaLabel": "Pieteikt zvanu",
-    "ctaHref": "/lv/contact"
+  "hero": {
+    "title": "Praktisks ISO un atbilstības atbalsts Latvijas uzņēmumiem",
+    "subtitle": "Praktiskas, neatkarīgas vadlīnijas ISO sertifikācijas iegūšanai un uzturēšanai, kā arī normatīvās atbilstības nodrošināšanai Latvijā.",
+    "imageAlt": "ISO & compliance support in Latvia",
+    "paragraphs": [
+      "Mēs sadarbojamies ar Latvijas uzņēmumiem, lai izstrādātu, ieviestu un uzturētu ISO sistēmas, kas darbojas reālos procesos, ne tikai uz papīra.",
+      "No ISO sertifikācijas līdz pārtikas drošībai un normatīvo prasību ievērošanai — mēs nodrošinām, lai jūsu atbilstība būtu skaidra, strukturēta un gatava auditam."
+    ],
+    "checklist": [
+      "ISO 9001, EN 9100 / AS9100, ISO 14001, ISO 27001, ISO 45001",
+      "Pārtikas drošība / HACCP un PVD prasību ievērošana",
+      "Iekšējie auditi un sistēmu uzturēšana",
+      "Dokumentācijas izstrāde un apmācības latviešu, angļu un krievu valodā",
+      "Sagatavošana sertifikācijai un atbalsts uz vietas",
+      "Neatkarīga pieeja, orientēta uz praktiskiem un izmērāmiem rezultātiem"
+    ],
+    "primaryCtaLabel": "Pieteikt konsultāciju",
+    "primaryCtaHref": "/lv/contact",
+    "secondaryCtaLabel": "Sazināties ar mums",
+    "secondaryCtaHref": "tel:+37122331164"
+  },
+  "intro": {
+    "title": "Uzticams partneris pārliecībai un atbilstībai",
+    "text": "ISOLOGIC palīdz uzņēmumiem stiprināt iekšējās kontroles, izpildīt regulatīvās prasības un sagatavoties auditam bez pārsteigumiem."
   },
   "industriesSection": {
-    "title": "Ar ko strādājam",
-    "subtitle": "Atbalstām organizācijas, kurām vajadzīgas skaidras kontroles, uzticami procesi un ilgtspējīga atbilstība.",
+    "title": "Palīdzam uzņēmumiem dažādās nozarēs Latvijā",
+    "subtitle": "Praktisks ISO un atbilstības atbalsts, kas darbojas reālos procesos.",
     "items": [
       {
-        "title": "Finanšu pakalpojumi",
+        "title": "Pārtikas nozare un viesmīlība",
+        "icon": "utensils"
+      },
+      {
+        "title": "Pārtikas ražošana",
+        "icon": "utensils"
+      },
+      {
+        "title": "Mazumtirdzniecība un nelielie veikali",
         "icon": "briefcase"
       },
       {
-        "title": "Tehnoloģijas",
-        "icon": "cpu"
+        "title": "Ražošana un rūpniecība",
+        "icon": "building"
       },
       {
-        "title": "Veselības aprūpe",
-        "icon": "heart-pulse"
-      },
-      {
-        "title": "Izglītība",
-        "icon": "graduation-cap"
-      },
-      {
-        "title": "Juridiskie pakalpojumi",
-        "icon": "scale"
+        "title": "Loģistika un transports",
+        "icon": "rocket"
       },
       {
         "title": "Profesionālie pakalpojumi",
         "icon": "messages-square"
       },
       {
-        "title": "Valsts sektors",
-        "icon": "landmark"
+        "title": "Būvniecība un inženierija",
+        "icon": "wrench"
       },
       {
-        "title": "Viesmīlība",
-        "icon": "building"
+        "title": "IT un tehnoloģiju nozare",
+        "icon": "cpu"
       }
     ]
   },
@@ -48,7 +67,7 @@
     "cards": [
       {
         "title": "Atbalsts ārējam auditam",
-        "description": "Sagatavošanās, dokumentu pārskati un sadarbība ar auditoriem, lai process būtu raits."
+        "description": "Sagatavošanās, dokumentācijas pārskati un sadarbība ar auditoriem, lai process būtu raits."
       },
       {
         "title": "Iekšējās kontroles un riski",
@@ -60,127 +79,37 @@
       }
     ]
   },
-  "intro": {
-    "title": "Uzticams partneris pārliecībai un atbilstībai",
-    "text": "ISOLOGIC palīdz stiprināt iekšējās kontroles, izpildīt regulatīvās prasības un sagatavoties auditam bez pārsteigumiem."
-  },
   "standardsSection": {
     "title": "Galvenās kompetences",
-    "subtitle": "Standarti un ietvari, kurus ieviešam un novērtējam.",
+    "subtitle": "Standarti un sistēmas, kuras ieviešam un novērtējam.",
     "groups": [
       {
-        "title": "ISO Certification in Latvia",
+        "title": "ISO sertifikācija Latvijā",
         "bullets": [
-          "ISO 9001 — Quality Management",
-          "EN 9100 / AS9100 — Aerospace, Space & Defence",
-          "ISO 14001 — Environmental Management",
-          "ISO 27001 — Information Security",
-          "ISO 45001 — Occupational Health & Safety"
+          "ISO 9001 — Kvalitātes vadība",
+          "EN 9100 / AS9100 — Aviācijas, kosmosa un aizsardzības nozare",
+          "ISO 14001 — Vides pārvaldība",
+          "ISO 27001 — Informācijas drošība",
+          "ISO 45001 — Darba aizsardzība un veselība"
         ]
       },
       {
-        "title": "Food Safety / HACCP & PVD Compliance in Latvia",
+        "title": "Pārtikas drošība / HACCP un PVD prasību ievērošana Latvijā",
         "bullets": [
-          "HACCP documentation and implementation",
-          "Food safety procedures and staff training",
-          "Ongoing compliance maintenance",
-          "Preparation for PVD inspections"
+          "HACCP dokumentācijas izstrāde un ieviešana",
+          "Pārtikas drošības procedūras un personāla apmācība",
+          "Nepārtraukta atbilstības uzturēšana",
+          "Sagatavošana PVD pārbaudēm"
         ]
       }
-    ],
-    "ctaText": "Saņemt konsultāciju",
-    "ctaHref": "/lv/contact",
-    "items": [
-      {
-        "title": "ISO 27001 — Informācijas drošība",
-        "icon": "flag"
-      },
-      {
-        "title": "ISO 22301 — Darbības nepārtrauktība",
-        "icon": "eye"
-      },
-      {
-        "title": "ISO 20000 — Pakalpojumu pārvaldība",
-        "icon": "user-settings"
-      },
-      {
-        "title": "ISO 27017 — Mākoņpakalpojumi",
-        "icon": "cloud"
-      },
-      {
-        "title": "ISO 9001 — Kvalitātes vadība",
-        "icon": "send"
-      },
-      {
-        "title": "ISO 45001 — Darba drošība un veselība",
-        "icon": "rocket"
-      },
-      {
-        "title": "ISO 14001 — Vides pārvaldība",
-        "icon": "tree"
-      }
     ]
-  },
-  "testimonialsSection": {
-    "title": "Atsauksmes",
-    "subtitle": "Klienti par sadarbības vērtību ar ISOLOGIC.",
-    "rotationIntervalMs": 6000,
-    "items": [
-      {
-        "quote": "Vēlamies pateikt lielu paldies Marijai no ISOlogic par sniegto atbalstu mūsu jaunā veikala darbības uzsākšanā. Viņa palīdzēja ne tikai ieviest pārtikas drošības prasības, bet arī praktiski apmācīja darbiniekus uz vietas, skaidri izskaidrojot normatīvās prasības, veselības pārbaudes un ikdienas kontroles procesus. Ļoti novērtējam profesionālu pieeju un spēju teoriju pārvērst saprotamā un praktiski pielietojamā risinājumā.",
-        "company": "MIX Veikals",
-        "rating": 5,
-        "avatarSrc": "/mix_review.jpeg"
-      }
-    ]
-  },
-  "ownershipSection": {
-    "title": "Uzņemamies atbildību.",
-    "subtitle": "No pirmās sarunas līdz ilgtspējīgam rezultātam — mēs atbildam par sertifikāciju un atbilstību.",
-    "buttonText": "Ārpakalpojums: atbilstības vadība",
-    "buttonHref": "/lv/contact",
-    "items": [
-      {
-        "title": "IEVIET",
-        "eyebrow": "Strukturēti jau no pirmās dienas.",
-        "description": "Sistēma tiek veidota korekti, domājot par sertifikāciju jau sākumā.",
-        "icon": "wrench"
-      },
-      {
-        "title": "AUDITS",
-        "eyebrow": "Vienmēr gatavi pārbaudei.",
-        "description": "Iekšējie pārskati uztur kontroli un atbilstību visa gada garumā.",
-        "icon": "badge-a"
-      },
-      {
-        "title": "SERTIFICĒ",
-        "eyebrow": "Sertifikācija nodrošināta.",
-        "description": "Pārvaldām procesu, lai apstiprinājums būtu raits un paredzams.",
-        "icon": "award"
-      },
-      {
-        "title": "PĀRVALDI",
-        "eyebrow": "Atbilstība — nodrošināta.",
-        "description": "Nepārtraukta uzraudzība nodrošina stipru un ilgtspējīgu sertifikāciju.",
-        "icon": "shield"
-      }
-    ]
-  },
-  "hero": {
-    "title": "Neatkarīgs audits un atbilstības konsultācijas",
-    "subtitle": "Precizitāte, godīgums un proaktīvs atbalsts regulētām nozarēm.",
-    "imageAlt": "ISO & compliance support in Latvia",
-    "primaryCtaLabel": "Sazināties ar konsultantu",
-    "primaryCtaHref": "/lv/contact",
-    "secondaryCtaLabel": "Mūsu pakalpojumi",
-    "secondaryCtaHref": "/lv/services"
   },
   "benefits": {
-    "title": "Kāpēc ISOLOGIC",
+    "title": "Kāpēc izvēlēties ISOLOGIC",
     "items": [
       {
-        "title": "Neatkarīgs skats",
-        "text": "Objektīvi secinājumi, kas palīdz pieņemt drošus lēmumus."
+        "title": "Neatkarīgs skatījums",
+        "text": "Objektīvi secinājumi, kas palīdz vadībai pieņemt pārliecinošus lēmumus."
       },
       {
         "title": "Efektīva piegāde",
@@ -192,49 +121,112 @@
       }
     ]
   },
-  "stats": {
-    "items": [
-      {
-        "value": "10+",
-        "label": "gadu pieredze"
-      },
-      {
-        "value": "50+",
-        "label": "projekti"
-      },
-      {
-        "value": "3",
-        "label": "valodas"
-      },
-      {
-        "value": "100%",
-        "label": "neatkarīgi"
-      }
-    ]
-  },
   "whyChoose": {
-    "title": "Kāpēc ISOLOGIC",
-    "subtitle": "Neatkarīga pārliecība ar praktisku, aizstāvamu rezultātu.",
+    "title": "Kāpēc izvēlēties ISOlogic",
+    "subtitle": "Neatkarīgs, skaidrs un praktisks atbalsts Latvijas uzņēmumiem.",
     "items": [
       {
-        "title": "Paredzama piegāde",
-        "description": "Skaidrs plāns, termiņi un komunikācija — bez pārsteigumiem.",
-        "icon": "clipboard"
-      },
-      {
-        "title": "Praktiskas sistēmas",
-        "description": "Kontroles un procedūras, kas atbilst jūsu darba ritmam.",
-        "icon": "cube"
-      },
-      {
-        "title": "Neatkarīga uzraudzība",
-        "description": "Objektīvs skats, pilna atbildība un caurspīdīgi pierādījumi.",
+        "title": "Vietējā izpratne",
+        "description": "Izprotam Latvijas uzņēmumu vidi un dažādu nozaru prasības.",
         "icon": "layers"
       },
       {
-        "title": "Uzticams rezultāts",
-        "description": "Ilgtspējīga atbilstība un dokumentācija audita gatavībā.",
+        "title": "Neatkarīga ekspertīze",
+        "description": "Vadošā auditora pieeja, kurai uzticas sertifikācijas iestādes.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Praktiska ieviešana",
+        "description": "Sistēmas, kas pielāgotas reāliem procesiem — vienkāršas, skaidras un pamatotas.",
+        "icon": "cube"
+      },
+      {
+        "title": "Strukturēta pieeja",
+        "description": "Skaidras ceļa kartes, posmi un pierādījumi, kas samazina audita risku.",
         "icon": "chart"
+      },
+      {
+        "title": "Daudzvalodu atbalsts",
+        "description": "Dokumentācija un apmācības angļu, latviešu un krievu valodā.",
+        "icon": "messages-square"
+      },
+      {
+        "title": "Ilgtermiņa uzticamība",
+        "description": "Nepārtraukta uzturēšana stabilai atbilstībai visa gada garumā.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "15+",
+        "label": "gadi — pieredze ISO sertifikācijā un atbilstībā"
+      },
+      {
+        "value": "Praktiska pieredze",
+        "label": "darbs reālā uzņēmējdarbības vidē"
+      },
+      {
+        "value": "Vienkārša pieeja",
+        "label": "skaidra un strukturēta ISO un normatīvā pieeja"
+      },
+      {
+        "value": "Neatkarīga pieeja",
+        "label": "elastīgi ISO konsultāciju pakalpojumi Latvijā"
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "Gatavi uzsākt sadarbību?",
+    "subtitle": "Sazinieties ar ISOlogic jau šodien, lai saņemtu profesionālu atbalstu Latvijā.",
+    "ctaLabel": "Pieteikt konsultāciju",
+    "ctaHref": "/lv/contact",
+    "secondaryLabel": "Sazinieties ar mums",
+    "secondaryHref": "tel:+37100000000"
+  },
+  "ownershipSection": {
+    "title": "Kā mēs nodrošinām jūsu sertifikāciju un atbilstību",
+    "subtitle": "Skaidrs, pilna cikla process, kas pielāgots Latvijas uzņēmumiem.",
+    "buttonText": "Pieteikt konsultāciju",
+    "buttonHref": "/lv/contact",
+    "items": [
+      {
+        "title": "IEVIEŠANA",
+        "eyebrow": "Izstrāde un ieviešana",
+        "description": "Praktiska ISO sistēma, pielāgota jūsu darbībai.",
+        "icon": "wrench"
+      },
+      {
+        "title": "PĀRSKATĪŠANA",
+        "eyebrow": "Iekšējie auditi",
+        "description": "Neatkarīgas pārbaudes un korektīvie pasākumi.",
+        "icon": "badge-a"
+      },
+      {
+        "title": "SERTIFICĒŠANA",
+        "eyebrow": "Atbalsts ārējam auditam",
+        "description": "Sagatavošana un atbalsts uz vietas sertifikācijai.",
+        "icon": "award"
+      },
+      {
+        "title": "ATBALSTS",
+        "eyebrow": "Uzturēšana",
+        "description": "Regulāri atjauninājumi, apmācības un konsultācijas visa gada garumā.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Klientu atsauksmes",
+    "subtitle": "Klientu pieredze un sadarbības rezultāti ar ISOlogic",
+    "rotationIntervalMs": 6000,
+    "items": [
+      {
+        "quote": "Vēlamies pateikt lielu paldies Marijai no ISOlogic par sniegto atbalstu mūsu jaunā veikala darbības uzsākšanā. Viņa palīdzēja ne tikai ieviest pārtikas drošības prasības, bet arī praktiski apmācīja darbiniekus uz vietas, skaidri izskaidrojot normatīvās prasības, veselības pārbaudes un ikdienas kontroles procesus. Ļoti novērtējam profesionālu pieeju un spēju teoriju pārvērst saprotamā un praktiski pielietojamā risinājumā.",
+        "company": "MIX Veikals",
+        "rating": 5,
+        "avatarSrc": "/mix_review.jpeg"
       }
     ]
   }

@@ -150,12 +150,18 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                             return (
                               <div key={i} className="card card-hover p-5 h-full">
                                 <div className="flex items-start gap-3">
-                                  {Icon && <Icon className="mt-0.5 w-7 h-7 text-neutral-900" />}
-                                  <div>
-                                    <div className="text-sm font-semibold tracking-wide text-neutral-900">{heading.toUpperCase()}</div>
-                                    {body && <p className="mt-1 text-sm leading-6 text-neutral-700">{body}</p>}
-                                  </div>
-                                </div>
+  {Icon && (
+    <div className="mt-0.5 h-7 w-7 min-h-7 min-w-7 shrink-0 flex items-center justify-center">
+      <Icon className="h-7 w-7 text-neutral-900" />
+    </div>
+  )}
+  <div className="min-w-0">
+    <div className="text-sm font-semibold tracking-wide text-neutral-900">
+      {heading.toUpperCase()}
+    </div>
+    {body && <p className="mt-1 text-sm leading-6 text-neutral-700">{body}</p>}
+  </div>
+</div>
                               </div>
                             );
                           })}

@@ -1,3 +1,33 @@
+function renderPopup(status, content) {
+  const serialized = JSON.stringify(content);
+
+  return `<!doctype html>
+<html>
+  <body>
+    <script>
+      (function () {
+        const receiveMessage = (message) => {
+          window.opener.postMessage(
+            "authorization:github:${status}:" + JSON.stringify(${serialized}),
+            message.origin
+          );
+          window.removeEventListener("message", receiveMessage, false);
+          window.close();
+        };
+
+        window.addEventListener("message", receiveMessage, false);
+
+        if (window.opener && !window.opener.closed) {
+          window.opener.postMessage("authorizing:github", "*");
+        } else {
+          document.body.innerText = "OAuth opener window was not found.";
+        }
+      })();
+    </script>
+  </body>
+</html>`;
+}
+
 export async function GET(request) {
   const url = new URL(request.url);
   const code = url.searchParams.get("code");
@@ -28,47 +58,24 @@ export async function GET(request) {
 
   const data = await tokenRes.json();
 
-  if (!data.access_token) {
+  if (data.error || !data.access_token) {
     return new Response(
-      `OAuth failed: ${JSON.stringify(data, null, 2)}`,
+      renderPopup("error", data),
       {
-        status: 500,
-        headers: { "Content-Type": "text/plain; charset=utf-8" },
+        status: 200,
+        headers: { "Content-Type": "text/html; charset=utf-8" },
       }
     );
   }
 
-  const payload = JSON.stringify({
-    token: data.access_token,
-    provider: "github",
-  });
-
-  const html = `
-    <!doctype html>
-    <html>
-      <body>
-        <script>
-          (function () {
-            try {
-              if (window.opener && !window.opener.closed) {
-                window.opener.postMessage(
-                  "authorization:github:success:" + ${JSON.stringify(payload)},
-                  "*"
-                );
-              }
-            } catch (e) {
-              document.body.innerText = "postMessage failed: " + e.message;
-              return;
-            }
-            window.close();
-          })();
-        </script>
-      </body>
-    </html>
-  `;
-
-  return new Response(html, {
-    status: 200,
-    headers: { "Content-Type": "text/html; charset=utf-8" },
-  });
+  return new Response(
+    renderPopup("success", {
+      token: data.access_token,
+      provider: "github",
+    }),
+    {
+      status: 200,
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    }
+  );
 }

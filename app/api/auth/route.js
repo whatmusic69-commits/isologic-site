@@ -11,7 +11,7 @@ export async function GET() {
     `https://github.com/login/oauth/authorize` +
     `?client_id=${encodeURIComponent(clientId)}` +
     `&redirect_uri=${encodeURIComponent(redirectUri)}` +
-    `&scope=repo`;
+    `&scope=${encodeURIComponent("repo user")}`;
 
   return Response.redirect(url, 302);
 }

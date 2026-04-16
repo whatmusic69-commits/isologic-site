@@ -9,7 +9,6 @@ display_url: https://www.isologic.lv
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-
 collections:
   # TRANSLATIONS
   - name: translations

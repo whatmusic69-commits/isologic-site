@@ -38,27 +38,24 @@ export async function GET(request) {
     );
   }
 
-  const authData = {
-    token: data.access_token,
-    provider: "github",
-  };
+  const token = data.access_token;
 
   const html = `
     <!doctype html>
     <html>
       <body>
         <script>
-          (function() {
-            function receiveMessage(e) {
+          (function () {
+            if (window.opener) {
               window.opener.postMessage(
-                'authorization:github:success:' + JSON.stringify(${JSON.stringify(authData)}),
-                e.origin
+                "authorization:github:success:" + JSON.stringify({
+                  token: "${token}",
+                  provider: "github"
+                }),
+                "https://isologic.lv"
               );
-              window.close();
             }
-
-            window.addEventListener("message", receiveMessage, false);
-            window.opener.postMessage("authorizing:github", "*");
+            window.close();
           })();
         </script>
       </body>

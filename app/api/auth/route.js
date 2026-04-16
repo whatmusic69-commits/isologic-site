@@ -1,6 +1,6 @@
 export async function GET() {
   const clientId = process.env.GITHUB_CLIENT_ID;
-  const siteUrl = "https://isologic-site.vercel.app";
+  const siteUrl = "https://isologic.lv";
   const redirectUri = `${siteUrl}/api/callback`;
 
   if (!clientId) {

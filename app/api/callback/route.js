@@ -1,6 +1,7 @@
 export async function GET(request) {
   const url = new URL(request.url);
   const code = url.searchParams.get("code");
+  const state = url.searchParams.get("state");
 
   if (!code) {
     return new Response("Missing code", { status: 400 });
@@ -12,6 +13,14 @@ export async function GET(request) {
   if (!clientId || !clientSecret) {
     return new Response("Missing GitHub OAuth env vars", { status: 500 });
   }
+
+  let openerOrigin = "https://www.isologic.lv";
+  try {
+    if (state) {
+      const parsed = JSON.parse(Buffer.from(state, "base64url").toString("utf8"));
+      if (parsed?.openerOrigin) openerOrigin = parsed.openerOrigin;
+    }
+  } catch {}
 
   const tokenRes = await fetch("https://github.com/login/oauth/access_token", {
     method: "POST",
@@ -38,7 +47,10 @@ export async function GET(request) {
     );
   }
 
-  const token = data.access_token;
+  const payload = JSON.stringify({
+    token: data.access_token,
+    provider: "github",
+  });
 
   const html = `
     <!doctype html>
@@ -46,14 +58,16 @@ export async function GET(request) {
       <body>
         <script>
           (function () {
-            if (window.opener) {
-              window.opener.postMessage(
-                "authorization:github:success:" + JSON.stringify({
-                  token: "${token}",
-                  provider: "github"
-                }),
-                "https://www.isologic.lv"
-              );
+            try {
+              if (window.opener && !window.opener.closed) {
+                window.opener.postMessage(
+                  "authorization:github:success:" + ${JSON.stringify(payload)},
+                  ${JSON.stringify(openerOrigin)}
+                );
+              }
+            } catch (e) {
+              document.body.innerText = "postMessage failed: " + e.message;
+              return;
             }
             window.close();
           })();

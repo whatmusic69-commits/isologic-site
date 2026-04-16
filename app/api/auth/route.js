@@ -1,6 +1,6 @@
 export async function GET() {
   const clientId = process.env.GITHUB_CLIENT_ID;
-  const siteUrl = "https://isologic.lv";
+  const siteUrl = "https://www.isologic.lv";
   const redirectUri = `${siteUrl}/api/callback`;
 
   if (!clientId) {

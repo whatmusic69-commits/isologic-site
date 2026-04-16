@@ -2,10 +2,10 @@ backend:
   name: github
   repo: whatmusic69-commits/isologic-site
   branch: main
-  base_url: https://isologic.lv
+  base_url: https://www.isologic.lv
   auth_endpoint: api/auth
 
-display_url: https://isologic.lv
+display_url: https://www.isologic.lv
 media_folder: "public/uploads"
 public_folder: "/uploads"
 

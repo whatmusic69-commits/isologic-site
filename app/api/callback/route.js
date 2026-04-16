@@ -52,7 +52,7 @@ export async function GET(request) {
                   token: "${token}",
                   provider: "github"
                 }),
-                "https://isologic.lv"
+                "https://www.isologic.lv"
               );
             }
             window.close();

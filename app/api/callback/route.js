@@ -6,19 +6,12 @@ function renderPopup(status, content) {
   <body>
     <script>
       (function () {
-        const receiveMessage = (message) => {
-          window.opener.postMessage(
-            "authorization:github:${status}:" + JSON.stringify(${serialized}),
-            message.origin
-          );
-          window.removeEventListener("message", receiveMessage, false);
-          window.close();
-        };
-
-        window.addEventListener("message", receiveMessage, false);
-
         if (window.opener && !window.opener.closed) {
-          window.opener.postMessage("authorizing:github", "*");
+          window.opener.postMessage(
+            "authorization:github:${status}:${serialized}",
+            window.location.origin
+          );
+          window.close();
         } else {
           document.body.innerText = "OAuth opener window was not found.";
         }
@@ -59,13 +52,10 @@ export async function GET(request) {
   const data = await tokenRes.json();
 
   if (data.error || !data.access_token) {
-    return new Response(
-      renderPopup("error", data),
-      {
-        status: 200,
-        headers: { "Content-Type": "text/html; charset=utf-8" },
-      }
-    );
+    return new Response(renderPopup("error", data), {
+      status: 200,
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    });
   }
 
   return new Response(

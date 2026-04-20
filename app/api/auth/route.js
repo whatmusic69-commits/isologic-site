@@ -6,12 +6,13 @@ export async function GET() {
   }
 
   const redirectUri = "https://www.isologic.lv/api/callback";
+  const scope = "repo";
 
   const url =
     `https://github.com/login/oauth/authorize` +
     `?client_id=${encodeURIComponent(clientId)}` +
     `&redirect_uri=${encodeURIComponent(redirectUri)}` +
-    `&scope=${encodeURIComponent("repo user")}`;
+    `&scope=${encodeURIComponent(scope)}`;
 
   return Response.redirect(url, 302);
 }

@@ -187,6 +187,7 @@ collections:
                     { label: Maintenance tagline, name: "iso-maintenance", widget: string },
                     { label: Food Safety tagline, name: "food-safety-haccp", widget: string }
                 ] }
+
   # HOME PAGE
   - name: home
     label: Home
@@ -207,66 +208,74 @@ collections:
                 name: paragraphs
                 widget: list
                 required: false
-                field: { label: Paragraph, name: paragraph, widget: text }
+                field: { label: Paragraph, name: paragraph, widget: text, required: false }
               - label: Checklist
                 name: checklist
                 widget: list
                 required: false
-                field: { label: Item, name: item, widget: string }
+                field: { label: Item, name: item, widget: string, required: false }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
               - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+
           - label: Intro
             name: intro
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Text, name: text, widget: text, required: false }
+
           - label: Services Preview
             name: servicesPreview
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Cards
                 name: cards
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+
           - label: Benefits (legacy layout)
             name: benefits
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+
           - label: Industries
             name: industriesSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Standards Section
             name: standardsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
@@ -275,67 +284,76 @@ collections:
                 widget: list
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - label: Bullets
                     name: bullets
                     widget: list
-                    field: { label: Item, name: item, widget: string }
+                    required: false
+                    field: { label: Item, name: item, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Why Choose (New Grid)
             name: whyChoose
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Ownership Section
             name: ownershipSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Button Text, name: buttonText, widget: string, required: false }
               - { label: Button Href, name: buttonHref, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Eyebrow, name: eyebrow, widget: string, required: false }
                   - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Testimonials Section
             name: testimonialsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
               - { label: Author Name, name: authorName, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Quote, name: quote, widget: text }
-                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Quote, name: quote, widget: text, required: false }
+                  - { label: Author Name, name: authorName, widget: string, required: false }
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
                   - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
+
           - label: Stats
             name: stats
             widget: object
@@ -344,15 +362,17 @@ collections:
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Value, name: value, widget: string }
-                  - { label: Label, name: label, widget: string }
+                  - { label: Value, name: value, widget: string, required: false }
+                  - { label: Label, name: label, widget: string, required: false }
+
           - label: CTA Band
             name: ctaBand
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Label, name: ctaLabel, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
@@ -375,66 +395,74 @@ collections:
                 name: paragraphs
                 widget: list
                 required: false
-                field: { label: Paragraph, name: paragraph, widget: text }
+                field: { label: Paragraph, name: paragraph, widget: text, required: false }
               - label: Checklist
                 name: checklist
                 widget: list
                 required: false
-                field: { label: Item, name: item, widget: string }
+                field: { label: Item, name: item, widget: string, required: false }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
               - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+
           - label: Intro
             name: intro
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Text, name: text, widget: text, required: false }
+
           - label: Services Preview
             name: servicesPreview
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Cards
                 name: cards
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+
           - label: Benefits (legacy layout)
             name: benefits
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+
           - label: Industries
             name: industriesSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Standards Section
             name: standardsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
@@ -443,67 +471,76 @@ collections:
                 widget: list
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - label: Bullets
                     name: bullets
                     widget: list
-                    field: { label: Item, name: item, widget: string }
+                    required: false
+                    field: { label: Item, name: item, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Why Choose (New Grid)
             name: whyChoose
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Ownership Section
             name: ownershipSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Button Text, name: buttonText, widget: string, required: false }
               - { label: Button Href, name: buttonHref, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Eyebrow, name: eyebrow, widget: string, required: false }
                   - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Testimonials Section
             name: testimonialsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
               - { label: Author Name, name: authorName, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Quote, name: quote, widget: text }
-                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Quote, name: quote, widget: text, required: false }
+                  - { label: Author Name, name: authorName, widget: string, required: false }
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
                   - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
+
           - label: Stats
             name: stats
             widget: object
@@ -512,15 +549,17 @@ collections:
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Value, name: value, widget: string }
-                  - { label: Label, name: label, widget: string }
+                  - { label: Value, name: value, widget: string, required: false }
+                  - { label: Label, name: label, widget: string, required: false }
+
           - label: CTA Band
             name: ctaBand
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Label, name: ctaLabel, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
@@ -543,66 +582,74 @@ collections:
                 name: paragraphs
                 widget: list
                 required: false
-                field: { label: Paragraph, name: paragraph, widget: text }
+                field: { label: Paragraph, name: paragraph, widget: text, required: false }
               - label: Checklist
                 name: checklist
                 widget: list
                 required: false
-                field: { label: Item, name: item, widget: string }
+                field: { label: Item, name: item, widget: string, required: false }
               - { label: Primary CTA Label, name: primaryCtaLabel, widget: string, required: false }
               - { label: Primary CTA Href, name: primaryCtaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryCtaLabel, widget: string, required: false }
               - { label: Secondary CTA Href, name: secondaryCtaHref, widget: string, required: false }
+
           - label: Intro
             name: intro
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Text, name: text, widget: text, required: false }
+
           - label: Services Preview
             name: servicesPreview
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Cards
                 name: cards
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
+
           - label: Benefits (legacy layout)
             name: benefits
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+
           - label: Industries
             name: industriesSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Standards Section
             name: standardsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
@@ -611,67 +658,76 @@ collections:
                 widget: list
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - label: Bullets
                     name: bullets
                     widget: list
-                    field: { label: Item, name: item, widget: string }
+                    required: false
+                    field: { label: Item, name: item, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Why Choose (New Grid)
             name: whyChoose
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Description, name: description, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Ownership Section
             name: ownershipSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Button Text, name: buttonText, widget: string, required: false }
               - { label: Button Href, name: buttonHref, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
+                  - { label: Title, name: title, widget: string, required: false }
                   - { label: Eyebrow, name: eyebrow, widget: string, required: false }
                   - { label: Description, name: description, widget: text, required: false }
                   - { label: Icon, name: icon, widget: string, required: false }
+
           - label: Testimonials Section
             name: testimonialsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Rotation Interval (ms), name: rotationIntervalMs, widget: number, required: false }
               - { label: Author Name, name: authorName, widget: string, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Quote, name: quote, widget: text }
-                  - { label: Author Name, name: authorName, widget: string }
+                  - { label: Quote, name: quote, widget: text, required: false }
+                  - { label: Author Name, name: authorName, widget: string, required: false }
                   - { label: Author Role, name: authorRole, widget: string, required: false }
                   - { label: Company, name: company, widget: string, required: false }
                   - { label: Rating, name: rating, widget: number, min: 1, max: 5, required: false }
                   - { label: Avatar Image, name: avatarSrc, widget: image, required: false }
+
           - label: Stats
             name: stats
             widget: object
@@ -680,22 +736,24 @@ collections:
               - label: Items
                 name: items
                 widget: list
+                required: false
                 fields:
-                  - { label: Value, name: value, widget: string }
-                  - { label: Label, name: label, widget: string }
+                  - { label: Value, name: value, widget: string, required: false }
+                  - { label: Label, name: label, widget: string, required: false }
+
           - label: CTA Band
             name: ctaBand
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: CTA Label, name: ctaLabel, widget: string, required: false }
               - { label: CTA Href, name: ctaHref, widget: string, required: false }
               - { label: Secondary CTA Label, name: secondaryLabel, widget: string, required: false }
               - { label: Secondary CTA Href, name: secondaryHref, widget: string, required: false }
 
-    # SERVICES PAGE
+  # SERVICES PAGE
   - name: services
     label: Services
     files:
@@ -711,6 +769,7 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
+
           - label: Sections
             name: sections
             widget: list
@@ -730,32 +789,36 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
-              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
+
           - label: Standards Section
             name: standardsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
+
           - label: Why Outsource Section
             name: whyOutsourceSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
 
       - label: Services (EN)
         name: services_en
@@ -769,6 +832,7 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
+
           - label: Sections
             name: sections
             widget: list
@@ -788,43 +852,48 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
-              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
+
           - label: CTA Band (bottom)
             name: ctaBand
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
               - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
               - { label: Secondary Button Label, name: secondaryLabel, widget: string, required: false }
               - { label: Secondary Button Href, name: secondaryHref, widget: string, required: false }
+
           - label: Standards Section
             name: standardsSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
+
           - label: Why Outsource Section
             name: whyOutsourceSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
 
       - label: Services (RU)
         name: services_ru
@@ -858,19 +927,19 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
               - { label: Note (after items), name: note, widget: text, required: false }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: CTA Button Label, name: ctaButtonLabel, widget: string, required: false }
-              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text }, required: false }
+              - { label: Extra Paragraphs, name: extraParagraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
 
           - label: CTA Band (bottom)
             name: ctaBand
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Subtitle, name: subtitle, widget: text, required: false }
               - { label: Primary Button Label, name: ctaLabel, widget: string, required: false }
               - { label: Primary Button Href, name: ctaHref, widget: string, required: false }
@@ -882,31 +951,33 @@ collections:
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
 
           - label: Why Outsource Section
             name: whyOutsourceSection
             widget: object
             required: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string, required: false }
               - { label: Intro, name: intro, widget: text, required: false }
               - label: Items
                 name: items
                 widget: list
+                required: false
 
           - label: Bottom Section (Lead Auditor Availability)
             name: bottomSection
             widget: object
             required: false
             fields:
-              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
 
-    # ABOUT
+  # ABOUT
   - name: about
     label: About
     files:
@@ -916,6 +987,7 @@ collections:
         format: json
         fields: &about_v2_fields
           - { label: Use new layout (v2), name: v2, widget: boolean, default: true, required: false }
+
           - label: Hero
             name: hero
             widget: object
@@ -923,27 +995,31 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
               - { label: Text, name: text, widget: text, required: false }
+
           - label: Image + Text Section
             name: imageSection
             widget: object
             required: false
             fields:
               - { label: Image Alt, name: imageAlt, widget: string, required: false }
-              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
+
           - label: CTA Section
             name: cta
             widget: object
             required: false
             fields:
-              - { label: Text, name: text, widget: string }
-              - { label: Button Label, name: buttonLabel, widget: string }
+              - { label: Text, name: text, widget: string, required: false }
+              - { label: Button Label, name: buttonLabel, widget: string, required: false }
               - { label: Target Anchor ID, name: targetId, widget: string, required: false }
+
           - label: Core Expertise
             name: coreExpertise
             widget: object
             required: false
             fields:
-              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
+
           - label: Principles Section (3 cards + statement)
             name: principlesSection
             widget: object
@@ -952,27 +1028,31 @@ collections:
               - label: Cards
                 name: cards
                 widget: list
+                required: false
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
-              - { label: Statement, name: statement, widget: text }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+              - { label: Statement, name: statement, widget: text, required: false }
+
           - label: Food Business Support
             name: foodSupport
             widget: object
             required: false
             fields:
-              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: Button Label, name: buttonLabel, widget: string, required: false }
+
           - label: Additional Expertise
             name: additionalExpertise
             widget: object
             required: false
             fields:
-              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Paragraphs, name: paragraphs, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text, required: false } }
 
       - { label: About (LV), name: about_lv, file: content/pages/about/lv.json, format: json, fields: *about_v2_fields }
       - { label: About (RU), name: about_ru, file: content/pages/about/ru.json, format: json, fields: *about_v2_fields }
+
   # CONTACT
   - name: contact
     label: Contact
@@ -1008,6 +1088,7 @@ collections:
                   - { label: Message Label, name: message, widget: string }
                   - { label: GDPR Text, name: gdprText, widget: text }
                   - { label: Submit Label, name: submit, widget: string }
+
       - { label: Contact (EN), name: contact_en, file: content/pages/contact/en.json, format: json, fields: *contact_fields }
       - { label: Contact (RU), name: contact_ru, file: content/pages/contact/ru.json, format: json, fields: *contact_fields }
 
@@ -1037,6 +1118,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Button Text, name: buttonText, widget: string }
+
       - { label: FAQ (EN), name: faq_en, file: content/pages/faq/en.json, format: json, fields: *faq_fields }
       - { label: FAQ (RU), name: faq_ru, file: content/pages/faq/ru.json, format: json, fields: *faq_fields }
 
@@ -1062,5 +1144,6 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Paragraphs, name: paragraphs, widget: list, required: false }
               - { label: Bullet Items, name: items, widget: list, required: false }
+
       - { label: Privacy (EN), name: privacy_en, file: content/pages/privacy/en.json, format: json, fields: *privacy_fields }
       - { label: Privacy (RU), name: privacy_ru, file: content/pages/privacy/ru.json, format: json, fields: *privacy_fields }

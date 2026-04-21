@@ -1,50 +1,70 @@
 {
-  "hero": {
-    "title": "ISO & Compliance Support for Latvian Businesses",
-    "subtitle": "Practical, independent guidance to achieve and maintain ISO certification and regulatory compliance in Latvia.",
-    "imageAlt": "ISO & compliance support in Latvia",
-    "paragraphs": [
-      "We partner with Latvian companies to design, implement and sustain ISO systems that work in real operations, not just on paper.",
-      "From ISO certification to food safety and regulatory obligations, we keep your compliance clear, structured and audit‑ready."
-    ],
-    "checklist": [
-      "ISO 9001, EN 9100 / AS9100, ISO 14001, ISO 27001, ISO 45001",
-      "Food Safety / HACCP and PVD compliance",
-      "Internal audits and ongoing maintenance",
-      "Documentation and training in English, Latvian or Russian",
-      "Certification preparation and on‑site support",
-      "Independent perspective focused on practical outcomes"
-    ],
-    "primaryCtaLabel": "Request Consultation",
-    "primaryCtaHref": "/en/contact",
-    "secondaryCtaLabel": "Call Us",
-    "secondaryCtaHref": "tel:+37100000000"
-  },
-  "intro": {
-    "title": "Trusted partner for assurance and compliance",
-    "text": "ISOLOGIC helps companies strengthen internal controls, meet regulatory obligations and prepare for audits without surprises."
+  "ctaBand": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Contact ISOLogic today for expert support in Latvia.",
+    "ctaLabel": "Request Consultation",
+    "ctaHref": "/en/contact",
+    "secondaryLabel": "Call Us",
+    "secondaryHref": "tel:+37124428884"
   },
   "industriesSection": {
     "title": "Industries We Support Across Latvia",
     "subtitle": "Practical ISO and compliance support for Latvian sectors.",
     "items": [
-      { "title": "Food & Hospitality", "icon": "utensils" },
-      { "title": "Food Manufacturing", "icon": "utensils" },
-      { "title": "Retail & Convenience Stores", "icon": "briefcase" },
-      { "title": "Manufacturing & Industrial", "icon": "building" },
-      { "title": "Logistics & Transport", "icon": "rocket" },
-      { "title": "Professional Services", "icon": "messages-square" },
-      { "title": "Construction & Engineering", "icon": "wrench" },
-      { "title": "IT & Technology", "icon": "cpu" }
+      {
+        "title": "Food & Hospitality",
+        "icon": "utensils"
+      },
+      {
+        "title": "Food Manufacturing",
+        "icon": "utensils"
+      },
+      {
+        "title": "Retail & Convenience Stores",
+        "icon": "briefcase"
+      },
+      {
+        "title": "Manufacturing & Industrial",
+        "icon": "building"
+      },
+      {
+        "title": "Logistics & Transport",
+        "icon": "rocket"
+      },
+      {
+        "title": "Professional Services",
+        "icon": "messages-square"
+      },
+      {
+        "title": "Construction & Engineering",
+        "icon": "wrench"
+      },
+      {
+        "title": "IT & Technology",
+        "icon": "cpu"
+      }
     ]
   },
   "servicesPreview": {
     "title": "Core capabilities",
     "cards": [
-      { "title": "External audit support", "description": "Preparation, documentation reviews and liaison with auditors to streamline the process." },
-      { "title": "Internal controls & risk", "description": "Design and assessment of control frameworks aligned with leading standards." },
-      { "title": "Compliance readiness", "description": "Policy alignment, gap analysis and practical remediation plans for regulatory requirements." }
+      {
+        "title": "External audit support",
+        "description": "Preparation, documentation reviews and liaison with auditors to streamline the process."
+      },
+      {
+        "title": "Internal controls & risk",
+        "description": "Design and assessment of control frameworks aligned with leading standards."
+      },
+      {
+        "title": "Compliance readiness",
+        "description": "Policy alignment, gap analysis and practical remediation plans for regulatory requirements."
+      }
     ]
+  },
+  "intro": {
+    "title": "Trusted partner for assurance and compliance",
+    "text": "ISOLOGIC helps companies strengthen internal controls, meet regulatory obligations and prepare for audits without surprises."
   },
   "standardsSection": {
     "title": "Key competencies",
@@ -71,54 +91,6 @@
       }
     ]
   },
-  "benefits": {
-    "title": "Why choose ISOLOGIC",
-    "items": [
-      { "title": "Independent perspective", "text": "Objective insights that help leadership make confident decisions." },
-      { "title": "Efficient delivery", "text": "Clear scope, pragmatic actions and sensible timelines." },
-      { "title": "Regulatory fluency", "text": "Experience across financial, technology and professional services." }
-    ]
-  },
-  "whyChoose": {
-    "title": "Why Choose ISOLogic",
-    "subtitle": "Clear, independent and practical support for Latvian businesses.",
-    "items": [
-      { "title": "Local understanding", "description": "Experience supporting Latvian organisations across key sectors.", "icon": "layers" },
-      { "title": "Independent expertise", "description": "Lead Auditor perspective that certification bodies trust.", "icon": "clipboard" },
-      { "title": "Practical delivery", "description": "Systems that fit real operations — lean, clear, defensible.", "icon": "cube" },
-      { "title": "Structured approach", "description": "Roadmaps, milestones and evidence that reduce audit risk.", "icon": "chart" },
-      { "title": "Multilingual support", "description": "Documentation and training in English, Latvian or Russian.", "icon": "messages-square" },
-      { "title": "Long‑term reliability", "description": "Ongoing maintenance to keep certification strong year‑round.", "icon": "shield" }
-    ]
-  },
-  "stats": {
-    "items": [
-      { "value": "15+", "label": "years — experience in ISO certification and compliance" },
-      { "value": "Real‑world", "label": "industry experience — practical business environments" },
-      { "value": "Simple", "label": "clear and structured ISO & regulatory approach" },
-      { "value": "Independent", "label": "and flexible ISO consultancy in Latvia" }
-    ]
-  },
-  "ctaBand": {
-    "title": "Ready to Get Started?",
-    "subtitle": "Contact ISOLogic today for expert support in Latvia.",
-    "ctaLabel": "Request Consultation",
-    "ctaHref": "/en/contact",
-    "secondaryLabel": "Call Us",
-    "secondaryHref": "tel:+37122331164"
-  },
-  "ownershipSection": {
-    "title": "How We Support Your Certification & Compliance",
-    "subtitle": "A clear, end‑to‑end process designed for Latvian businesses.",
-    "buttonText": "Request Consultation",
-    "buttonHref": "/en/contact",
-    "items": [
-      { "title": "IMPLEMENT", "eyebrow": "Design & build", "description": "Practical ISO system tailored to your operations.", "icon": "wrench" },
-      { "title": "REVIEW", "eyebrow": "Internal audits", "description": "Independent checks and corrective actions.", "icon": "badge-a" },
-      { "title": "CERTIFY", "eyebrow": "External audit support", "description": "Preparation and on‑site guidance for certification.", "icon": "award" },
-      { "title": "SUPPORT", "eyebrow": "Maintenance", "description": "Year‑round updates, training and advisory.", "icon": "shield" }
-    ]
-  },
   "testimonialsSection": {
     "title": "Client feedback",
     "subtitle": "How clients describe the value of working with ISOLOGIC.",
@@ -129,6 +101,132 @@
         "company": "MIX Veikals",
         "rating": 5,
         "avatarSrc": "/mix_review.jpeg"
+      }
+    ]
+  },
+  "ownershipSection": {
+    "title": "How We Support Your Certification & Compliance",
+    "subtitle": "A clear, end‑to‑end process designed for Latvian businesses.",
+    "buttonText": "Request Consultation",
+    "buttonHref": "/en/contact",
+    "items": [
+      {
+        "title": "IMPLEMENT",
+        "eyebrow": "Design & build",
+        "description": "Practical ISO system tailored to your operations.",
+        "icon": "wrench"
+      },
+      {
+        "title": "REVIEW",
+        "eyebrow": "Internal audits",
+        "description": "Independent checks and corrective actions.",
+        "icon": "badge-a"
+      },
+      {
+        "title": "CERTIFY",
+        "eyebrow": "External audit support",
+        "description": "Preparation and on‑site guidance for certification.",
+        "icon": "award"
+      },
+      {
+        "title": "SUPPORT",
+        "eyebrow": "Maintenance",
+        "description": "Year‑round updates, training and advisory.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "hero": {
+    "paragraphs": [
+      "We partner with Latvian companies to design, implement and sustain ISO systems that work in real operations, not just on paper.",
+      "From ISO certification to food safety and regulatory obligations, we keep your compliance clear, structured and audit‑ready."
+    ],
+    "checklist": [
+      "ISO 9001, EN 9100 / AS9100, ISO 14001, ISO 27001, ISO 45001",
+      "Food Safety / HACCP and PVD compliance",
+      "Internal audits and ongoing maintenance",
+      "Documentation and training in English, Latvian or Russian",
+      "Certification preparation and on‑site support",
+      "Independent perspective focused on practical outcomes"
+    ],
+    "primaryCtaLabel": "Request Consultation",
+    "secondaryCtaHref": "tel:+37124428884",
+    "imageAlt": "ISO & compliance support in Latvia",
+    "subtitle": "Practical, independent guidance to achieve and maintain ISO certification and regulatory compliance in Latvia.",
+    "secondaryCtaLabel": "Call Us",
+    "title": "ISO & Compliance Support for Latvian Businesses",
+    "primaryCtaHref": "/en/contact"
+  },
+  "benefits": {
+    "title": "Why choose ISOLOGIC",
+    "items": [
+      {
+        "title": "Independent perspective",
+        "text": "Objective insights that help leadership make confident decisions."
+      },
+      {
+        "title": "Efficient delivery",
+        "text": "Clear scope, pragmatic actions and sensible timelines."
+      },
+      {
+        "title": "Regulatory fluency",
+        "text": "Experience across financial, technology and professional services."
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "15+",
+        "label": "years — experience in ISO certification and compliance"
+      },
+      {
+        "value": "Real‑world",
+        "label": "industry experience — practical business environments"
+      },
+      {
+        "value": "Simple",
+        "label": "clear and structured ISO & regulatory approach"
+      },
+      {
+        "value": "Independent",
+        "label": "and flexible ISO consultancy in Latvia"
+      }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Choose ISOLogic",
+    "subtitle": "Clear, independent and practical support for Latvian businesses.",
+    "items": [
+      {
+        "title": "Local understanding",
+        "description": "Experience supporting Latvian organisations across key sectors.",
+        "icon": "layers"
+      },
+      {
+        "title": "Independent expertise",
+        "description": "Lead Auditor perspective that certification bodies trust.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Practical delivery",
+        "description": "Systems that fit real operations — lean, clear, defensible.",
+        "icon": "cube"
+      },
+      {
+        "title": "Structured approach",
+        "description": "Roadmaps, milestones and evidence that reduce audit risk.",
+        "icon": "chart"
+      },
+      {
+        "title": "Multilingual support",
+        "description": "Documentation and training in English, Latvian or Russian.",
+        "icon": "messages-square"
+      },
+      {
+        "title": "Long‑term reliability",
+        "description": "Ongoing maintenance to keep certification strong year‑round.",
+        "icon": "shield"
       }
     ]
   }

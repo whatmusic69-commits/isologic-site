@@ -19,7 +19,10 @@
         "contact": "Kontakti",
         "privacy": "Privātuma politika"
       },
-      "rights": "Visas tiesības aizsargātas."
+      "rights": "Visas tiesības aizsargātas.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/"
+      }
     }
   },
   "en": {
@@ -68,7 +71,10 @@
         "contact": "Контакты",
         "privacy": "Политика конфиденциальности"
       },
-      "rights": "Все права защищены."
+      "rights": "Все права защищены.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/"
+      }
     }
   }
 }

@@ -42,7 +42,10 @@
         "contact": "Contact",
         "privacy": "Privacy Policy"
       },
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "social": {
+        "linkedin": "1"
+      }
     }
   },
   "ru": {

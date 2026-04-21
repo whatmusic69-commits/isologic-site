@@ -5,6 +5,13 @@
     "ctaText": "Let’s discuss how we can help you with ISO standards and food safety requirements.",
     "asideTitle": "Contact Us",
     "asideSubtitle": "Let’s discuss your ISO requirements.",
+    "contactDetails": {
+      "email": "info@isologic.lv",
+      "phone": "+371 22 33 11 64",
+      "phoneHref": "+37122331164",
+      "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+      "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
+    },
     "successTitle": "✅ Thank you for reaching out.",
     "successBody": "Your message has been received and will be reviewed shortly. You will be contacted regarding your ISO consultancy request.",
     "form": {

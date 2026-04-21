@@ -16,6 +16,13 @@ type ContactPageContent = {
     ctaText?: string;
     asideTitle?: string;
     asideSubtitle?: string;
+    contactDetails?: {
+      email?: string;
+      phone?: string;
+      phoneHref?: string;
+      address?: string;
+      addressUrl?: string;
+    };
     successTitle?: string;
     successBody?: string;
     form: ContactFormSchema;
@@ -32,6 +39,11 @@ export default async function ContactPage({
   const content = await getPageContent<ContactPageContent>("contact", lang);
 
   const page = content.contactPage;
+  const email = page.contactDetails?.email?.trim();
+  const phoneLabel = page.contactDetails?.phone?.trim();
+  const phoneHref = page.contactDetails?.phoneHref?.trim() || phoneLabel?.replace(/\s+/g, "");
+  const address = page.contactDetails?.address?.trim();
+  const addressUrl = page.contactDetails?.addressUrl?.trim();
   // Map service option slugs to localized labels from shared translations.
   const svc = (servicesTranslations as any)[lang as keyof typeof servicesTranslations]?.contact || {};
   const formWithMappedServices: ContactFormSchema = {
@@ -66,25 +78,31 @@ export default async function ContactPage({
               {/* Inline contact details moved here to sit next to the form */}
               <div className="mt-4">
                 <ul className="space-y-2 text-sm text-neutral-800">
-                  <li className="flex items-start gap-2">
-                    <MailIcon className="mt-0.5 w-4 h-4 text-accent" />
-                    <a className="hover:text-accent transition-colors" href="mailto:info@isologic.lv">info@isologic.lv</a>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <PhoneIcon className="mt-0.5 w-4 h-4 text-accent" />
-                    <a className="hover:text-accent transition-colors" href="tel:+37122331164">+371 22 33 11 64</a>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <MapPinIcon className="mt-0.5 w-4 h-4 text-accent" />
-                    <a
-                      className="hover:text-accent transition-colors"
-                      href="https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia
-                    </a>
-                  </li>
+                  {email && (
+                    <li className="flex items-start gap-2">
+                      <MailIcon className="mt-0.5 w-4 h-4 text-accent" />
+                      <a className="hover:text-accent transition-colors" href={`mailto:${email}`}>{email}</a>
+                    </li>
+                  )}
+                  {phoneLabel && phoneHref && (
+                    <li className="flex items-start gap-2">
+                      <PhoneIcon className="mt-0.5 w-4 h-4 text-accent" />
+                      <a className="hover:text-accent transition-colors" href={`tel:${phoneHref}`}>{phoneLabel}</a>
+                    </li>
+                  )}
+                  {address && addressUrl && (
+                    <li className="flex items-start gap-2">
+                      <MapPinIcon className="mt-0.5 w-4 h-4 text-accent" />
+                      <a
+                        className="hover:text-accent transition-colors"
+                        href={addressUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {address}
+                      </a>
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>

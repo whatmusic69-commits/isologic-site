@@ -42,6 +42,11 @@
         ["data", "lv", "footer", "contact"],
         "Saziņa"
       );
+      const lvLinkedin = get(
+        entry,
+        ["data", "lv", "footer", "social", "linkedin"],
+        ""
+      );
       const lvPrivacy = get(
         entry,
         ["data", "lv", "footer", "links", "privacy"],
@@ -79,6 +84,7 @@
           h("div", { className: "iso-preview-col", key: "col1" }, [
             h("h4", { key: "h4" }, "ISOLOGIC"),
             h("p", { key: "p" }, lvTagline),
+            lvLinkedin ? h("p", { key: "linkedin" }, "LinkedIn") : null,
           ]),
           h("div", { className: "iso-preview-col", key: "col2" }, [
             h("h4", { key: "h4" }, lvQuickLinks),

@@ -7,7 +7,14 @@ export const ui: {
     home: string; about: string; services: string; contact: string; faq: string;
     servicesDropdown: { items: { label: string; slug: "implementation" | "internal-auditing" | "iso-maintenance" | "food-safety-haccp" | "lead-auditing" }[] }
   }>;
-  footer: Record<Lang, { tagline: string; quickLinks: string; contact: string; links: { home: string; about: string; services: string; faq: string; contact: string; privacy: string }; rights: string }>;
+  footer: Record<Lang, {
+    tagline: string;
+    quickLinks: string;
+    contact: string;
+    social?: { linkedin?: string };
+    links: { home: string; about: string; services: string; faq: string; contact: string; privacy: string };
+    rights: string;
+  }>;
 } = ((): any => {
   const langs: Lang[] = ["lv", "en", "ru"] as const;
   const makeNav = (l: Lang) => ({

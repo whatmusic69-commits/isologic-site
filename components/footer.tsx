@@ -6,6 +6,8 @@ import { MailIcon, PhoneIcon, MapPinIcon, LinkedinIcon } from "./ui/icons";
 
 export default function Footer({ lang }: { lang: Lang }) {
   const t = ui.footer[lang];
+  const linkedinHref = t.social?.linkedin?.trim();
+  const resolvedLinkedinHref = linkedinHref || "#";
   return (
     <footer className="mt-16 bg-[color:var(--surface-dark)] text-[color:var(--text-on-dark)]">
       <div className="mx-auto max-w-6xl px-6 footer-section grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
@@ -14,7 +16,14 @@ export default function Footer({ lang }: { lang: Lang }) {
           <p className="mt-2 max-w-md text-sm/6 opacity-90">{t.tagline}</p>
           {/* Socials */}
           <div className="mt-3">
-            <a href="#" aria-label="LinkedIn" className="inline-flex items-center justify-center w-9 h-9 rounded-full border transition-colors hover:bg-[color:var(--accent)] hover:text-[color:var(--text-on-dark)]" style={{ borderColor: "var(--border-dark)" }}>
+            <a
+              href={resolvedLinkedinHref}
+              aria-label="LinkedIn"
+              target={linkedinHref ? "_blank" : undefined}
+              rel={linkedinHref ? "noopener noreferrer" : undefined}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border transition-colors hover:bg-[color:var(--accent)] hover:text-[color:var(--text-on-dark)]"
+              style={{ borderColor: "var(--border-dark)" }}
+            >
               <LinkedinIcon className="w-5 h-5" />
             </a>
           </div>

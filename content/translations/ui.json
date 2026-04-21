@@ -11,6 +11,9 @@
       "tagline": "Neatkarīgs audits un atbilstības konsultācijas. Precizitāte, uzticamība, rezultāts.",
       "quickLinks": "Noderīgas saites",
       "contact": "Saziņa",
+      "social": {
+        "linkedin": ""
+      },
       "links": {
         "home": "Sākums",
         "about": "Par mums",
@@ -37,6 +40,9 @@
       "tagline": "Guidance with Logic. Support in Every Step.",
       "quickLinks": "Quick links",
       "contact": "Contact",
+      "social": {
+        "linkedin": ""
+      },
       "links": {
         "home": "Home",
         "about": "About us",
@@ -63,6 +69,9 @@
       "tagline": "Независимый аудит и консультирование по соответствию. Точность. Доверие. Результат.",
       "quickLinks": "Ссылки",
       "contact": "Контакты",
+      "social": {
+        "linkedin": ""
+      },
       "links": {
         "home": "Главная",
         "about": "О нас",

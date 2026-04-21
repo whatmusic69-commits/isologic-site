@@ -37,6 +37,11 @@ collections:
                   - { label: Tagline, name: tagline, widget: string }
                   - { label: Quick Links, name: quickLinks, widget: string }
                   - { label: Contact, name: contact, widget: string }
+                  - label: Social
+                    name: social
+                    widget: object
+                    fields:
+                      - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
                   - label: Links
                     name: links
                     widget: object
@@ -66,6 +71,11 @@ collections:
                   - { label: Tagline, name: tagline, widget: string }
                   - { label: Quick Links, name: quickLinks, widget: string }
                   - { label: Contact, name: contact, widget: string }
+                  - label: Social
+                    name: social
+                    widget: object
+                    fields:
+                      - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
                   - label: Links
                     name: links
                     widget: object
@@ -95,6 +105,11 @@ collections:
                   - { label: Tagline, name: tagline, widget: string }
                   - { label: Quick Links, name: quickLinks, widget: string }
                   - { label: Contact, name: contact, widget: string }
+                  - label: Social
+                    name: social
+                    widget: object
+                    fields:
+                      - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
                   - label: Links
                     name: links
                     widget: object
@@ -1071,6 +1086,16 @@ collections:
               - { label: CTA Text, name: ctaText, widget: text, required: false }
               - { label: Aside Title, name: asideTitle, widget: string, required: false }
               - { label: Aside Subtitle, name: asideSubtitle, widget: text, required: false }
+              - label: Contact Details
+                name: contactDetails
+                widget: object
+                required: false
+                fields:
+                  - { label: Email, name: email, widget: string, required: false }
+                  - { label: Phone Label, name: phone, widget: string, required: false }
+                  - { label: Phone Href, name: phoneHref, widget: string, required: false, hint: "Example: +37122331164" }
+                  - { label: Address, name: address, widget: text, required: false }
+                  - { label: Address URL, name: addressUrl, widget: string, required: false }
               - { label: Success Title, name: successTitle, widget: string, required: false }
               - { label: Success Body, name: successBody, widget: text, required: false }
               - label: Form

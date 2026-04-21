@@ -5,6 +5,13 @@
     "ctaText": "Давайте обсудим, как ISOlogic может помочь вам внедрить стандарты ISO и обеспечить соответствие требованиям пищевой безопасности.",
     "asideTitle": "Свяжитесь с нами",
     "asideSubtitle": "Обсудим ваши ISO-задачи и приоритеты.",
+    "contactDetails": {
+      "email": "info@isologic.lv",
+      "phone": "+371 22 33 11 64",
+      "phoneHref": "+37122331164",
+      "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+      "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
+    },
     "successTitle": "✅ Спасибо за ваше обращение.",
     "successBody": "Ваше сообщение получено и будет рассмотрено в ближайшее время. С вами свяжутся по вашему запросу на консультацию по ISO.",
     "form": {

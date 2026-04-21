@@ -1,11 +1,24 @@
 {
   "contactPage": {
     "asideTitle": "Sazinieties ar mums",
+<<<<<<< HEAD
     "contactDetails": {
       "email": "",
       "address": "",
       "addressUrl": ""
     },
+=======
+    "asideSubtitle": "Apspriedīsim jūsu uzņēmuma ISO prasības.",
+    "contactDetails": {
+      "email": "info@isologic.lv",
+      "phone": "+371 22 33 11 64",
+      "phoneHref": "+37122331164",
+      "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+      "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
+    },
+    "successTitle": "✅ Paldies par jūsu ziņu.",
+    "successBody": "Jūsu ziņojums ir saņemts un drīzumā tiks izskatīts. Ar jums sazināsies par jūsu ISO konsultāciju pieprasījumu.",
+>>>>>>> 2ad1fe4 (Fi3x adminka)
     "form": {
       "standardOptions": [
         "ISO 9001 (Kvalitātes vadība)",

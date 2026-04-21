@@ -1,34 +1,14 @@
 {
   "contactPage": {
-    "title": "Get Your ISO Certification Working for You",
-    "subtitle": "Whether you are pursuing a new certification, preparing for an upcoming audit, need support with your existing system, or require guidance on food safety and HACCP compliance, we provide the logic and support to get you there.",
-    "ctaText": "Let’s discuss how we can help you with ISO standards and food safety requirements.",
     "asideTitle": "Contact Us",
-    "asideSubtitle": "Let’s discuss your ISO requirements.",
     "contactDetails": {
       "email": "info@isologic.lv",
-      "phone": "+371 22 33 11 64",
-      "phoneHref": "+37122331164",
+      "phone": "+371 244 288 84",
+      "phoneHref": "+37124428884",
       "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
       "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
     },
-    "successTitle": "✅ Thank you for reaching out.",
-    "successBody": "Your message has been received and will be reviewed shortly. You will be contacted regarding your ISO consultancy request.",
     "form": {
-      "name": "Name",
-      "company": "Company Name",
-      "email": "Email Address",
-      "phone": "Phone / WhatsApp",
-      "serviceLabel": "Interested in",
-      "serviceOptions": [
-        "implementation",
-        "internal-auditing",
-        "iso-maintenance",
-        "food-safety-haccp",
-        "lead-auditing",
-        "other"
-      ],
-      "standardLabel": "Standard(s)",
       "standardOptions": [
         "ISO 9001 (Quality Management)",
         "EN 9100 (Aerospace)",
@@ -39,8 +19,28 @@
         "Other / Multiple"
       ],
       "message": "Message",
+      "serviceOptions": [
+        "implementation",
+        "internal-auditing",
+        "iso-maintenance",
+        "food-safety-haccp",
+        "lead-auditing",
+        "other"
+      ],
+      "name": "Name",
       "gdprText": "I consent to the collection and storage of my data by ISOLogic for the sole purpose of responding to this inquiry. I understand that my information will be handled in accordance with the Privacy Policy.",
-      "submit": "Get a Consultation"
-    }
+      "phone": "Phone / WhatsApp",
+      "standardLabel": "Standard(s)",
+      "submit": "Get a Consultation",
+      "email": "Email Address",
+      "company": "Company Name",
+      "serviceLabel": "Interested in"
+    },
+    "successBody": "Your message has been received and will be reviewed shortly. You will be contacted regarding your ISO consultancy request.",
+    "asideSubtitle": "Let’s discuss your ISO requirements.",
+    "successTitle": "✅ Thank you for reaching out.",
+    "subtitle": "Whether you are pursuing a new certification, preparing for an upcoming audit, need support with your existing system, or require guidance on food safety and HACCP compliance, we provide the logic and support to get you there.",
+    "title": "Get Your ISO Certification Working for You",
+    "ctaText": "Let’s discuss how we can help you with ISO standards and food safety requirements."
   }
 }

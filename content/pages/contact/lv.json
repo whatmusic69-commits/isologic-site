@@ -1,27 +1,12 @@
 {
   "contactPage": {
-    "title": "Padariet ISO par praktisku ieguvumu jūsu biznesam",
-    "subtitle": "Neatkarīgi no tā, vai plānojat iegūt jaunu sertifikāciju, gatavojaties auditam, nepieciešams atbalsts esošajai sistēmai vai konsultācijas pārtikas drošības un paškontroles sistēmas (HACCP) jomā — ISOlogic nodrošina skaidru pieeju un praktisku atbalstu, lai palīdzētu to sasniegt.",
-    "ctaText": "Sazinieties, lai pārrunātu, kā ISOlogic var palīdzēt ar ISO standartiem un pārtikas drošības prasībām.",
     "asideTitle": "Sazinieties ar mums",
-    "asideSubtitle": "Apspriedīsim jūsu uzņēmuma ISO prasības.",
-    "successTitle": "✅ Paldies par jūsu ziņu.",
-    "successBody": "Jūsu ziņojums ir saņemts un drīzumā tiks izskatīts. Ar jums sazināsies par jūsu ISO konsultāciju pieprasījumu.",
+    "contactDetails": {
+      "email": "wwolf0809@gmail.com",
+      "address": "Juglas iela 1A",
+      "addressUrl": "Juglas iela 1A"
+    },
     "form": {
-      "name": "Vārds, Uzvārds",
-      "company": "Uzņēmums",
-      "email": "E-pasts",
-      "phone": "Tālrunis / WhatsApp",
-      "serviceLabel": "Interesē",
-      "serviceOptions": [
-        "implementation",
-        "internal-auditing",
-        "iso-maintenance",
-        "food-safety-haccp",
-        "lead-auditing",
-        "other"
-      ],
-      "standardLabel": "Standarts(-i)",
       "standardOptions": [
         "ISO 9001 (Kvalitātes vadība)",
         "EN 9100 (Aviācijas/kosmiskā nozare)",
@@ -32,8 +17,28 @@
         "Cits / Vairāki"
       ],
       "message": "Ziņojums",
+      "serviceOptions": [
+        "implementation",
+        "internal-auditing",
+        "iso-maintenance",
+        "food-safety-haccp",
+        "lead-auditing",
+        "other"
+      ],
+      "name": "Vārds, Uzvārds",
       "gdprText": "Piekrītu, ka ISOLogic apkopo un uzglabā manus datus ar mērķi atbildēt uz šo pieprasījumu. Apliecinu, ka esmu iepazinies ar Privātuma politiku.",
-      "submit": "Pieteikties konsultācijai"
-    }
+      "phone": "Tālrunis / WhatsApp",
+      "standardLabel": "Standarts(-i)",
+      "submit": "Pieteikties konsultācijai",
+      "email": "E-pasts",
+      "company": "Uzņēmums",
+      "serviceLabel": "Interesē"
+    },
+    "successBody": "Jūsu ziņojums ir saņemts un drīzumā tiks izskatīts. Ar jums sazināsies par jūsu ISO konsultāciju pieprasījumu.",
+    "asideSubtitle": "Apspriedīsim jūsu uzņēmuma ISO prasības.",
+    "successTitle": "✅ Paldies par jūsu ziņu.",
+    "subtitle": "Neatkarīgi no tā, vai plānojat iegūt jaunu sertifikāciju, gatavojaties auditam, nepieciešams atbalsts esošajai sistēmai vai konsultācijas pārtikas drošības un paškontroles sistēmas (HACCP) jomā — ISOlogic nodrošina skaidru pieeju un praktisku atbalstu, lai palīdzētu to sasniegt.",
+    "title": "Padariet ISO par praktisku ieguvumu jūsu biznesam",
+    "ctaText": "Sazinieties, lai pārrunātu, kā ISOlogic var palīdzēt ar ISO standartiem un pārtikas drošības prasībām."
   }
 }

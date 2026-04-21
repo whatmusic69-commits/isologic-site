@@ -8,6 +8,11 @@ export default function Footer({ lang }: { lang: Lang }) {
   const t = ui.footer[lang];
   const linkedinHref = t.social?.linkedin?.trim();
   const resolvedLinkedinHref = linkedinHref || "#";
+  const email = t.contactDetails?.email?.trim() || "info@isologic.lv";
+  const phone = t.contactDetails?.phone?.trim() || "+371 22 33 11 64";
+  const phoneHref = t.contactDetails?.phoneHref?.trim() || "+37122331164";
+  const address = t.contactDetails?.address?.trim() || "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia";
+  const addressUrl = t.contactDetails?.addressUrl?.trim() || "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia";
   return (
     <footer className="mt-16 bg-[color:var(--surface-dark)] text-[color:var(--text-on-dark)]">
       <div className="mx-auto max-w-6xl px-6 footer-section grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
@@ -44,21 +49,21 @@ export default function Footer({ lang }: { lang: Lang }) {
           <ul className="mt-2 space-y-1.5 text-sm">
             <li className="flex items-start gap-2">
               <MailIcon className="mt-0.5 w-4 h-4 text-white/80" />
-              <a className="hover:text-[color:var(--accent)] transition-colors" href="mailto:info@isologic.lv">info@isologic.lv</a>
+              <a className="hover:text-[color:var(--accent)] transition-colors" href={`mailto:${email}`}>{email}</a>
             </li>
             <li className="flex items-start gap-2">
               <PhoneIcon className="mt-0.5 w-4 h-4 text-white/80" />
-              <a className="hover:text-[color:var(--accent)] transition-colors" href="tel:+37122331164">+371 22 33 11 64</a>
+              <a className="hover:text-[color:var(--accent)] transition-colors" href={`tel:${phoneHref}`}>{phone}</a>
             </li>
             <li className="flex items-start gap-2">
               <MapPinIcon className="mt-0.5 w-4 h-4 text-white/80" />
               <a
                 className="hover:text-[color:var(--accent)] transition-colors"
-                href="https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
+                href={addressUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia
+                {address}
               </a>
             </li>
           </ul>

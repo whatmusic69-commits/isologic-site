@@ -12,7 +12,14 @@
       "quickLinks": "Noderīgas saites",
       "contact": "Saziņa",
       "social": {
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/"
+      },
+      "contactDetails": {
+        "email": "info@isologic.lv",
+        "phone": "+371 22 33 11 64",
+        "phoneHref": "+37122331164",
+        "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+        "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
       },
       "links": {
         "home": "Sākums",
@@ -22,10 +29,7 @@
         "contact": "Kontakti",
         "privacy": "Privātuma politika"
       },
-      "rights": "Visas tiesības aizsargātas.",
-      "social": {
-        "linkedin": "https://www.linkedin.com/"
-      }
+      "rights": "Visas tiesības aizsargātas."
     }
   },
   "en": {
@@ -41,7 +45,14 @@
       "quickLinks": "Quick links",
       "contact": "Contact",
       "social": {
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/"
+      },
+      "contactDetails": {
+        "email": "info@isologic.lv",
+        "phone": "+371 22 33 11 64",
+        "phoneHref": "+37122331164",
+        "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+        "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
       },
       "links": {
         "home": "Home",
@@ -51,10 +62,7 @@
         "contact": "Contact",
         "privacy": "Privacy Policy"
       },
-      "rights": "All rights reserved.",
-      "social": {
-        "linkedin": "https://www.linkedin.com/"
-      }
+      "rights": "All rights reserved."
     }
   },
   "ru": {
@@ -70,7 +78,14 @@
       "quickLinks": "Ссылки",
       "contact": "Контакты",
       "social": {
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/"
+      },
+      "contactDetails": {
+        "email": "info@isologic.lv",
+        "phone": "+371 22 33 11 64",
+        "phoneHref": "+37122331164",
+        "address": "Brīvības Gatve 224B, 3. Korpuss, Riga, LV-1039, Latvia",
+        "addressUrl": "https://www.google.com/maps?q=Br%C4%ABv%C4%ABbas%20Gatve%20224B%2C%203.%20Korpuss%2C%20Riga%2C%20LV-1039%2C%20Latvia"
       },
       "links": {
         "home": "Главная",
@@ -80,10 +95,7 @@
         "contact": "Контакты",
         "privacy": "Политика конфиденциальности"
       },
-      "rights": "Все права защищены.",
-      "social": {
-        "linkedin": "https://www.linkedin.com/"
-      }
+      "rights": "Все права защищены."
     }
   }
 }

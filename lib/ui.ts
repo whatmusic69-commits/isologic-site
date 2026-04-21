@@ -12,6 +12,13 @@ export const ui: {
     quickLinks: string;
     contact: string;
     social?: { linkedin?: string };
+    contactDetails?: {
+      email?: string;
+      phone?: string;
+      phoneHref?: string;
+      address?: string;
+      addressUrl?: string;
+    };
     links: { home: string; about: string; services: string; faq: string; contact: string; privacy: string };
     rights: string;
   }>;
